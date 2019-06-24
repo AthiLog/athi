@@ -63,7 +63,7 @@ layout: compress
         <!-- cards -->
 
         <div class="wrapper">
-          {% for post in site.posts %}
+          {% for post in site.posts %} {% if post.tag == "react"%}
           <div class="card" data-id="{{ post.id }}">
             <div class="card__container card__container--closed">
               <svg
@@ -107,7 +107,7 @@ layout: compress
               </div>
             </div>
           </div>
-          {% endfor %}
+          {% endif %} {% endfor %}
           <!-- /cards -->
         </div>
       </div>
