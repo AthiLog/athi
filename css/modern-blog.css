@@ -1,4 +1,4 @@
-/*CARD */
+/*-------------------CARD-------------------- */
 
 .card {
   position: relative;
@@ -179,6 +179,15 @@
   }
 }
 
+/*-------------------CARD-------------------- */
+
+/*-------------------Athi-------------------- */
+.athi {
+  color: black;
+}
+/*-------------------Athi-------------------- */
+
+/*-------------------BODY-------------------- */
 *,
 *:after,
 *:before {
@@ -325,7 +334,9 @@ i {
   }
 }
 
-/* PATTERN */
+/*-------------------BODY-------------------- */
+
+/*-------------------PATTERN-------------------- */
 
 .pattern {
   position: fixed;
@@ -372,9 +383,12 @@ i {
   transform: scale(1) !important;
 }
 
+/*-------------------PATTERN-------------------- */
+
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
+/*-------------------FONT-------------------- */
 @font-face {
   font-family: "NanumBarunpen";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff")
@@ -382,6 +396,10 @@ i {
   font-weight: normal;
   font-style: normal;
 }
+
+/*-------------------FONT-------------------- */
+
+/*-------------------CHECK BOX-------------------- */
 input[type="checkbox"]::after {
   border-width: 1px;
   border-style: solid;
@@ -397,6 +415,10 @@ del {
 ul {
   margin: 0;
 }
+
+/*-------------------CHECK BOX-------------------- */
+
+/*-------------------PROGESS BAR-------------------- */
 
 progress[value]::-webkit-progress-value {
   background-image: -webkit-linear-gradient(
@@ -466,6 +488,9 @@ progress[value]::-webkit-progress-bar {
   display: block;
 }
 
+/*-------------------PROGESS BAR-------------------- */
+
+/*-------------------COLOR CLASS-------------------- */
 .red {
   color: red;
   font-size: 20px;
@@ -508,6 +533,9 @@ progress[value]::-webkit-progress-bar {
   font-weight: 550;
 }
 
+/*-------------------COLOR CLASS-------------------- */
+
+/*-------------------MARKDOWN-------------------- */
 p {
   font-size: 23px;
   /* font-size: 1.5em; */
@@ -530,7 +558,7 @@ code {
   font-size: 15px;
   font-family: Consolas;
   border-radius: 3px;
-  padding: 0.8em;
+  padding: 0.2em 0.7em;
 }
 
 h1 {
@@ -640,3 +668,106 @@ span {
 .property {
   color: #f92672;
 }
+
+/*-------------------MARKDOWN-------------------- */
+
+/*-------------------TAG-------------------- */
+
+.tags > span {
+  line-height: 250%;
+}
+
+.tags > span > a {
+  line-height: 250%;
+  color: white;
+}
+
+.tags > span > a:hover {
+  line-height: 250%;
+  color: black;
+}
+
+.tags > span > a > code {
+  background: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0px;
+  border-radius: 1rem;
+  font-family: sans-serif;
+}
+
+.informationTagLink > code {
+  background: #09c !important;
+}
+
+.jekyllTagLink > code {
+  background: #d19a66 !important;
+}
+
+.testTagLink > code {
+  background: #ff9ff3 !important;
+}
+
+.test1TagLink > code {
+  background: #feca57 !important;
+}
+
+.test2TagLink > code {
+  background: #f368e0 !important;
+}
+
+.test3TagLink > code {
+  background: #ff9f43 !important;
+}
+
+.test4TagLink > code {
+  background: #ff6b6b !important;
+}
+
+.test5TagLink > code {
+  background: #ee5253 !important;
+}
+
+.test6TagLink > code {
+  background: #0abde3 !important;
+}
+
+.test7TagLink > code {
+  background: #48dbfb !important;
+}
+
+.test8TagLink > code {
+  background: #1dd1a1 !important;
+}
+
+.test9TagLink > code {
+  background: #10ac84 !important;
+}
+
+.test10TagLink > code {
+  background: #00d2d3 !important;
+}
+
+.test11TagLink > code {
+  background: #01a3a4 !important;
+}
+
+.test12TagLink > code {
+  background: #54a0ff !important;
+}
+
+.test13TagLink > code {
+  background: #2e86de !important;
+}
+
+.test14TagLink > code {
+  background: #5f27cd !important;
+}
+
+.test15TagLink > code {
+  background: #341f97 !important;
+}
+
+/*-------------------TAG-------------------- */

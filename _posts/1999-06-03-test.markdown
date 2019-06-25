@@ -2,9 +2,26 @@
 title: "Test"
 subtitle: "The Fly!"
 author: "Wferr"
-avatar: "img/authors/athi.png"
-image: "img/f.jpg"
-tag: "react"
+avatar: "/img/authors/athi.png"
+image: "/img/f.jpg"
+tags:
+  [
+    test,
+    test2,
+    test3,
+    test4,
+    test5,
+    test6,
+    test7,
+    test8,
+    test9,
+    test10,
+    test11,
+    test12,
+    test13,
+    test14,
+    test15,
+  ]
 date: 1999-06-03 12:12:12
 ---
 

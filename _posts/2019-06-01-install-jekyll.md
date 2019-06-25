@@ -2,9 +2,9 @@
 title: "#1 Jekyll설치하기"
 subtitle: "How to install"
 author: "Athi"
-avatar: "img/authors/athi.png"
-image: "img/a.jpg"
-tag: "jekyll"
+avatar: "/img/authors/athi.png"
+image: "/img/a.jpg"
+tags: [jekyll]
 date: 2019-06-01 12:12:12
 ---
 

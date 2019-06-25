@@ -2,9 +2,9 @@
 title: "#3 Jekyll폴더구조"
 subtitle: "Jekyll folder's structure"
 author: "Athi"
-avatar: "img/authors/athi.png"
-image: "img/c.jpg"
-tag: "jekyll"
+avatar: "/img/authors/athi.png"
+image: "/img/c.jpg"
+tags: [jekyll]
 date: 2019-06-03 14:12:12
 ---
 
@@ -40,7 +40,7 @@ Jekyll 폴더를 생성하면 다음과 같은 파일이 생성된다.
 | \_config.yml                                                  | [환경설정](https://jekyllrb-ko.github.io/docs/configuration/) 정보를 보관한다. 명령어를 실행할 때 여러가지 옵션들을 추가할 수도 있지만, 그렇게 따로 외우는 것보다 이 파일에 정의해두는게 더 편리하다.                                                                                                                                                             |
 | \_drafts                                                      | 초안이란 아직 게시하지 않은 포스트를 말한다. 파일명 형식에 날짜가 없다: `title.MARKUP`. 사용 방법은 [초안 활용하기](https://jekyllrb-ko.github.io/docs/drafts/)를 참고하라.                                                                                                                                                                                       |
 | \_includes                                                    | 재사용하기 위한 파일을 담는 디렉토리로서, 필요에 따라 포스트나 레이아웃에 쉽게 삽입할 수 있다. `{` `% include file.ext %` `}` 와 같이 Liquid 태그를 사용하면 `_includes/file.ext` 파일에 담긴 코드가 삽입된다.                                                                                                                                                    |
-| \_layouts                                                     | 포스트를 포장할 때 사용하는 템플릿이다. 각 포스트 별로 레이아웃을 선택하는 기준은 [YAML 머리말](https://jekyllrb-ko.github.io/docs/frontmatter/)이며, 자세한 내용은 다음 섹션에서 설명한다. `{{ content }}` 와 같이 Liquid 태그를 사용하면 페이지에 컨텐츠가 주입된다.                                                                                            |
+| \_layouts                                                     | 포스트를 포장할 때 사용하는 템플릿이다. 각 포스트 별로 레이아웃을 선택하는 기준은 [YAML 머리말](https://jekyllrb-ko.github.io/docs/frontmatter/)이며, 자세한 내용은 다음 섹션에서 설명한다. `{` `{content}` `}`와 같이 Liquid 태그를 사용하면 페이지에 컨텐츠가 주입된다.                                                                                         |
 | \_posts                                                       | 한마디로 말하면, 당신의 컨텐츠다. 중요한 것은 파일들의 명명규칙인데, 반드시 이 형식을 따라야 한다: `YEAR-MONTH-DAY-title.MARKUP`. [고유주소](https://jekyllrb-ko.github.io/docs/permalinks/)는 포스트 별로 각각 정의할 수 있지만, 날짜와 마크업 언어 종류는 오로지 파일명에 의해 결정된다.                                                                        |
 | \_data                                                        | 사이트에 사용할 데이터를 적절한 포맷으로 정리하여 보관하는 디렉토리. Jekyll 엔진은 이 디렉토리에 있는 (확장자와 포맷이 `.yml` 또는 `.yaml`, `.json`, `.csv` 인) 모든 데이터 파일을 자동으로 읽어들여 \`site.data\` 로 사용할 수 있도록 만든다. 만약 이 디렉토리에 `members.yml` 라는 파일이 있다면, `site.data.members` 라고 입력하여 그 컨텐츠를 사용할 수 있다. |
 | \_sass                                                        | Sass 조각파일들로, 프로젝트의 `main.scss` 에 임포트할 수 있으며 임포트 후에는 다시 하나의 스타일시트(`main.scss`)로 가공되어 사이트에 사용되는 스타일들을 정의한다.                                                                                                                                                                                               |
