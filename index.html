@@ -4,7 +4,7 @@ layout: default
 
 <div class="container">
   <header class="header">
-    <a href="/" class="athi"
+    <a href="{{ site.baseurl }}/" class="athi"
       ><h1>아띠<span>A Clean, Fresh Minimal Look.</span></h1></a
     >
     <nav class="links">
@@ -43,7 +43,7 @@ layout: default
               clip-path="url(#{{ post.id }}-clip-path)"
               width="1920"
               height="1200"
-              xlink:href="{{ post.image }}"
+              xlink:href="{{ site.baseurl }}{{ post.image }}"
             ></image>
           </svg>
           <div class="card__content">
@@ -54,7 +54,10 @@ layout: default
             </div>
             <div class="card__copy">
               <div class="meta">
-                <img class="meta__avatar" src="{{ post.avatar }}" />
+                <img
+                  class="meta__avatar"
+                  src="{{ site.baseurl }}{{ post.avatar }}"
+                />
                 <span class="meta__author">{{ post.author }}</span>
                 <span class="meta__date">{{
                   post.date | date: "%Y-%m-%d"

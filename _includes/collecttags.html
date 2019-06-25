@@ -64,7 +64,7 @@
 <span >
   {% for tag in tags %} {% capture tag_name %}{{ tag }}{% endcapture %}
   {% if tag != "" %}
-  <a href="/tag/{{ tag_name }}" class="{{ tag_name}}TagLink"><code><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  <a href="{{ site.baseurl }}/tag/{{ tag_name }}" class="{{ tag_name}}TagLink"><code><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
   {% endif %}
   {% endfor %}
 </span>
