@@ -6,6 +6,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/athi" # for test: remove string '/space-jekyll-template' to ''
 url: "https://athilog.github.io/athi/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
+paginate: 6 # 페이징 처리 개수
+paginate_path: "/page:num/" # URL 규칙
+
 markdown: kramdown
 theme: minima
 plugins:

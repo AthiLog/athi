@@ -21,7 +21,7 @@ layout: default
     <!-- cards -->
 
     <div class="wrapper">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <div class="card" data-id="{{ post.id }}">
         <div class="card__container card__container--closed">
           <svg
@@ -72,5 +72,28 @@ layout: default
       <!-- /cards -->
     </div>
   </div>
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a
+      href="{{ site.baseurl }}{{ paginator.previous_page_path }}"
+      class="previous"
+      >Previous</a
+    >
+    {% else %}
+    <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number"
+      >{{ paginator.page }} / {{ paginator.total_pages }}</span
+    >
+    {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next"
+      >Next</a
+    >
+    {% else %}
+    <span class="next ">Next</span>
+    {% endif %}
+  </div>
+
   <!-- /container -->
 </div>
