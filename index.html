@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination:
+  enabled: true
 ---
 
 <div class="container">
@@ -43,7 +45,7 @@ layout: default
               clip-path="url(#{{ post.id }}-clip-path)"
               width="1920"
               height="1200"
-              xlink:href="{{ site.baseurl }}{{ post.image }}"
+              xlink:href="{{ post.image }}"
             ></image>
           </svg>
           <div class="card__content">
@@ -73,27 +75,7 @@ layout: default
     </div>
   </div>
 
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a
-      href="{{ site.baseurl }}{{ paginator.previous_page_path }}"
-      class="previous"
-      >Previous</a
-    >
-    {% else %}
-    <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number"
-      >{{ paginator.page }} / {{ paginator.total_pages }}</span
-    >
-    {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next"
-      >Next</a
-    >
-    {% else %}
-    <span class="next ">Next</span>
-    {% endif %}
-  </div>
+  {% include pagination.html %}
 
   <!-- /container -->
 </div>

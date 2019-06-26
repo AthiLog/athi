@@ -3,7 +3,7 @@ title: "#3 Jekyll폴더구조"
 subtitle: "Jekyll folder's structure"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/img/c.jpg"
+image: "/athi/img/c.jpg"
 tags: [jekyll]
 date: 2019-06-03 14:12:12
 ---

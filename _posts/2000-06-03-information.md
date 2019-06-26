@@ -3,7 +3,7 @@ title: "알려줄 정보"
 subtitle: "Show Information"
 author: "Wferr"
 avatar: "/img/authors/athi.png"
-image: "/img/f.jpg"
+image: "/athi/img/f.jpg"
 tags: [information]
 date: 2000-06-03 12:12:12
 ---

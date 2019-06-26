@@ -1,3 +1,8 @@
+---
+pagination:
+  enabled: true
+---
+
 <!-- page variable확인 -->
 
 <!-- {% for post in site.tags[page.tag] %}
@@ -75,8 +80,7 @@
         <!-- cards -->
 
         <div class="wrapper">
-          {% for post in site.posts %} {% for tag in post.tags %} {% if tag ==
-          page.tag %}
+          {% for post in paginator.posts %}
           <div class="card" data-id="{{ post.id }}">
             <div class="card__container card__container--closed">
               <svg
@@ -98,7 +102,7 @@
                   clip-path="url(#{{ post.id }}-clip-path)"
                   width="1920"
                   height="1200"
-                  xlink:href="{{ site.baseurl }}{{ post.image }}"
+                  xlink:href="{{ post.image }}"
                 ></image>
               </svg>
               <div class="card__content">
@@ -123,10 +127,12 @@
               </div>
             </div>
           </div>
-          {% endif %} {% endfor %} {% endfor %}
+          {% endfor %}
           <!-- /cards -->
         </div>
       </div>
+
+      {% include pagination.html %}
       <!-- /container -->
     </div>
     <!-- JS -->
