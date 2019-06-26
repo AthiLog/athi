@@ -1,0 +1,82 @@
+<h2 id="jekyll-pagination-설치">jekyll-pagination 설치</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll-pagination
+
+</code></pre></div></div>
+
+<h2 id="_configyml-파일-업데이트">_config.yml 파일 업데이트</h2>
+
+<p>_config.yml 파일에 페이징 관련 정보를 추가한다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>paginate: 10                  <span class="c"># 페이징 처리 개수</span>
+paginate_path: <span class="s2">"/page:num/"</span>   <span class="c"># URL 규칙</span>
+
+</code></pre></div></div>
+
+<h2 id="gemfile-파일-업데이트">Gemfile 파일 업데이트</h2>
+
+<p>Gemfile 파일에 jekyll-paginate 플러그인 정보를 추가한다.
+플러그인 버전 정보는 github 페이지를 참조한다.
+<a href="https://pages.github.com/versions.json">https://pages.github.com/versions.json</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins <span class="k">do
+  </span>gem <span class="s2">"jekyll-feed"</span>, <span class="s2">"~&gt; 0.6"</span>
+  gem <span class="s2">"jekyll-paginate"</span>, <span class="s2">"~&gt; 1.1.0"</span>  <span class="c"># 추가</span>
+end
+
+</code></pre></div></div>
+
+<h2 id="bundle-install--update">bundle install &amp; update</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">install</span>
+<span class="nv">$ </span>bundle update
+
+</code></pre></div></div>
+
+<h2 id="indexhtml-추가">index.html 추가</h2>
+
+<p>구동 시 index.html 파일이 필요하다.
+index.md은 필요 없으므로 삭제하고, index.md가 쓰던 home 템플릿 역시 필요 없으므로 삭제한다.
+다만, home 템플릿에 있던 내용은 필요하므로 index.html로 옮긴다.
+(minima 기본 테마 기준)</p>
+
+<h2 id="페이징-코드-수정--추가">페이징 코드 수정 &amp; 추가</h2>
+
+<p>포스트 템플릿 반복문을 아래와 같이 변경한다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>post <span class="k">in </span>posts.posts      <span class="c"># as-is</span>
+<span class="k">for </span>post <span class="k">in </span>paginator.posts  <span class="c"># to-be</span>
+
+</code></pre></div></div>
+
+<p>하단에 페이징 버튼 을 추가한다.test</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+&lt;<span class="o">!</span><span class="nt">--</span> Pagination links <span class="nt">--</span><span class="o">&gt;</span>
+&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"pagination"</span><span class="o">&gt;</span>
+  <span class="o">{</span>% <span class="k">if </span>paginator.previous_page %<span class="o">}</span>
+    &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"{{ paginator.previous_page_path }}"</span> <span class="nv">class</span><span class="o">=</span><span class="s2">"previous"</span><span class="o">&gt;</span>Previous&lt;/a&gt;
+  <span class="o">{</span>% <span class="k">else</span> %<span class="o">}</span>
+    &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"previous"</span><span class="o">&gt;</span>Previous&lt;/span&gt;
+  <span class="o">{</span>% endif %<span class="o">}</span>
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"page_number "</span><span class="o">&gt;</span>Page: <span class="o">{{</span> paginator.page <span class="o">}}</span> of <span class="o">{{</span> paginator.total_pages <span class="o">}}</span>&lt;/span&gt;
+  <span class="o">{</span>% <span class="k">if </span>paginator.next_page %<span class="o">}</span>
+    &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"{{ paginator.next_page_path }}"</span> <span class="nv">class</span><span class="o">=</span><span class="s2">"next"</span><span class="o">&gt;</span>Next&lt;/a&gt;
+  <span class="o">{</span>% <span class="k">else</span> %<span class="o">}</span>
+    &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"next "</span><span class="o">&gt;</span>Next&lt;/span&gt;
+  <span class="o">{</span>% endif %<span class="o">}</span>
+&lt;/div&gt;
+
+
+</code></pre></div></div>
+
+<h2 id="주의">주의</h2>
+
+<p>Paginator는 서버를 껐다 켜야 적용된다.</p>
+
+<h2 id="참조">참조</h2>
+
+<ul>
+  <li><a href="https://pilot376.tistory.com/42">pilot376블로그</a></li>
+</ul>
