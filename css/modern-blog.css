@@ -536,6 +536,9 @@ progress[value]::-webkit-progress-bar {
 /*-------------------COLOR CLASS-------------------- */
 
 /*-------------------MARKDOWN-------------------- */
+img {
+  width: 100%;
+}
 p {
   font-size: 23px;
   /* font-size: 1.5em; */

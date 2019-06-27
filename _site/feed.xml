@@ -6,103 +6,9 @@
         <link>http://localhost:4000/athi/</link>
         <atom:link href="http://localhost:4000/athi/feed.xml" rel="self"
         type="application/rss+xml"/>
-        <pubDate>Wed, 26 Jun 2019 16:13:15 +0900</pubDate>
-        <lastBuildDate>Wed, 26 Jun 2019 16:13:15 +0900</lastBuildDate>
+        <pubDate>Thu, 27 Jun 2019 10:41:28 +0900</pubDate>
+        <lastBuildDate>Thu, 27 Jun 2019 10:41:28 +0900</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
-        
-        <item>
-            <title>Jekyll 페이지네이션</title>
-            <description>&lt;h2 id=&quot;jekyll-pagination-설치&quot;&gt;jekyll-pagination 설치&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll-pagination
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;_configyml-파일-업데이트&quot;&gt;_config.yml 파일 업데이트&lt;/h2&gt;
-
-&lt;p&gt;_config.yml 파일에 페이징 관련 정보를 추가한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;paginate: 10                  &lt;span class=&quot;c&quot;&gt;# 페이징 처리 개수&lt;/span&gt;
-paginate_path: &lt;span class=&quot;s2&quot;&gt;&quot;/page:num/&quot;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# URL 규칙&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;gemfile-파일-업데이트&quot;&gt;Gemfile 파일 업데이트&lt;/h2&gt;
-
-&lt;p&gt;Gemfile 파일에 jekyll-paginate 플러그인 정보를 추가한다.
-플러그인 버전 정보는 github 페이지를 참조한다.
-&lt;a href=&quot;https://pages.github.com/versions.json&quot;&gt;https://pages.github.com/versions.json&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;group :jekyll_plugins &lt;span class=&quot;k&quot;&gt;do
-  &lt;/span&gt;gem &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-feed&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.6&quot;&lt;/span&gt;
-  gem &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-paginate&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 1.1.0&quot;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# 추가&lt;/span&gt;
-end
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;bundle-install--update&quot;&gt;bundle install &amp;amp; update&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle update
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;indexhtml-추가&quot;&gt;index.html 추가&lt;/h2&gt;
-
-&lt;p&gt;구동 시 index.html 파일이 필요하다.
-index.md은 필요 없으므로 삭제하고, index.md가 쓰던 home 템플릿 역시 필요 없으므로 삭제한다.
-다만, home 템플릿에 있던 내용은 필요하므로 index.html로 옮긴다.
-(minima 기본 테마 기준)&lt;/p&gt;
-
-&lt;h2 id=&quot;페이징-코드-수정--추가&quot;&gt;페이징 코드 수정 &amp;amp; 추가&lt;/h2&gt;
-
-&lt;p&gt;포스트 템플릿 반복문을 아래와 같이 변경한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;post &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;posts.posts      &lt;span class=&quot;c&quot;&gt;# as-is&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;post &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;paginator.posts  &lt;span class=&quot;c&quot;&gt;# to-be&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;하단에 페이징 버튼 을 추가한다.test&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-
-&amp;lt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Pagination links &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&amp;lt;div &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pagination&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;paginator.previous_page %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &amp;lt;a &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ paginator.previous_page_path }}&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;previous&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Previous&amp;lt;/a&amp;gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;previous&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Previous&amp;lt;/span&amp;gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;page_number &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Page: &lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt; paginator.page &lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt; of &lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt; paginator.total_pages &lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;&amp;lt;/span&amp;gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;paginator.next_page %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &amp;lt;a &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ paginator.next_page_path }}&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;next&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Next&amp;lt;/a&amp;gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;next &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Next&amp;lt;/span&amp;gt;
-  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&amp;lt;/div&amp;gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;주의&quot;&gt;주의&lt;/h2&gt;
-
-&lt;p&gt;Paginator는 서버를 껐다 켜야 적용된다.&lt;/p&gt;
-
-&lt;h2 id=&quot;참조&quot;&gt;참조&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pilot376.tistory.com/42&quot;&gt;pilot376블로그&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-            <pubDate>Wed, 05 Jun 2019 01:12:12 +0900</pubDate>
-            <link>http://localhost:4000/athi#/2019/06/05/jekyll-paginator.html</link>
-            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/05/jekyll-paginator.html</guid>
-            
-            <category>jekyll</category>
-            
-            
-        </item>
         
         <item>
             <title>리액트 네이티브 animated</title>
@@ -551,6 +457,119 @@ index.md은 필요 없으므로 삭제하고, index.md가 쓰던 home 템플릿 
             <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/05/animated.html</guid>
             
             <category>react-native</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Jekyll 페이지네이션</title>
+            <description>&lt;h2 id=&quot;jekyll-pagination-설치&quot;&gt;jekyll-pagination 설치&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll-pagination
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;_configyml-파일-업데이트&quot;&gt;_config.yml 파일 업데이트&lt;/h2&gt;
+
+&lt;p&gt;_config.yml 파일에 페이징 관련 정보를 추가한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;paginate: 10                  &lt;span class=&quot;c&quot;&gt;# 페이징 처리 개수&lt;/span&gt;
+paginate_path: &lt;span class=&quot;s2&quot;&gt;&quot;/page:num/&quot;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# URL 규칙&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;gemfile-파일-업데이트&quot;&gt;Gemfile 파일 업데이트&lt;/h2&gt;
+
+&lt;p&gt;Gemfile 파일에 jekyll-paginate 플러그인 정보를 추가한다.
+플러그인 버전 정보는 github 페이지를 참조한다.
+&lt;a href=&quot;https://pages.github.com/versions.json&quot;&gt;https://pages.github.com/versions.json&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;group :jekyll_plugins &lt;span class=&quot;k&quot;&gt;do
+  &lt;/span&gt;gem &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-feed&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.6&quot;&lt;/span&gt;
+  gem &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-paginate&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 1.1.0&quot;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# 추가&lt;/span&gt;
+end
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;bundle-install--update&quot;&gt;bundle install &amp;amp; update&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle update
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;indexhtml-추가&quot;&gt;index.html 추가&lt;/h2&gt;
+
+&lt;p&gt;구동 시 index.html 파일이 필요하다.
+index.md은 필요 없으므로 삭제하고, index.md가 쓰던 home 템플릿 역시 필요 없으므로 삭제한다.
+다만, home 템플릿에 있던 내용은 필요하므로 index.html로 옮긴다.
+(minima 기본 테마 기준)&lt;/p&gt;
+
+&lt;h2 id=&quot;페이징-코드-수정--추가&quot;&gt;페이징 코드 수정 &amp;amp; 추가&lt;/h2&gt;
+
+&lt;p&gt;포스트 템플릿 반복문을 아래와 같이 변경한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;post &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;posts.posts      &lt;span class=&quot;c&quot;&gt;# as-is&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;post &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;paginator.posts  &lt;span class=&quot;c&quot;&gt;# to-be&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;하단에 페이징 버튼 을 추가한다.test&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+&amp;lt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Pagination links &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&amp;lt;div &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pagination&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;paginator.previous_page %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &amp;lt;a &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ paginator.previous_page_path }}&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;previous&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Previous&amp;lt;/a&amp;gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;previous&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Previous&amp;lt;/span&amp;gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;page_number &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Page: &lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt; paginator.page &lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt; of &lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt; paginator.total_pages &lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;&amp;lt;/span&amp;gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;paginator.next_page %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &amp;lt;a &lt;span class=&quot;nv&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{{ paginator.next_page_path }}&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;next&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Next&amp;lt;/a&amp;gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &amp;lt;span &lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;next &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Next&amp;lt;/span&amp;gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% endif %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&amp;lt;/div&amp;gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;주의&quot;&gt;주의&lt;/h2&gt;
+
+&lt;p&gt;Paginator는 서버를 껐다 켜야 적용된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;참조&quot;&gt;참조&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pilot376.tistory.com/42&quot;&gt;pilot376블로그&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            <pubDate>Wed, 05 Jun 2019 01:12:12 +0900</pubDate>
+            <link>http://localhost:4000/athi#/2019/06/05/jekyll-paginator.html</link>
+            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/05/jekyll-paginator.html</guid>
+            
+            <category>jekyll</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Jekyll 페이지네이션v2</title>
+            <description>&lt;h1 id=&quot;참고자료&quot;&gt;참고자료&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sverrirs/jekyll-paginate-v2/blob/master/lib/jekyll-paginate-v2.rb&quot;&gt;jekyll-paginate-v2.rb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md&quot;&gt;jekyll-paginate-v2/README-GENERATOR.md&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sverrirs/jekyll-paginate-v2/tree/master/examples/03-tags&quot;&gt;example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            <pubDate>Wed, 05 Jun 2019 01:12:12 +0900</pubDate>
+            <link>http://localhost:4000/athi#/2019/06/05/jekyll-paginator-v2.html</link>
+            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/05/jekyll-paginator-v2.html</guid>
+            
+            <category>jekyll</category>
             
             
         </item>
@@ -1776,33 +1795,6 @@ Jekyll 폴더를 생성하면 다음과 같은 파일이 생성된다.&lt;/p&gt;
             <pubDate>Mon, 03 Jun 2019 23:12:12 +0900</pubDate>
             <link>http://localhost:4000/athi#/2019/06/03/jekyll-structure.html</link>
             <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/03/jekyll-structure.html</guid>
-            
-            <category>jekyll</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>#2 Jekyll사용하기</title>
-            <description>&lt;h1 id=&quot;jekyll-app-설치&quot;&gt;Jekyll app 설치&lt;/h1&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new [폴더이름]&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd [폴더이름]&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cmd창에서&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; 접속&lt;/p&gt;
-
-&lt;p&gt;이 창은 자기 컴퓨터를 기반으로 만든 로컬서버, 즉 자기만 쓸 수 있는 서버, 외부에서 접속할 수 없는 서버이다.&lt;/p&gt;
-
-&lt;p&gt;서버를 중지시키고 싶다면 cmd창에서 ctrl + c를 누르면 된다.&lt;/p&gt;
-</description>
-            <pubDate>Sun, 02 Jun 2019 22:12:12 +0900</pubDate>
-            <link>http://localhost:4000/athi#/2019/06/02/use-jekyll.html</link>
-            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/02/use-jekyll.html</guid>
             
             <category>jekyll</category>
             

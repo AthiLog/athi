@@ -3,7 +3,7 @@ title: "Jekyll 페이지네이션"
 subtitle: "Jekyll Paginator"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "https://source.unsplash.com/5LOhydOtTKU/1920x1200"
+image: "/img/d.jpg"
 tags: [jekyll]
 date: 2019-06-04 16:12:12
 ---

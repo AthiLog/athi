@@ -3,7 +3,7 @@ title: "클라이언트 인증"
 subtitle: "Client Auth"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/d.jpg"
+image: "/img/d.jpg"
 tags: [react-native]
 date: 2019-06-04 14:12:12
 ---

@@ -3,7 +3,7 @@ title: "리액트 네이티브 가운데정렬"
 subtitle: "Jekyll folder's structure"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/f.jpg"
+image: "/img/f.jpg"
 tags: [react-native]
 date: 2019-06-04 14:12:12
 ---

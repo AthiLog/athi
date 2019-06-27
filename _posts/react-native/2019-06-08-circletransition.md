@@ -3,7 +3,7 @@ title: "circletransition 모듈"
 subtitle: "circletransition"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/a.jpg"
+image: "/img/a.jpg"
 tags: [react-native]
 date: 2019-06-04 14:12:12
 ---

@@ -1,0 +1,34 @@
+<h1 id="pugins사용시-배포할-때">pugins사용시 배포할 때</h1>
+
+<p>Depending if you deal with a User/Organization (<strong>UO</strong>) site or a Project site (<strong>P</strong>), do :</p>
+
+<ol>
+  <li>from your working folder <code class="highlighter-rouge">git init</code></li>
+  <li><code class="highlighter-rouge">git remote add origin git@github.com:userName/userName.github.io.git</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git remote add origin git@github.com:userName/repositoryName.git</code> (<strong>P</strong>)</li>
+  <li><code class="highlighter-rouge">jekyll new .</code> creates your code base</li>
+  <li>in <em>_config.yml</em>, set the <em>baseurl</em> parameter to <code class="highlighter-rouge">baseurl: ''</code> (<strong>UO</strong>) or <code class="highlighter-rouge">baseurl: '/repositoryName'</code> (<strong>P</strong>)</li>
+  <li>in <em>.gitignore</em> add <strong>_site</strong>, it will be versioned in the other branch</li>
+  <li><code class="highlighter-rouge">jekyll build</code> will create the destination folder and build site.</li>
+  <li><code class="highlighter-rouge">git checkout -b sources</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git checkout master</code> (<strong>P</strong>)</li>
+  <li><code class="highlighter-rouge">git add -A</code></li>
+  <li><code class="highlighter-rouge">git commit -m "jekyll base sources"</code> commit your source code</li>
+  <li><code class="highlighter-rouge">git push origin sources</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git push origin master</code> (<strong>P</strong>) push your sources in the appropriate branch</li>
+  <li><code class="highlighter-rouge">cd _site</code></li>
+  <li><code class="highlighter-rouge">touch .nojekyll</code>, this file tells gh-pages that there is no need to build</li>
+  <li><code class="highlighter-rouge">git init</code> init the repository</li>
+  <li><code class="highlighter-rouge">git remote add origin git@github.com:userName/userName.github.io.git</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git remote add origin git@github.com:userName/repositoryName.git</code> (<strong>P</strong>)</li>
+  <li><code class="highlighter-rouge">git checkout master</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git checkout -b gh-pages</code> (<strong>P</strong>) put this repository on the appropriate branch</li>
+  <li><code class="highlighter-rouge">git add -A</code></li>
+  <li><code class="highlighter-rouge">git commit -m "jekyll first build"</code> commit your site code</li>
+  <li><code class="highlighter-rouge">git push origin master</code> (<strong>UO</strong>) or <code class="highlighter-rouge">git push origin gh-pages</code> (<strong>P</strong>)</li>
+</ol>
+
+<p>You now have something like <a href="http://octopress.org/docs/">Octopress</a> does. Look at their rake file, there are some nice comments inside.
+_site만 따로 분리해서 github에 배포해야 한다.
+그냥 올릴 시 github pages는 인식하지 못한다.</p>
+
+<h1 id="참고자료">참고자료</h1>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/28249255/how-do-i-configure-github-to-use-non-supported-jekyll-site-plugins/28252200#28252200#fromHistory">https://stackoverflow.com/questions/28249255/how-do-i-configure-github-to-use-non-supported-jekyll-site-plugins/28252200#28252200#fromHistory</a></li>
+</ul>

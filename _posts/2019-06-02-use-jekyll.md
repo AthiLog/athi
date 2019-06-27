@@ -3,7 +3,7 @@ title: "#2 Jekyll사용하기"
 subtitle: "How to use Jekyll"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/b.jpg"
+image: "/img/b.jpg"
 tags: [jekyll]
 date: 2019-06-02 13:12:12
 ---

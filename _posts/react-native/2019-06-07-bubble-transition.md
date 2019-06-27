@@ -3,7 +3,7 @@ title: "리액트 네이티브 bubble-transition 모듈"
 subtitle: "bubble-transition"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/b.jpg"
+image: "/img/b.jpg"
 tags: [react-native]
 date: 2019-06-04 14:12:12
 ---

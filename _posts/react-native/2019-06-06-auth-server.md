@@ -3,7 +3,7 @@ title: "서버 인증"
 subtitle: "Auth Server"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/athi/img/c.jpg"
+image: "/img/c.jpg"
 tags: [react-native]
 date: 2019-06-04 14:12:12
 ---
