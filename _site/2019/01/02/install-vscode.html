@@ -1,23 +1,74 @@
 <h1 id="vscode">VScode</h1>
 
+<h2 id="vscode란">VSCode란?</h2>
+
+<p>메모장은 모든 사람이 아실 겁니다.
+메모장을 다른말로 <code class="highlighter-rouge">텍스트 편집기</code>라고도 하는데</p>
+
+<p>VSCode는 개발자를 위한 <code class="highlighter-rouge">텍스트 편집기</code>일 뿐입니다.
+VSCode는 개발자들이 코드를 작성하면 예쁘게 볼 수 있게 도와주어서 한눈에 알아보기 쉽게 해줍니다.</p>
+
+<p>텍스트 편집기는 정말 다양하게 여러가지가 있는데
+Sublime Text, Atom, Vim, Emacs, 등등
+이 모든걸 다 써본결과 정말 가볍고, 확장프로그램까지 완변하고 좋은 것이라고 판단 되는것이 VSCode입니다.
+그래서 이 강의</p>
+
 <h2 id="vscode설치하기">VSCode설치하기</h2>
+
+<p><a href="https://code.visualstudio.com/download">VSCode 다운로드</a></p>
+
+<p>위에 들어가서 자기 컴퓨터에 맞는걸 다운로드 하세요.</p>
+
+<p><img src="https://i.imgur.com/mtMO3x3.png" alt="vscode" /></p>
+
+<p>설치할 때 따로 설정은 필요없고 계속 next를 눌러주세요.</p>
+
+<p>설치가 다 됬으면 vscode를 실행 시켜주세요.</p>
+
+<h2 id="vscode-실행">VSCode 실행</h2>
+
+<p>git bash에서 원하는 폴더에 들어가서
+<code class="highlighter-rouge">code .</code>명령어를 실행시키거나</p>
+
+<p>폴더창에서 마우스 오른쪽 클릭해서 vscode를 실행시키면 됩니다.
+<img src="https://i.imgur.com/91U7VSK.png" alt="vscode열기" /></p>
 
 <h2 id="vscode-설정하기">VScode 설정하기</h2>
 
-<h3 id="git-bash설정">git bash설정</h3>
+<h3 id="vscode-extensions-설치하기">🔧VScode Extensions 설치하기</h3>
 
-<h3 id="vscode-extensions-설치하기">VScode Extensions 설치하기</h3>
+<p>왼쪽 상단에 보시면 다음과 같은 아이콘이 있을 겁니다. <strong>제일 밑에 있는 아이콘</strong>을 클릭해주세요.
+<img src="https://i.imgur.com/qMOw6B2.png" alt="vscode구조" /></p>
+
+<p>그럼 여러가지 Extensions을 설치하실 수 있는데 다음 네가지 Extensions을 설치 할 겁니다.
+모두 검색을 해서 다운받아 주세요.
+다운 받을 떄는 install 버튼만 누르면 됩니다.</p>
 
 <ul>
-  <li>Bracket Pair Colorizer</li>
-  <li>Color Hightlight</li>
-  <li>Markdown Preview Enhanced</li>
+  <li>Bracket Pair Colorizer: (),{},[] 이러한 괄호등에 색깔을 입혀 구분을 쉽게 도와줍니다.</li>
+  <li>Color Hightlight: #fff, #000 이런 색상코드에 색깔을 표시해주어 생산성을 높여줍닌다.</li>
+  <li>Markdown Preview Enhanced: 이 강의에서 가장 핵심이 되는 Extension으로 markdown 파일을 예쁘게 표시해줍니다.</li>
+  <li>Prettier: 저장 버튼을 누르게 되면 코드를 예쁘게 정리해줍니다.</li>
 </ul>
 
-<p>🔧</p>
+<p><img src="https://i.loli.net/2019/06/28/5d15876a0874714097.png" alt="extension1" />
+<img src="https://i.loli.net/2019/06/28/5d1587d6a66bd83757.png" alt="extension2" />
+<img src="https://i.loli.net/2019/06/28/5d1587e0db73210219.png" alt="extension3" />
+<img src="https://i.imgur.com/3ZbMxdm.png" alt="extension4" /></p>
 
-<pre><code class="language-less">/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+<p>다 설치했으면 창을 닫아주세요.
+창을 열고 닫고 하는 단축키는
+<code class="highlighter-rouge">ctrl + B</code> 입니다.</p>
+
+<h3 id="-markdown-preview-enhanced-extension-설정">🔧 Markdown Preview Enhanced Extension 설정</h3>
+
+<p><code class="highlighter-rouge">ctrl + shift + p</code> 키를 눌러서</p>
+
+<p>Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.</p>
+
+<p><img src="https://i.imgur.com/v4l2gQR.png" alt="markdown preview" /></p>
+
+<pre><code class="language-less">/* 아래 코드를 Markdown Preview Enhanced: Customize CSS-&gt; style.less에 복사 붙여넣기하고 저장 해주세요*/
 
 .markdown-preview.markdown-preview {
   @font-face {
@@ -281,3 +332,82 @@
   // css
 }
 </code></pre>
+
+<p>저장을 했으면 그 다음에는
+Markdown Preview Enhanced: Extend Parser을 검색 후 눌러 줍니다.</p>
+
+<p><img src="https://i.imgur.com/mcKkugL.png" alt="markdown preview parser" /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 아래 코드를 Markdown Preview Enhanced: Extend Parser-&gt;parser.js에 복사 붙여넣기 하고 저장 해주세요.</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">onWillParseMarkdown</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">markdown</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// markdown = markdown.replace(</span>
+      <span class="c1">//   /\&lt;red\&gt;([\w\W]+?)\&lt;\/red\&gt;/g,</span>
+      <span class="c1">//   (whole, content) =&gt; `&lt;div class="red"&gt;${content}&lt;/div&gt;`</span>
+      <span class="c1">// );</span>
+      <span class="c1">// markdown = markdown.replace(</span>
+      <span class="c1">//   /(^|[^\*])\!(?!\*)(.*?[^\*])\!(?!\*)/g,</span>
+      <span class="c1">//   (whole, content) =&gt; `&lt;div class="red"&gt;${content}&lt;/div&gt;`</span>
+      <span class="c1">// );</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/!!11</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">11!!/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="red"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/@@22</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">22@@/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="orange"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/##33</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">33##/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="yellow"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/$$44</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">44$$/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="green"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/%%55</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">55%%/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="blue"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/^^66</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">66^^/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="deepblue"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/&amp;&amp;77</span><span class="se">([\w\W]</span><span class="sr">+</span><span class="se">?)</span><span class="sr">77&amp;&amp;/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;p class="purple"&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/p&gt;`</span>
+      <span class="p">);</span>
+      <span class="nx">markdown</span> <span class="o">=</span> <span class="nx">markdown</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+        <span class="sr">/</span><span class="se">\-\s\[[</span><span class="sr">d</span><span class="se">]\]\s(</span><span class="sr">.+</span><span class="se">)</span><span class="sr">/g</span><span class="p">,</span>
+        <span class="p">(</span><span class="nx">whole</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="o">=&gt;</span>
+          <span class="s2">`&lt;ul&gt;&lt;li class="task-list-item"&gt;&lt;input type="checkbox" class="task-list-item-checkbox" checked&gt;&lt;del&gt;</span><span class="p">${</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/del&gt;&lt;/li&gt;&lt;/ul&gt;`</span>
+      <span class="p">);</span>
+      <span class="k">return</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">markdown</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+  <span class="na">onDidParseMarkdown</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">html</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>좋습니다.</p>
+
+<p>여기까지 잘 따라오셨으면 벌써 우리가 사용할 기능의 절반을 사용할 수 있게 되셨습니다.</p>
+
+<p>이제 Markdown을 쓰실 때 누구보다 멋지고, 예쁘게, 그리고 빠르게 쓰실 수 있습니다.</p>
+
+<p>Markdown이 뭔지 모른다고요?</p>
+
+<p>걱정하지마세요.</p>
+
+<p>다음강의에 설명해드리겠습니다.</p>
+
+<hr />
+
+<p>위의 코드는 제가 삽질하면서 만든 코드이고 나중에 따로 자기만의 스타일을 만드시고 싶은분들은 아래 문서를 참조하시면 됩니다.</p>
+
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/">Markdown Preivew Enhanced 문서</a></p>

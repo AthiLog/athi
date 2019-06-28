@@ -1,14 +1,14 @@
 ---
-title: "#1 좋은 글쓰기"
-subtitle: "How to install"
+title: "#1 jekyll plugins을 사용할 때"
+subtitle: "When you use jekyll plugins"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series]
-date: 2019-01-02 12:12:12
+date: 2020-01-02 12:12:12
 ---
 
-# pugins사용시 배포할 때
+# plugins 사용시 배포할 때
 
 ![warning](https://i.imgur.com/ePOfGfe.png)
 \_site만 따로 분리해서 github에 배포해야 한다.

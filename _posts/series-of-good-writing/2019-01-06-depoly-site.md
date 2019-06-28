@@ -5,7 +5,7 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series, jekyll]
-date: 2019-01-06 12:12:12
+date: 2020-01-06 12:12:12
 ---
 
 # pugins사용시 배포할 때

@@ -264,6 +264,7 @@ a:focus {
 
 .body {
   background: #acaad1;
+  /* background-image: url(/athi/img/trianglify.png); */
 }
 
 i {
@@ -421,7 +422,7 @@ ul {
 /*-------------------PROGESS BAR-------------------- */
 
 progress[value]::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(
+  background: kit-linear-gradien(
       -45deg,
       transparent 33%,
       rgba(0, 0, 0, 0.1) 33%,
@@ -537,7 +538,7 @@ progress[value]::-webkit-progress-bar {
 
 /*-------------------MARKDOWN-------------------- */
 img {
-  width: 100%;
+  max-width: 100%;
 }
 p {
   font-size: 23px;
@@ -713,19 +714,19 @@ span {
   background: #ff9ff3 !important;
 }
 
-.test1TagLink > code {
+.VScodeTagLink > code {
   background: #feca57 !important;
 }
 
-.test2TagLink > code {
+.booksTagLink > code {
   background: #f368e0 !important;
 }
 
-.test3TagLink > code {
+.githubTagLink > code {
   background: #ff9f43 !important;
 }
 
-.test4TagLink > code {
+.goodwriting-seriesTagLink > code {
   background: #ff6b6b !important;
 }
 

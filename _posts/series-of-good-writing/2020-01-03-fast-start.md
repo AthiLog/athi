@@ -5,7 +5,7 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series]
-date: 2019-01-01 12:12:12
+date: 2020-01-01 12:12:12
 ---
 
 # 클라우드 스토리지
