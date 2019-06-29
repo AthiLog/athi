@@ -48,3 +48,5 @@ picpic은 캡쳐도구와 컬러를 추출할 수 있는 도구를 단축키로 
 https://source.unsplash.com/[사진id]/[사진가로크기]x[사진세로크기]
 
 https://source.unsplash.com/[사진id]/1920x1200
+
+# lastpass

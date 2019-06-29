@@ -5,14 +5,14 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series, VScode]
-date: 2019-01-02 12:12:12
+date: 2019-01-01 12:12:12
 ---
 
 # VScode
 
 ## VSCode란?
 
-메모장은 모든 사람이 아실 겁니다.
+메모장은 모두들 아실 겁니다.
 메모장을 다른말로 `텍스트 편집기`라고도 하는데
 
 VSCode는 개발자를 위한 `텍스트 편집기`일 뿐입니다.
@@ -39,6 +39,8 @@ Sublime Text, Atom, Vim, Emacs, 등등
 
 git bash에서 원하는 폴더에 들어가서
 `code .`명령어를 실행시키거나
+
+💬 git bash는 install github강의를 끝내면 사용하실 수 있습니다.
 
 폴더창에서 마우스 오른쪽 클릭해서 vscode를 실행시키면 됩니다.
 ![vscode열기](https://i.imgur.com/91U7VSK.png)
@@ -416,8 +418,9 @@ Markdown이 뭔지 모른다고요?
 
 다음강의에 설명해드리겠습니다.
 
----
+# Customizing
 
 위의 코드는 제가 삽질하면서 만든 코드이고 나중에 따로 자기만의 스타일을 만드시고 싶은분들은 아래 문서를 참조하시면 됩니다.
 
-[Markdown Preivew Enhanced 문서](https://shd101wyy.github.io/markdown-preview-enhanced/#/)
+[Customize CSS](https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css)
+[Extend Markdown Parser](https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser)

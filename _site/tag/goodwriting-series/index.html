@@ -68,7 +68,7 @@
 <br />
 
 <span>test5|test6|test7|test8|test9|test10|test11|test12|test13|test14|test15|</span><br />
-<span>VScodeVScodebooksgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesjekylljekylljekylljekylljekylljekyllreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetest10test11test12test13test14test15test5test6test7test8test9</span>
+<span>VScodeVScodeVScodebooksgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesjekylljekylljekylljekylljekylljekyllreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetest10test11test12test13test14test15test5test6test7test8test9</span>
 
 <br />
 
@@ -312,7 +312,7 @@
 
         <div class="wrapper">
           
-          <div class="card" data-id="/2019/01/03/what-is-markdown">
+          <div class="card" data-id="/2019/01/03/sync-file">
             <div class="card__container card__container--closed">
               <svg
                 class="card__image"
@@ -322,7 +322,7 @@
                 preserveAspectRatio="xMidYMid slice"
               >
                 <defs>
-                  <clipPath id="/2019/01/03/what-is-markdown-clip-path">
+                  <clipPath id="/2019/01/03/sync-file-clip-path">
                     <polygon
                       class="clip"
                       points="0,1200 0,0 1920,0 1920,1200"
@@ -330,7 +330,170 @@
                   </clipPath>
                 </defs>
                 <image
-                  clip-path="url(#/2019/01/03/what-is-markdown-clip-path)"
+                  clip-path="url(#/2019/01/03/sync-file-clip-path)"
+                  width="1920"
+                  height="1200"
+                  xlink:href="/athi/img/a.jpg"
+                ></image>
+              </svg>
+              <div class="card__content">
+                <i class="card__btn-close fa fa-times"></i>
+                <div class="card__caption">
+                  <span class="card__title">#4 글 연동하기</span>
+                  <p class="card__subtitle">synchronize post</p>
+                </div>
+                <div class="card__copy">
+                  <div class="meta">
+                    <img
+                      class="meta__avatar"
+                      src="/athi/img/authors/athi.png"
+                    />
+                    <span class="meta__author">Athi</span>
+                    <span class="meta__date">2019-01-03</span>
+                  </div>
+                  <h1 id="연동하기-위해-dropbox를-쓰는-이유">연동하기 위해 dropbox를 쓰는 이유</h1>
+
+<blockquote>
+  <p>내가 무언가를 작성하는 것은 나중에 잊어버리고 있다가, 나중에 찾을 수 있어야 한다.</p>
+</blockquote>
+
+<p>보다시피 아시겠지만, markdown은 파일이다.
+즉 메모장 같은 txt파일과 다를게 없다.</p>
+
+<p>그래서 나중에 컴퓨터가 고장나서 파일이 날아가버릴 경우</p>
+
+<p>정말 당황스러운 상황이 발생할 수 있다.</p>
+
+<p>그러기 위해서 파일을 연동할 필요가 있다.</p>
+
+<p>그래서 우리는 dropbox를 쓸 예정이다.</p>
+
+<p>하지만 여기서 의문이 들것이다.</p>
+
+<p>왜 dropbox같은 스토리지 서비스로 연동을 해야하지?</p>
+
+<p>markdown을 포스팅하고 관리해주는 인터넷서비스를 사용하면 되지 않나요?</p>
+
+<p>물론 나도 알아보지 않은건 아니다.</p>
+
+<p>내가 처음 markdown을 알게 되었을 때 그런 서비스를 찾기위해 많은 검색을 해보고 써보았다.</p>
+
+<p>하지만 그럴 떄마다 항상 아쉬움을 느꼈다.</p>
+
+<p>일단 그런 서비스를 이용하게 되면 가독성을 더 높일 수 있음에도 불구하고</p>
+
+<p>단조로운 markdown 즉, 예쁘지 않은 markdown을 써야하고, 미리보기가 지원되지 않고</p>
+
+<p>파일을 폴더에서 관리하는 것처럼 일목요연하게 관리할 수가 없으며</p>
+
+<p>페이지를 이동하면서 로딩시간이 걸리는 문제등이 생긴다.</p>
+
+<p>그래도 요즘에는 <a href="https://medium.com/">Meidum</a> 이나 <a href="https://velog.io/">velog</a> 같은 서비스가 생겨나면서 조금씩 나아지고 있다.</p>
+
+<p>여기까지 읽으셨다면 왜 클라우드 서비스를 쓰는지 아셨을거라고 생각합니다.</p>
+
+<p>위에 발생하는 모든 문제를 markdown preview enhanced + dropbox로 해결할 수 있습니다.</p>
+
+<p>밑에는 클라우드 소개 글입니다. 필요없으시면 skip 해주세요.</p>
+
+<h1 id="다양한-클라우드-스토리지-서비스">다양한 클라우드 스토리지 서비스</h1>
+
+<h5 id="dropbox"><a href="https://www.dropbox.com/">dropbox</a></h5>
+
+<p>기본 2GB 제공
+친구 추천시 1명당 500MB, 최대 16GB까지 업그레이드 할 수 있다.</p>
+
+<p>2GB밖에 제공하지 않는 단점이 있지만
+개발자로서 dropbox만큼 좋은게 없다.
+모든 OS에서 실시간 연동이 가능하며 정말 직관적이고 PC에서 파일을 관리하는 듯한 느낌을 받을 수 있다.</p>
+
+<p>내가 쓰는 클라우드로 처음 클라우드를 써야겠다고 결심하고, 결제할 때 많은 망설임이 있었지만 지금은 너무 만족하고 쓰고 있다.
+정말 삶의 질이 달라지는걸 느낀다.</p>
+
+<p>dropbox가 싫은 사람도 있을 것입니다.
+그래서 일단 준비해 두었습니다.
+이것들이 잘 연동되는지는 내가 쓰질 않아서 잘 모르기 때문에 혹시 써보실 마음이 있다면 써보시고 애기해주세요.😃</p>
+
+<ol>
+  <li><a href="https://cloud.naver.com/">Naver Cloud</a></li>
+  <li><a href="https://www.google.com/intl/ko_ALL/drive/">Google Drive</a></li>
+  <li><a href="https://file.toast.com/">Toast File</a></li>
+</ol>
+
+<h1 id="파일-동기화하기">파일 동기화하기</h1>
+
+<p>일단 동기화를 하기전에 dropbox를 설치를 해야합니다.</p>
+
+<p>설치를 할려면 dropbox 회원가입을 하고 로그인 해주세요.</p>
+
+<p>로그인 하셨으면 오른쪽 하단에 <code class="highlighter-rouge">...</code> 표시를 눌러주시면 설치 항목을 보실 수 있습니다</p>
+
+<p><img src="https://i.imgur.com/rwsneoL.png" alt="설치" /></p>
+
+<p>설치를 눌러 주시면 다음과 같이 다운로드 화면을 보실 수 있습니다.</p>
+
+<p><img src="https://i.imgur.com/iZ0nZRk.png" alt="다운로드 화면" /></p>
+
+<p>다운로드 버튼을 눌러서 설치해주세요.</p>
+
+<p>설치를 다 하셨으면 이제 로컬에 있는 pc와 dropbox를 동기화 시킬 수 있습니다.</p>
+
+<p>폴더에 들어가시면 dropbox 표시를 보실 수 있습니다.</p>
+
+<p><img src="https://i.imgur.com/Zk6UKcc.png" alt="표시" /></p>
+
+<p>이제 저 폴더안에 내가 동기화 시키고 싶은 파일들을 생성하거나 가져다 놓으면 자동으로 dropbox가 동기화 됩니다.</p>
+
+<p>굳이 저 위치가 아니라 다른 위치로 설정하고 싶으시면 설정 할 수 있습니다.</p>
+
+<p>윈도우 오른쪽 창 아래에 보면 dropbox표시를 눌러주고 검은색으로 색칠되어 있는 부분을 눌러 줍니다.</p>
+
+<p><img src="https://i.imgur.com/R3LWbtp.png" alt="버튼" /></p>
+
+<p>그럼 메뉴창이 뜰건데 <code class="highlighter-rouge">환경설정</code> 버튼을 눌러 줍니다.</p>
+
+<p><img src="https://i.imgur.com/GRiHkp5.png" alt="환경설정" /></p>
+
+<p>그리고 동기화버튼을 눌러주세요.</p>
+
+<p>여기서 방금 그 dropbox폴더의 위치를 바꿀 수 있고, 모두 동기화 하는 것이 아닌 내가 원하는 폴더만 동기화 하도록 <code class="highlighter-rouge">선택적 동기화</code>를 설정할 수도 있습니다.</p>
+
+<p><img src="https://i.imgur.com/lp5Jkgt.png" alt="설정" /></p>
+
+<p>그리고 업로드 속도를 늘리고 싶으시면 대역폭 버튼을 누른뒤</p>
+
+<p>제안 안함을 눌러주세요.</p>
+
+<p><img src="https://i.imgur.com/HL6pH9f.png" alt="업로드" /></p>
+
+<p>여기까지 하셨으면 동기화는 이제 걱정하지 안하셔도 됩니다.</p>
+
+<p>앞으로 삭제되는 걱정을 없애고 싶으것은 dropbox폴더에서 vscode를 열고 편집하시면 컴퓨터가 도중에 꺼져도 걱정하지 않으실 수 있습니다.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" data-id="/2019/01/02/how-to-use-markdown">
+            <div class="card__container card__container--closed">
+              <svg
+                class="card__image"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 1920 1200"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <defs>
+                  <clipPath id="/2019/01/02/how-to-use-markdown-clip-path">
+                    <polygon
+                      class="clip"
+                      points="0,1200 0,0 1920,0 1920,1200"
+                    ></polygon>
+                  </clipPath>
+                </defs>
+                <image
+                  clip-path="url(#/2019/01/02/how-to-use-markdown-clip-path)"
                   width="1920"
                   height="1200"
                   xlink:href="/athi/img/a.jpg"
@@ -349,16 +512,154 @@
                       src="/athi/img/authors/athi.png"
                     />
                     <span class="meta__author">Athi</span>
-                    <span class="meta__date">2019-01-03</span>
+                    <span class="meta__date">2019-01-02</span>
                   </div>
-                  <h1 id="markdwon">Markdwon</h1>
+                  <h1 id="참고문서">참고문서</h1>
+
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics?id=syntax-guide">https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics?id=syntax-guide</a></p>
+
+<h1 id="markdown이란">Markdown이란?</h1>
+
+<blockquote>
+  <p># 또는 *와 같은 특수문자들을 이용해서 보다 빠르고 쉽게, 사전에 미리 정의해둔 스타일을 입히는 것이다.</p>
+</blockquote>
+
+<h1 id="굳이-markdown을-써야하는가">굳이 Markdown을 써야하는가?</h1>
+
+<p>결론부터 말하면 글을 쓰는데 당신의 시간을 줄여줄 것이다.</p>
+
+<p>처음에는 뭔가 어색하고 어렵게 느껴질 수 있다.</p>
+
+<p>그게 정상이다 모든 처음하는 것은 어색하고 어렵다.</p>
+
+<p>하지만 1~2시간만 사용하다보면 느낄 것이다.</p>
+
+<p>와~~ 내가 이 좋은걸 이제야 알았지 하고 말이다.</p>
+
+<p>처음 markdown을 만났을 때, 정말 보물을 발견한것처럼 기뻤다.</p>
+
+<p>이 강의를 만든것도 개발자금이 없어서 돈을 보태기위해 만든것도 있지만,</p>
+
+<p>내가 보물을 발견했던 이 기쁨을 개발자 뿐만 아니라 모든 사람들에게 공유하고 싶어서이기도 하다.</p>
+
+<h1 id="마크다운-문법-사용법">마크다운 문법 사용법</h1>
+
+<h2 id="헤더">헤더</h2>
+
+<pre><code class="language-markdwon"># 최상된 제목태그입니다.
+## 두번째 제목 태그입니다.
+### 세번째 제목 태그입니다.
+#### 네번째 제목 태그입니다.
+##### 다섯번째 제목 태그입니다.
+###### 여섯번째 제목 태그입니다.
+</code></pre>
+
+<h2 id="강조">강조</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">_This text will be italic_</span>
+<span class="ge">_This will also be italic_</span>
+
+<span class="gs">**This text will be bold**</span>
+<span class="gs">**This will also be bold**</span>
+
+<span class="ge">_You **can** combine them_</span>
+
+~~This text will be strikethrough~~
+</code></pre></div></div>
+
+<h2 id="리스트">리스트</h2>
+
+<h3 id="순서가-없는-리스트">순서가 없는 리스트</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+</code></pre></div></div>
+
+<h3 id="순서가-있는-리스트">순서가 있는 리스트</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
+</code></pre></div></div>
+
+<h2 id="이미지">이미지</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt Text](url)
+</code></pre></div></div>
+
+<h2 id="링크">링크</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[GitHub](http://github.com)
+</code></pre></div></div>
+
+<h2 id="인용구문">인용구문</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; We're living the future so
+&gt; the present is our past.
+
+</code></pre></div></div>
+
+<h2 id="가로선">가로선</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre></div></div>
+
+<h2 id="인라인-코드">인라인 코드</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I think you should use an
+`&lt;addr&gt;` element here instead.
+</code></pre></div></div>
+
+<h2 id="코드블록--구문강조">코드블록 &amp; 구문강조</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="p">.</span><span class="nf">to_html</span>
+</code></pre></div></div>
+
+<h2 id="작업">작업</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+</code></pre></div></div>
+
+<h2 id="표">표</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+</code></pre></div></div>
+
+<h2 id="이모지">이모지</h2>
+
+<p><a href="https://emojipedia.org/">https://emojipedia.org/</a>
+<a href="https://www.emojiengine.com/ko/">https://www.emojiengine.com/ko/</a></p>
 
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="card" data-id="/2019/01/02/install-vscode">
+          <div class="card" data-id="/2019/01/01/install-vscode">
             <div class="card__container card__container--closed">
               <svg
                 class="card__image"
@@ -368,7 +669,7 @@
                 preserveAspectRatio="xMidYMid slice"
               >
                 <defs>
-                  <clipPath id="/2019/01/02/install-vscode-clip-path">
+                  <clipPath id="/2019/01/01/install-vscode-clip-path">
                     <polygon
                       class="clip"
                       points="0,1200 0,0 1920,0 1920,1200"
@@ -376,7 +677,7 @@
                   </clipPath>
                 </defs>
                 <image
-                  clip-path="url(#/2019/01/02/install-vscode-clip-path)"
+                  clip-path="url(#/2019/01/01/install-vscode-clip-path)"
                   width="1920"
                   height="1200"
                   xlink:href="/athi/img/a.jpg"
@@ -395,13 +696,13 @@
                       src="/athi/img/authors/athi.png"
                     />
                     <span class="meta__author">Athi</span>
-                    <span class="meta__date">2019-01-02</span>
+                    <span class="meta__date">2019-01-01</span>
                   </div>
                   <h1 id="vscode">VScode</h1>
 
 <h2 id="vscode란">VSCode란?</h2>
 
-<p>메모장은 모든 사람이 아실 겁니다.
+<p>메모장은 모두들 아실 겁니다.
 메모장을 다른말로 <code class="highlighter-rouge">텍스트 편집기</code>라고도 하는데</p>
 
 <p>VSCode는 개발자를 위한 <code class="highlighter-rouge">텍스트 편집기</code>일 뿐입니다.
@@ -805,11 +1106,12 @@ Markdown Preview Enhanced: Extend Parser을 검색 후 눌러 줍니다.</p>
 
 <p>다음강의에 설명해드리겠습니다.</p>
 
-<hr />
+<h1 id="customizing">Customizing</h1>
 
 <p>위의 코드는 제가 삽질하면서 만든 코드이고 나중에 따로 자기만의 스타일을 만드시고 싶은분들은 아래 문서를 참조하시면 됩니다.</p>
 
-<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/">Markdown Preivew Enhanced 문서</a></p>
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css">Customize CSS</a>
+<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser">Extend Markdown Parser</a></p>
 
                 </div>
               </div>
@@ -1065,12 +1367,41 @@ ex) <code class="highlighter-rouge">ls</code></p>
                   </div>
                   <h1 id="강의-개요">강의 개요</h1>
 
-<p>5년 동안 개발을 하면서 정말 많은 삽질을 통해 겨우겨우 알아내 기술이자 노하우이고 보물입니다.
-사실 정말 나만 간직하고 싶지만 개발할 자금이 없어서 강의를 냅니다.</p>
+<h2 id="해왔던-고민">해왔던 고민</h2>
 
-<p>5만원</p>
+<p>개발을 시작할 때부터 지금까지 개발하면서 항상 느꼈던게</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f2hYXC1A5Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>내가 배운것들을 어떻게 하면 잘 정리할 수 있을까?</p>
+
+<p>어떻게 남들이 볼 때 한눈에 작성을 할 수 있을까?</p>
+
+<p>비밀번호나 사적인 기록같은 것은 어떻게 보관해야할까?</p>
+
+<p>개발만 하기에도 시간이 부족한데 어떻게 하면 더 빠르게 작성할 수 있는 방법은 없나?</p>
+
+<p>내가 작성한 기록들을 잃어버리지 않고 무료로 보관할 수는 없는건가?</p>
+
+<h2 id="강의를-만든-이유">강의를 만든 이유</h2>
+
+<p>이 강의 안에 들어있는 내용은 3년 동안 개발을 하는동안 어떻게 배운것들을 기록할지 많은 고민을 하고 정말 많은 삽질을 통해 겨우겨우 알아내 주옥같은 정보이자 노하우이고 보물입니다.</p>
+
+<p>그럼에도 불구하고 공개하는 이유는</p>
+
+<p>그동안 이러한 강의가 있는지도 많이 찾아봤지만 찾을 수가 없었습니다.</p>
+
+<p>또 저와같은 시행착오를 겪지 않았으면 해서이기도 합니다.</p>
+
+<p>여기까지 알기까지 많은 삽질을 했는데 이것 개발을 배우기 시작했을 때부터 알았다면 얼마나 좋았을까?</p>
+
+<p>그랬다면 1년동안 학교다니면서 배운 정리한 자료들을 잊어버리지 않아도 됬을텐데…</p>
+
+<p>여러 만족하지 못하는 블로그를 개설하면서 뒤죽박죽된 자료들을 다시 정리하는 시간을 아낄 수 있었을 텐데…</p>
+
+<p>이제 막 개발을 배우기 시작한 사람이라면 다른 기술강의 무엇보다 가장 필요한 강의라고 생각합니다.</p>
+
+<p>강의비용: 5만원</p>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/f2hYXC1A5Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 <h1 id="이-강의가-필요한-사람들">이 강의가 필요한 사람들</h1>
 
@@ -1105,6 +1436,9 @@ ex) <code class="highlighter-rouge">ls</code></p>
   <li>
     <p>나만의 블로그를 서버비용 1도 없이 가지고 싶으신 분들</p>
   </li>
+  <li>
+    <p>눈이 즐거운 글을 적고 싶으신 분들</p>
+  </li>
 </ul>
 
 <h1 id="사전-지식-html-javascript-css-기본적인-지식">사전 지식: html, javascript, css 기본적인 지식</h1>
@@ -1120,7 +1454,7 @@ ex) <code class="highlighter-rouge">ls</code></p>
 <h1 id="이것을-배움으로서-얻을-수-있는-것들">이것을 배움으로서 얻을 수 있는 것들</h1>
 
 <blockquote>
-  <p>5년동안 개발을 하면서 효율적으로 글쓰는 노하우, 블로그까지를 단 하루만에 습득할 수 있게 해준다.</p>
+  <p>3년동안 개발을 하면서 효율적으로 글쓰는 노하우, 블로그까지를 단 하루만에 습득할 수 있게 해준다.</p>
 </blockquote>
 
 <blockquote>

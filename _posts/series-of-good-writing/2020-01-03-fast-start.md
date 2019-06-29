@@ -33,8 +33,4 @@ date: 2020-01-01 12:12:12
 2. [Google Cloud]()
 3. [Toast File](https://file.toast.com/)
 
-# 마크다운
-
-## 마크다운 문법(Markdown Syntax)이란?
-
 # Jekyll 설치하기

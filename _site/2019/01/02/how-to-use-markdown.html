@@ -1,0 +1,139 @@
+<h1 id="참고문서">참고문서</h1>
+
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics?id=syntax-guide">https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics?id=syntax-guide</a></p>
+
+<h1 id="markdown이란">Markdown이란?</h1>
+
+<blockquote>
+  <p># 또는 *와 같은 특수문자들을 이용해서 보다 빠르고 쉽게, 사전에 미리 정의해둔 스타일을 입히는 것이다.</p>
+</blockquote>
+
+<h1 id="굳이-markdown을-써야하는가">굳이 Markdown을 써야하는가?</h1>
+
+<p>결론부터 말하면 글을 쓰는데 당신의 시간을 줄여줄 것이다.</p>
+
+<p>처음에는 뭔가 어색하고 어렵게 느껴질 수 있다.</p>
+
+<p>그게 정상이다 모든 처음하는 것은 어색하고 어렵다.</p>
+
+<p>하지만 1~2시간만 사용하다보면 느낄 것이다.</p>
+
+<p>와~~ 내가 이 좋은걸 이제야 알았지 하고 말이다.</p>
+
+<p>처음 markdown을 만났을 때, 정말 보물을 발견한것처럼 기뻤다.</p>
+
+<p>이 강의를 만든것도 개발자금이 없어서 돈을 보태기위해 만든것도 있지만,</p>
+
+<p>내가 보물을 발견했던 이 기쁨을 개발자 뿐만 아니라 모든 사람들에게 공유하고 싶어서이기도 하다.</p>
+
+<h1 id="마크다운-문법-사용법">마크다운 문법 사용법</h1>
+
+<h2 id="헤더">헤더</h2>
+
+<pre><code class="language-markdwon"># 최상된 제목태그입니다.
+## 두번째 제목 태그입니다.
+### 세번째 제목 태그입니다.
+#### 네번째 제목 태그입니다.
+##### 다섯번째 제목 태그입니다.
+###### 여섯번째 제목 태그입니다.
+</code></pre>
+
+<h2 id="강조">강조</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">_This text will be italic_</span>
+<span class="ge">_This will also be italic_</span>
+
+<span class="gs">**This text will be bold**</span>
+<span class="gs">**This will also be bold**</span>
+
+<span class="ge">_You **can** combine them_</span>
+
+~~This text will be strikethrough~~
+</code></pre></div></div>
+
+<h2 id="리스트">리스트</h2>
+
+<h3 id="순서가-없는-리스트">순서가 없는 리스트</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+</code></pre></div></div>
+
+<h3 id="순서가-있는-리스트">순서가 있는 리스트</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
+</code></pre></div></div>
+
+<h2 id="이미지">이미지</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt Text](url)
+</code></pre></div></div>
+
+<h2 id="링크">링크</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[GitHub](http://github.com)
+</code></pre></div></div>
+
+<h2 id="인용구문">인용구문</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; We're living the future so
+&gt; the present is our past.
+
+</code></pre></div></div>
+
+<h2 id="가로선">가로선</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre></div></div>
+
+<h2 id="인라인-코드">인라인 코드</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I think you should use an
+`&lt;addr&gt;` element here instead.
+</code></pre></div></div>
+
+<h2 id="코드블록--구문강조">코드블록 &amp; 구문강조</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="p">.</span><span class="nf">to_html</span>
+</code></pre></div></div>
+
+<h2 id="작업">작업</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+</code></pre></div></div>
+
+<h2 id="표">표</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+</code></pre></div></div>
+
+<h2 id="이모지">이모지</h2>
+
+<p><a href="https://emojipedia.org/">https://emojipedia.org/</a>
+<a href="https://www.emojiengine.com/ko/">https://www.emojiengine.com/ko/</a></p>
