@@ -1,5 +1,5 @@
 ---
-title: "#3 Markdown 사용법"
+title: "#2 Markdown 사용법"
 subtitle: "How to use Markdown"
 author: "Athi"
 avatar: "/img/authors/athi.png"

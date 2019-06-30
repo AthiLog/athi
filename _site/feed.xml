@@ -6,9 +6,39 @@
         <link>http://localhost:4000/athi/</link>
         <atom:link href="http://localhost:4000/athi/feed.xml" rel="self"
         type="application/rss+xml"/>
-        <pubDate>Sun, 30 Jun 2019 09:36:59 +0900</pubDate>
-        <lastBuildDate>Sun, 30 Jun 2019 09:36:59 +0900</lastBuildDate>
+        <pubDate>Sun, 30 Jun 2019 14:35:33 +0900</pubDate>
+        <lastBuildDate>Sun, 30 Jun 2019 14:35:33 +0900</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
+        
+        <item>
+            <title>모든 폴더에서 도커 명령어 사용하기</title>
+            <description>&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
+
+&lt;p&gt;도커를 설치하게 되면 도커명령어는&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Program Files\Docker Toolbox&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;에서만 사용이 가능한데 이것을 모든 폴더에서 사용할 수 있도록 변경할려면 환경 변수를 설정해주어야 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;경로&quot;&gt;경로&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;내컴퓨터 -&amp;gt; 속성 -&amp;gt; 고급 시스템 설정 -&amp;gt; 환경변수 -&amp;gt; 새로만들기&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;설정&quot;&gt;설정&lt;/h3&gt;
+
+&lt;p&gt;변수이름: docker
+변수값: C:\Program Files\Docker Toolbox&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/MUaX5AP.png&quot; alt=&quot;도커설정&quot; /&gt;&lt;/p&gt;
+</description>
+            <pubDate>Sun, 30 Jun 2019 12:12:12 +0900</pubDate>
+            <link>http://localhost:4000/athi#/2019/06/30/docker-environment.html</link>
+            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/30/docker-environment.html</guid>
+            
+            <category>docker</category>
+            
+            
+        </item>
         
         <item>
             <title>리액트 네이티브 animated</title>
@@ -1705,98 +1735,6 @@ justifyContent는 세로로 가운데 정렬
             <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/04/react-native-align-center.html</guid>
             
             <category>react-native</category>
-            
-            
-        </item>
-        
-        <item>
-            <title>#3 Jekyll폴더구조</title>
-            <description>&lt;p&gt;Jekyll의 디렉토리 구조에 대해 살펴보자. 개인적으로는 Jekyll의 디렉토리 구조만 대충 알아도 거의 50% 이상은 알게 된 셈이라고 생각할 정도로 Jekyll은 직관적이고 쉽다.
-Jekyll 폴더를 생성하면 다음과 같은 파일이 생성된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;config.yml
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;data
-| └── members.yml
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;drafts
-| ├── begin-with-the-crazy-ideas.md
-| └── on-simplicity-in-technology.md
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;includes
-| ├── footer.html
-| └── header.html
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;layouts
-| ├── default.html
-| └── post.html
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;posts
-| ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-| └── 2009-04-26-barcamp-boston-4-roundup.md
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;sass
-| ├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;base.scss
-| └── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;layout.scss
-├── &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;site
-├── .jekyll-metadata
-└── index.html &lt;span class=&quot;c&quot;&gt;# 'index.md' 이어도 되지만 올바른 YAML 머리말이 필요합니다&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;파일/디렉토리&lt;/th&gt;
-      &lt;th&gt;기능 &amp;amp; 역할&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_config.yml&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://jekyllrb-ko.github.io/docs/configuration/&quot;&gt;환경설정&lt;/a&gt; 정보를 보관한다. 명령어를 실행할 때 여러가지 옵션들을 추가할 수도 있지만, 그렇게 따로 외우는 것보다 이 파일에 정의해두는게 더 편리하다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_drafts&lt;/td&gt;
-      &lt;td&gt;초안이란 아직 게시하지 않은 포스트를 말한다. 파일명 형식에 날짜가 없다: &lt;code class=&quot;highlighter-rouge&quot;&gt;title.MARKUP&lt;/code&gt;. 사용 방법은 &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/drafts/&quot;&gt;초안 활용하기&lt;/a&gt;를 참고하라.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_includes&lt;/td&gt;
-      &lt;td&gt;재사용하기 위한 파일을 담는 디렉토리로서, 필요에 따라 포스트나 레이아웃에 쉽게 삽입할 수 있다. {% include file.ext %}  와 같이 Liquid 태그를 사용하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/file.ext&lt;/code&gt; 파일에 담긴 코드가 삽입된다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_layouts&lt;/td&gt;
-      &lt;td&gt;포스트를 포장할 때 사용하는 템플릿이다. 각 포스트 별로 레이아웃을 선택하는 기준은 &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/frontmatter/&quot;&gt;YAML 머리말&lt;/a&gt;이며, 자세한 내용은 다음 섹션에서 설명한다. &lt;code class=&quot;highlighter-rouge&quot;&gt;{{content}}&lt;/code&gt;와 같이 Liquid 태그를 사용하면 페이지에 컨텐츠가 주입된다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_posts&lt;/td&gt;
-      &lt;td&gt;한마디로 말하면, 당신의 컨텐츠다. 중요한 것은 파일들의 명명규칙인데, 반드시 이 형식을 따라야 한다: &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;. &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/permalinks/&quot;&gt;고유주소&lt;/a&gt;는 포스트 별로 각각 정의할 수 있지만, 날짜와 마크업 언어 종류는 오로지 파일명에 의해 결정된다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_data&lt;/td&gt;
-      &lt;td&gt;사이트에 사용할 데이터를 적절한 포맷으로 정리하여 보관하는 디렉토리. Jekyll 엔진은 이 디렉토리에 있는 (확장자와 포맷이 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yml&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.json&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt; 인) 모든 데이터 파일을 자동으로 읽어들여 `site.data` 로 사용할 수 있도록 만든다. 만약 이 디렉토리에 &lt;code class=&quot;highlighter-rouge&quot;&gt;members.yml&lt;/code&gt; 라는 파일이 있다면, &lt;code class=&quot;highlighter-rouge&quot;&gt;site.data.members&lt;/code&gt; 라고 입력하여 그 컨텐츠를 사용할 수 있다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_sass&lt;/td&gt;
-      &lt;td&gt;Sass 조각파일들로, 프로젝트의 &lt;code class=&quot;highlighter-rouge&quot;&gt;main.scss&lt;/code&gt; 에 임포트할 수 있으며 임포트 후에는 다시 하나의 스타일시트(&lt;code class=&quot;highlighter-rouge&quot;&gt;main.scss&lt;/code&gt;)로 가공되어 사이트에 사용되는 스타일들을 정의한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;_site&lt;/td&gt;
-      &lt;td&gt;Jekyll 이 변환 작업을 마친 뒤 생성된 사이트가 저장되는 (디폴트) 경로이다. 대부분의 경우, 이 경로를 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; 에 추가하는 것은 괜찮은 생각이다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;.jekyll-metadata&lt;/td&gt;
-      &lt;td&gt;Jekyll 은 이 파일을 참고하여, 마지막으로 빌드한 이후에 한번도 수정되지 않은 파일은 어떤 것인지, 다음 빌드 때 어떤 파일을 다시 생성해야 하는지 판단할 수 있다. 생성된 사이트에 이 파일이 복사되지는 않는다. 대부분의 경우, 이 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; 에 추가하는 것은 괜찮은 생각이다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;index.html 또는 index.md 및 다른 HTML, 마크다운, Textile 파일&lt;/td&gt;
-      &lt;td&gt;Jekyll 은 &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/frontmatter/&quot;&gt;YAML 머리말&lt;/a&gt; 섹션을 가진 모든 파일을 찾아 변환 작업을 수행한다. 위에서 언급하지 않은 다른 디렉토리나 사이트의 루트 디렉토리에 있는 모든 &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.textile&lt;/code&gt; 이 여기에 해당한다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;다른 파일/폴더&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; 나 &lt;code class=&quot;highlighter-rouge&quot;&gt;images&lt;/code&gt; 폴더, &lt;code class=&quot;highlighter-rouge&quot;&gt;favicon.ico&lt;/code&gt; 파일같이 앞서 언급하지 않은 다른 모든 디렉토리와 파일들은 있는 그대로 생성된 사이트에 복사한다. 다른 사람들이 만든 사이트는 어떤식으로 생겼는지 궁금하다면, &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/sites/&quot;&gt;Jekyll 을 사용하는 사이트들&lt;/a&gt;이 이미 많이 있으니 살펴보도록 한다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-            <pubDate>Mon, 03 Jun 2019 23:12:12 +0900</pubDate>
-            <link>http://localhost:4000/athi#/2019/06/03/jekyll-structure.html</link>
-            <guid isPermaLink="true">http://localhost:4000/athi#/2019/06/03/jekyll-structure.html</guid>
-            
-            <category>jekyll</category>
             
             
         </item>

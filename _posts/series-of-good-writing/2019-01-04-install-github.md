@@ -1,5 +1,5 @@
 ---
-title: "#1 github설치하기 "
+title: "#4 github설치하기 "
 subtitle: "How to install Github"
 author: "Athi"
 avatar: "/img/authors/athi.png"
@@ -58,6 +58,11 @@ VSCode Terminal을 보는 방법은 `` Ctrl + ` `` 이다.
 [github사이트](https://github.com/)
 
 첫화면부터 가입할 수 있다.
+
+가입을 할 때 Username을 입력하실 때 자신을 대표할만한 이름을 적어주세요.
+
+나중에 인터넷 주소 맨 앞을 나타낼 것입니다.
+
 ![깃가입](https://i.imgur.com/dKgn6HX.png)
 
 Unlimited public repositores for free를 선택한다.
@@ -109,9 +114,13 @@ Documents로 이동한 걸 볼 수 있다.
 
 클릭을 했으면 https://github.com/AthiLog/athi.git가 복사 되었을 것이다.
 
-다시 git bash로 돌아와서 명령어를 적어준다.
+다시 git bash로 돌아와서 다음 명령어를 적어준다.
 
-![git clone](https://i.imgur.com/uPdMM0a.png)
+`git clone --branch lecture https://github.com/AthiLog/athi.git`
+
+![git 가져오기](https://i.imgur.com/f1cO68W.png)
+
+--branch lecture 옵션을 써준 이유는 master branch(master폴더)가 아닌 lecture branch(lecture 폴더를) 가져올 것이기 때문이다.
 
 그럼 이제 내 문서에 들어가보면 github에서 가져온 파일들이 생길 것이다.
 

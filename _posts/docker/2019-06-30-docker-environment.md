@@ -3,9 +3,9 @@ title: "모든 폴더에서 도커 명령어 사용하기"
 subtitle: "Use docker command on everywhere"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/img/f.jpg"
-tags: [goodwriting-series]
-date: 2019-06-30 08:12:12
+image: "/img/e.jpg"
+tags: [docker]
+date: 2019-06-30 03:12:12
 ---
 
 ### 문제

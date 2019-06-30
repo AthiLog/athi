@@ -1,5 +1,5 @@
 ---
-title: "#1 github설치하기 "
+title: "#5 ruby 설치하기 "
 subtitle: "How to install Github"
 author: "Athi"
 avatar: "/img/authors/athi.png"

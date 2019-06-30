@@ -1,5 +1,5 @@
 ---
-title: "#2 VSCode 설치하기"
+title: "#1 VSCode 설치하기"
 subtitle: "How to install VScode"
 author: "Athi"
 avatar: "/img/authors/athi.png"
