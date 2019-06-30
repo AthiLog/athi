@@ -5,7 +5,7 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series, github]
-date: 2019-01-01 12:12:12
+date: 2019-01-04 12:12:12
 ---
 
 # github
@@ -32,6 +32,26 @@ date: 2019-01-01 12:12:12
 git GUI가 필요없는 사람은 체크 해제를 해준다.
 
 나머지는 다 Next를 누른다.
+
+## VSCode에서 bash설정하기
+
+![bash설정](https://i.imgur.com/KnT3hqE.png)
+
+![bash설정2](https://i.imgur.com/6wLcAyh.png)
+
+Edit in settings.json을 클릭해준다.
+
+`terminal.integrated.shell.windows` 부분을 다음과 같이 수정해준다.
+
+이렇게 설정하면 VSCode Terminal에서 git bash를 사용할 수 있게된다.
+
+![bash설정3](https://i.imgur.com/V2cyZqq.png)
+
+VSCode Terminal을 보는 방법은 `` Ctrl + ` `` 이다.
+
+![bash창](https://i.loli.net/2019/06/30/5d18087580d3261364.png)
+
+설정이 잘 되었으면 다음과 같은 창을 볼 수 있다.
 
 ## github 로그인하기
 

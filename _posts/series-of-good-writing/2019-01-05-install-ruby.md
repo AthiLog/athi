@@ -5,7 +5,7 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/a.jpg"
 tags: [goodwriting-series, github]
-date: 2019-01-01 12:12:12
+date: 2019-01-05 12:12:12
 ---
 
 # ruby 다운로드
