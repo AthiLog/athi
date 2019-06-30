@@ -94,3 +94,13 @@ Documents로 이동한 걸 볼 수 있다.
 ![git clone](https://i.imgur.com/uPdMM0a.png)
 
 그럼 이제 내 문서에 들어가보면 github에서 가져온 파일들이 생길 것이다.
+
+VSCode로 가져온 파일을 열어보자.
+
+![구성](https://i.imgur.com/ToGOlHI.png)
+
+위와 같은 파일구성으로 화면이 뜬다면 성공이다.
+
+위 폴더와 파일 구성을 jekyll이라고 하는데 jekyll을 서버로 실행시킬려면 ruby 개발 환경이 필요하다.
+
+다음 강의는 마지막 설치 강의로 ruby를 설치할 것이다.
