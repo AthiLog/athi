@@ -1,5 +1,5 @@
 ---
-title: "#4 github설치하기 "
+title: "#4 github설치하기"
 subtitle: "How to install Github"
 author: "Athi"
 avatar: "/img/authors/athi.png"
@@ -129,6 +129,8 @@ VSCode로 가져온 파일을 열어보자.
 ![구성](https://i.imgur.com/ToGOlHI.png)
 
 위와 같은 파일구성으로 화면이 뜬다면 성공이다.
+
+파일 목록창에 색깔이 왜 입혀져 있는지 궁금하신 분들이 있을 텐데 그건 나중에 알려드리 겠습니다.
 
 위 폴더와 파일 구성을 jekyll이라고 하는데 jekyll을 서버로 실행시킬려면 ruby 개발 환경이 필요하다.
 

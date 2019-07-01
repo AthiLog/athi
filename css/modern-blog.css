@@ -730,50 +730,56 @@ span {
   background: #ff6b6b !important;
 }
 
-.test5TagLink > code {
-  background: #ee5253 !important;
-}
-
-.test6TagLink > code {
-  background: #0abde3 !important;
-}
-
-.test7TagLink > code {
-  background: #48dbfb !important;
-}
-
-.test8TagLink > code {
-  background: #1dd1a1 !important;
-}
-
-.test9TagLink > code {
-  background: #10ac84 !important;
-}
-
-.test10TagLink > code {
-  background: #00d2d3 !important;
-}
-
-.test11TagLink > code {
-  background: #01a3a4 !important;
-}
-
-.test12TagLink > code {
-  background: #54a0ff !important;
-}
-
-.test13TagLink > code {
+.dockerTagLink > code {
   background: #2e86de !important;
 }
 
-.test14TagLink > code {
+.test1TagLink > code {
+  background: #ee5253 !important;
+}
+
+.test2TagLink > code {
+  background: #0abde3 !important;
+}
+
+.test3TagLink > code {
+  background: #48dbfb !important;
+}
+
+.test4TagLink > code {
+  background: #1dd1a1 !important;
+}
+
+.test5TagLink > code {
+  background: #10ac84 !important;
+}
+
+.test6TagLink > code {
+  background: #00d2d3 !important;
+}
+
+.test7TagLink > code {
+  background: #01a3a4 !important;
+}
+
+.test8TagLink > code {
+  background: #54a0ff !important;
+}
+
+.test9TagLink > code {
   background: #5f27cd !important;
 }
 
-.test15TagLink > code {
+.test10TagLink > code {
   background: #341f97 !important;
 }
 
+.tag2TagLink > code {
+  background: #636e72 !important;
+}
+.tag3TagLink > code {
+  background: #2d3436 !important;
+}
 /*-------------------TAG-------------------- */
 
 /*-------------------PAGINATIOn-------------------- */
