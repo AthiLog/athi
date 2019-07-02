@@ -5,7 +5,7 @@ author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/b.jpg"
 tags: [goodwriting-series]
-date: 2021-01-01 12:12:12
+date: 2019-01-01 12:12:12
 ---
 
 # VSCode Extensions
