@@ -8,23 +8,37 @@ tags: [goodwriting-series]
 date: 2000-06-03 12:12:12
 ---
 
-# 강의 개요
+<!-- 강의비용: 11만원 -->
 
-다른 어떤 프로그래밍 강의보다 가장 필요한게 이것입니다.
+# A급인재
 
-모든 프로그래밍 관련된 지식은 영어가 된다면, 영어가 되지 않아도 무료 강좌들이 많습니다.
+<div class="citeBlockQuote">
 
-하지만 내가 쌓은 데이터를 어떻게 관리하는 것이 가장
+  <blockquote cite="Steve Jobs">
+  in this field, like in a lot of fields, the difference between the worst taxi cab driver and the best taxi cab driver to get you crosstown Manhattan might be two to one. The best one will get you there in fifteen minutes, the worst one will get you there in a half an hour. Or the best cook and the worst cook, maybe it's three to one. Pick something like that.
+  In the field that I'm in the difference between the best person and the worst person is about a hundred to one or more. The difference between a good software person and a great software person is fifty to one, twenty-five to fifty to one, huge dynamic range.
 
-일반인도 따라할 수 있게 해주는 정말 떠먹여 주는 강의
+  </blockquote>
 
----
+</div>
 
-강의 결제를 하시면 벌고 시작합니다.
+위 글은 [스티브잡스 인터뷰](https://www.computerworld.com/article/2498543/steve-jobs-interview-one-on-one-in-1995.html?page=3) 기사에서 발췌해 온 것입니다.
 
-evernote나 notion을 보면 한달에 만원가량 결제를 하게 되는데 이 강의
+A급 인재를 택시기사, 요리사, IT엔지니어 부문으로 나눠 비교했는데, 뉴욕에서 최고와 최악의 택시기사가 각각 목적지에 도달하는 실력 차이가 2대 1이라고 가정할 때 조금 더 창의성이 필요한 요리 부문에서 최고와 최악의 실력차는 3대 1 정도로 볼 수 있을 것이다. 하지만 잡스 자신이 일하고 잇는 IT업계에서 최고와 최악의 차이는 50대 1 이상일 수 있다고, 그는 강조했습니다.
 
-## 해왔던 고민
+과연 저 만큼의 차이가 나는 이유가 뭘까요?
+
+물론 수십가지의 이유가 있겠지만 크게 두가지가 있다고 생각합니다.
+
+1. 일을 사랑하는 열정
+
+2. IT분야는 실력이 늘수록 시간이 걸리는 모든일을 자동화 시킬 수 있다.
+
+제 강의를 들을 분들은 모두 배우는것에 열정이 있으실거라고 믿겠습니다😁
+
+그렇다면 이제 어떻게 자동화시키는지 배우기만 하면 끝!!
+
+# 해왔던 고민
 
 개발을 시작할 때부터 지금까지 개발하면서 항상 느꼈던게
 
@@ -38,7 +52,7 @@ evernote나 notion을 보면 한달에 만원가량 결제를 하게 되는데 �
 
 내가 작성한 기록들을 잃어버리지 않고 무료로 보관할 수는 없는건가?
 
-## 강의를 만든 이유
+# 강의를 만든 이유
 
 이 강의 안에 들어있는 내용은 3년 동안 개발을 하는동안 어떻게 배운것들을 기록할지 많은 고민을 하고 정말 많은 삽질을 통해 겨우겨우 알아내 주옥같은 정보이자 노하우이고 보물입니다.
 
@@ -56,9 +70,57 @@ evernote나 notion을 보면 한달에 만원가량 결제를 하게 되는데 �
 
 이제 막 개발을 배우기 시작한 사람이라면 다른 기술강의 무엇보다 가장 필요한 강의라고 생각합니다.
 
-강의비용: 6만원
+# 강의목표
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/f2hYXC1A5Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+코딩의 문외한도 따라할 수 있게 만드는게 저의 강의의 목표입니다.
+
+<div class="embed-container">
+  <iframe
+      src="https://player.vimeo.com/video/345617771"
+      width="500"
+      height="281"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen>
+  </iframe>
+</div>
+
+위 영상 수준까지 만들 수 있는게 목표이고
+
+이 강의가 끝나고 나면 아래와 같은 사이트들을 순식간에 만들 수 있습니다.
+
+![목표1](https://i.imgur.com/awh7zuc.png)
+
+![목표2](https://i.imgur.com/ZW18iyR.jpg)
+
+![목표3](https://i.imgur.com/rBLOHXM.jpg)
+
+![목표4](https://i.imgur.com/qbbb3a7.jpg)
+
+# 이 강의를 꼭 들어야 하는 이유
+
+강의 결제를 하시면 일단 벌고 시작하시는 겁니다.
+
+evernote나 notion을 보면 한달에 만원가량 결제를 하게 되는데 이 강의를 들으시면 평생 무제한으로 걱정없이 글을 보관할 수 있습니다.
+
+약 파는거 아니냐구요?
+
+맞습니다.
+
+<div class="citeBlockQuote">
+
+  <blockquote cite="웹툰:니편 내편">
+  사람에겐 각자의 입장이 있을 뿐입니다.<br />
+  누구나 자신의 입장이 옳은 것이고... <br />
+  언제든 같은 입장에서 같은 목적을 갖는다면 다시 같은 편이 됩니다.
+  </blockquote>
+
+</div>
+
+저의 입장은 이게 분명히 여러분들에게 도움이될것이다라고 생각하는 것이고
+제 강의를 들어주시는 여러분들은 같은 편 입니다.
+저는 같은 편에게 만족할만 결과를 주기위해 최선을 다할 뿐입니다.
 
 # 이 강의가 필요한 사람들
 
@@ -108,31 +170,17 @@ html, css이란 무엇이고 어떠한 태그가 있는지 대충알고 html에�
 
 > 나는 원래 게을러서 글쓰는게 싫은 사람인데 글쓰는게 즐거워질 수 있다.
 
-> 가독성 좋은 폰트, 특히 가독성 좋은 폰트하면 영어와 관련된 폰트는 찾아보면 쉽게 구할 수 있지만, 한글을 포함한 폰트로 가독성 좋은 폰트를 찾는것은 쉽지가 않다. 정말 폰트만 찾는 것도 수십시간의 노력으로 찾은 것이다.
+> 가독성 좋은 폰트, 특히 가독성 좋은 폰트하면 영어와 관련된 폰트는 찾아보면 쉽게 구할 수 있지만, 한글을 포함한 폰트로 가독성 좋은 폰트를 찾는것은 쉽지가 않다. 이런 폰트 패치를 순식간에 적용시킬 수 있다.
 
 > 적절한 css(컬러) vscode에서 쓰는 css와 jekyll에서 쓰는 css는 좀 구조가 다른데, 각자가 다른모듈(개발된 결과물 구조가 다름)이기 때문이다. 따라서 이에 따라 jekyll에서는 변형된 css를 적용하는 방법
 
-> 인터넷에서 글 자체는 좋은글을 찾았지만 가독성이 너무 떨어지고, 읽기가 싫어지는 글을 만났을 때 1분안에 좋은글로 바꾸는 법
+> 인터넷에서 글 자체는 좋은글을 찾았지만 가독성이 너무 떨어지고, 읽기가 싫어지는 글을 만났을 때 30초만에 좋은글로 바꾸는 법
 
-> 클라우드환경을 통해서 글을 쓰자마자 지워질 걱정을 하지 않게 됩니다.
+> 클라우드환경을 통해서 글을 쓰자마자 지워질 걱정을 하지 않게 된다.
 
-> 개인블로그를 서버 비용 1도 없이 가질 수 있으므로 만약에 광고를 붙이면 모든 수익을 가질 수 있다
+> 개인블로그를 서버 비용 1도 없이 가질 수 있으므로 만약에 광고를 붙이면 모든 수익을 가질 수 있다.
 
-> prettier
-
-> jekyll
-
-> copycat
-
-> velog, meidum
-
-> markdown preview enhanced
-
-> [markdown을 이용한 ppt](https://slides.com/)
-
-> 가독성 있는 글이란?
-
-# 강의 목록
+# 업데이트된 강의 목록
 
 - #0 강의를 시작하기 전
 
@@ -146,25 +194,46 @@ html, css이란 무엇이고 어떠한 태그가 있는지 대충알고 html에�
 
 - #5 ruby 설치하기
 
-- #6 빠르게 만들어보고 배우기
+- #6 빠르게 만들어보고 배우기(자동화 도구 겟🤟)
 
-* vscode란?
+* #last-2 IT현실 & 개발자 초봉 3000만원 이상 받고 시작하는 법
 
-* markdown preview enhanced란?
+* #last-1 미래의 대세가될 언어
 
-* jekyll theme
-
-* markdown을 효과적으로 활용할 수 있는 블로그
-
-* 가독성 있는 글이란?
-
-* custom blog, 나만의 블로그 만들기
+* #last 가독성 있는 글이란?
 
 # 앞으로 업데이트 될 강의
 
-> 업데이트 될 강의는 무료입니다.
+> 업데이트 될 강의는 어떤게 먼저 업데이트 될지 순서가 정해지지 않았고
+> 필요에 따라 추가되거나 합쳐질 수 있습니다.
+
+- it종사자 로드맵
+
+- layout이란?
+
+- 자동으로 태그 추가하기
+
+- FrontMatter란?
+
+- jekyll syntax
+
+- jekyll plugins 설치
+
+- jekyll 폴더구조
+
+- jekyll paginator v2
+
+- 생산성으르 200%~300% 올려줄 유용한 도구들 모음
+
+- [markdown을 이용한 ppt](https://slides.com/)
+
+- 웹서핑 중 맘에 드는 글이지만 예쁘지 않은글을 순식간에 가독성 높은글로 바꾸기
+
+- 순식간에 사이트 구조 바꾸기
 
 - 블로그 방문자들이 comments를 달 수 있게 만들기
+
+- 광고 붙이기
 
 - 분석하는 도구를 추가해서 블로그를 방문하는 이용자 데이터를 분석
 
