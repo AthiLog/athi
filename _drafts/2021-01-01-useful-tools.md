@@ -3,7 +3,7 @@ title: "#번외 유용한 도구 모음"
 subtitle: "Useful Tools"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/img/a.jpg"
+image: "/img/b.jpg"
 tags: [goodwriting-series]
 date: 2021-01-01 12:12:12
 ---

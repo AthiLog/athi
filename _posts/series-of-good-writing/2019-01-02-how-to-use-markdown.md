@@ -3,7 +3,7 @@ title: "#2 Markdown 사용법"
 subtitle: "How to use Markdown"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/img/a.jpg"
+image: "/img/c.jpg"
 tags: [goodwriting-series, VScode]
 date: 2019-01-02 12:12:12
 ---

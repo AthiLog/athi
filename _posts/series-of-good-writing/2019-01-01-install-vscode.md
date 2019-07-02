@@ -3,7 +3,7 @@ title: "#1 VSCode 설치하기"
 subtitle: "How to install VScode"
 author: "Athi"
 avatar: "/img/authors/athi.png"
-image: "/img/a.jpg"
+image: "/img/b.jpg"
 tags: [goodwriting-series, VScode]
 date: 2019-01-01 12:12:12
 ---
