@@ -287,7 +287,7 @@ date: 2019-06-30 12:12:12
 
 ### commit하기전 빌드하기(html파일로 변환시키는 작업)
 
-cmd창에서 `jekyll build` 명령어나 `jekyll serve`를 입력 해주세요.
+최상위 폴더에서 `jekyll build` 명령어나 `jekyll serve`를 입력 해주세요.
 
 `jekyll serve` 명령어는 실행 후 실행창을 꺼야 합니다.
 
@@ -312,7 +312,7 @@ git remote add origin [원격지 ur]
 
 .git 파일을 생성하는 명령어 입니다.
 
-.git 파일은 현재 폴더부터 하위에 있는 폴더들에 있는 모든 파일의 변경사항을 추적(기록) 합니다.
+.git 파일은 현재 폴더부터 하위에 있는 폴더들에 있는 모든 파일의 변경사항을 추적(기록)을 시작 합니다.
 
 `git add .`
 
@@ -346,6 +346,21 @@ staged에 있는걸 commit 상태로 넘기는 명령어 입니다.
 
 `git push origin master`
 
-원격지 주소에 \_site에 있는 파일을 업로드 합니다.
+원격지 주소에 \_site에 있는 master(현재파일이 있는 폴더)를 업로드 합니다.
+
+master라는 별칭은 git init . 할 때 자동으로 생겨 납니다.
 
 ## 글을 수정하고 블로그에 다시 등록하기
+
+글을 수정하고
+
+```
+jekyll build or jekyll serve
+git add .
+git commit -m "commit"
+git push origin master
+```
+
+해주면 자동으로 블로그에 업데이트 됩니다.
+
+이로서 자동화도구를 얻으셨습니다.
