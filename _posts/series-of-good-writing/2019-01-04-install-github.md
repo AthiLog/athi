@@ -28,10 +28,10 @@ date: 2019-01-04 12:12:12
 
 ![다운로드2](https://i.imgur.com/EE2GHhK.png)
 
-여기서 반드시 git bash에 체크가 되있어야하고
-git GUI가 필요없는 사람은 체크 해제를 해준다.
+여기서 반드시 git bash에 체크가 되있어야하고  
+git GUI가 필요없는 사람은 체크 해제를 해줍니다.
 
-나머지는 다 Next를 누른다.
+나머지는 다 Next를 눌러주세요.
 
 ## VSCode에서 bash설정하기
 
@@ -39,25 +39,25 @@ git GUI가 필요없는 사람은 체크 해제를 해준다.
 
 ![bash설정2](https://i.imgur.com/6wLcAyh.png)
 
-Edit in settings.json을 클릭해준다.
+Edit in settings.json을 클릭해줍니다.
 
-`terminal.integrated.shell.windows` 부분을 다음과 같이 수정해준다.
+`terminal.integrated.shell.windows` 부분을 다음과 같이 수정해줍니다.
 
-이렇게 설정하면 VSCode Terminal에서 git bash를 사용할 수 있게된다.
+이렇게 설정하면 VSCode Terminal에서 git bash를 사용할 수 있게 됬습니다.
 
 ![bash설정3](https://i.imgur.com/V2cyZqq.png)
 
-VSCode Terminal을 보는 방법은 `` Ctrl + ` `` 이다.
+VSCode Terminal을 보는 방법은 `` Ctrl + ` `` 입니다.
 
 ![bash창](https://i.loli.net/2019/06/30/5d18087580d3261364.png)
 
-설정이 잘 되었으면 다음과 같은 창을 볼 수 있다.
+설정이 잘 되었으면 다음과 같은 창을 볼 수 있습니다.
 
 ## github 로그인하기
 
 [github사이트](https://github.com/)
 
-첫화면부터 가입할 수 있다.
+첫화면부터 가입할 수 있습니다.
 
 가입을 할 때 Username을 입력하실 때 자신을 대표할만한 이름을 적어주세요.
 
@@ -65,12 +65,12 @@ VSCode Terminal을 보는 방법은 `` Ctrl + ` `` 이다.
 
 ![깃가입](https://i.imgur.com/dKgn6HX.png)
 
-Unlimited public repositores for free를 선택한다.
-무료만으로도 충분히 많은 기능을 사용할 수 있다.
+Unlimited public repositores for free를 선택 하세요.  
+무료만으로도 충분히 많은 기능을 사용할 수 있습니다.
 ![프리](https://i.imgur.com/HDwE9lf.png)
 
-마지막으로 자기에 해당사항을 체크하고 가입한다.
-그러면 이메일에 확인 메일이 와있을 것이다.
+마지막으로 자기에 해당사항을 체크하고 가입 합니다.  
+그러면 이메일에 확인 메일이 와있을 겁니다.
 
 ![step3](https://i.imgur.com/j5R9TGE.png)
 
@@ -80,58 +80,58 @@ Unlimited public repositores for free를 선택한다.
 
 ![git bash](https://i.imgur.com/vmiDTQ3.png)
 
-`pwd` 입력시 현재 폴더 위치를 알 수 있다.
+`pwd` 입력시 현재 폴더 위치를 알 수 있습니다.
 ![pwd](https://i.imgur.com/7eQsYRz.png)
 
 ex) `/c/User/blabla~~`
 
-/c/는 c드라이브를 가르키고
-User는 c드라이브 밑에있는 User폴더를 가르킨다
-출력결과는 자기 컴퓨터마다 다 다르다
+/c/는 c드라이브를 가르키고  
+User는 c드라이브 밑에있는 User폴더를 가르킵니다.  
+출력결과는 자기 컴퓨터마다 다 다름니다.
 
-폴더간에 이동 할 때는 `cd` 명령어를 쓴다
+폴더간에 이동 할 때는 `cd` 명령어를 써주시면 됩니다.
 ex) `cd [이동할경로]`
 
-폴더간에 이동을 하면서 어떠한 파일이 있는지 알고 싶을 때 `ls`명령어를 사용하면 파일과 폴더 목록을 볼 수 있다
+폴더간에 이동을 하면서 어떠한 파일이 있는지 알고 싶을 때 `ls`명령어를 사용하면 파일과 폴더 목록을 볼 수 있습니다.
 ex) `ls`
 
-이제 우리가 데이터를 받을 경로로 이동한다.
+이제 우리가 데이터를 받을 경로로 이동합니다.
 
-나는 Documents(문서)로 가겠다.
+나는 Documents(문서)로 가겠습니다.
 ![이동](https://i.imgur.com/2c7TXKA.png)
 
-Documents로 이동한 걸 볼 수 있다.
+Documents로 이동한 걸 볼 수 있습니다.
 ![이동2](https://i.imgur.com/dCGBKXv.png)
 
-그리고 `git clone [가져올 데이터 주소]` 명령어로 데이터를 가져올 것이다.
+그리고 `git clone [가져올 데이터 주소]` 명령어로 데이터를 가져올 것 입니다.
 
-데이터를 가져올려면 무엇을 가져올지 알아야 한다.
+데이터를 가져올려면 무엇을 가져올지 알아야 합니다.
 [github athi](https://github.com/AthiLog/athi)
 
-여기에 접속해서 Clone or Download를 클릭 한뒤 복사 이미지를 클릭한다.
+여기에 접속해서 Clone or Download를 클릭 한뒤 복사 이미지를 클릭합니다.
 
 ![clone](https://i.imgur.com/DyrbTGD.png)
 
-클릭을 했으면 https://github.com/AthiLog/athi.git가 복사 되었을 것이다.
+클릭을 했으면 https://github.com/AthiLog/athi.git가 복사 되었을 것 입니다.
 
-다시 git bash로 돌아와서 다음 명령어를 적어준다.
+다시 git bash로 돌아와서 다음 명령어를 적어 주세요.
 
 `git clone --branch lecture https://github.com/AthiLog/athi.git`
 
 ![git 가져오기](https://i.imgur.com/f1cO68W.png)
 
---branch lecture 옵션을 써준 이유는 master branch(master폴더)가 아닌 lecture branch(lecture 폴더를) 가져올 것이기 때문이다.
+--branch lecture 옵션을 써준 이유는 master branch(master폴더)가 아닌 lecture branch(lecture 폴더를) 가져올 것이기 때문 입니다.
 
-그럼 이제 내 문서에 들어가보면 github에서 가져온 파일들이 생길 것이다.
+그럼 이제 내 문서에 들어가보면 github에서 가져온 파일들이 생길 겁니다.
 
-VSCode로 가져온 파일을 열어보자.
+VSCode로 가져온 파일을 열어 보세요.
 
 ![구성](https://i.imgur.com/ToGOlHI.png)
 
-위와 같은 파일구성으로 화면이 뜬다면 성공이다.
+위와 같은 파일구성으로 화면이 뜬다면 성공 입니다.
 
-파일 목록창에 색깔이 왜 입혀져 있는지 궁금하신 분들이 있을 텐데 그건 나중에 알려드리 겠습니다.
+파일 목록창에 색깔이 왜 입혀져 있는지 궁금하신 분들이 있을 텐데 그건 나중에 알려드리겠습니다.
 
-위 폴더와 파일 구성을 jekyll이라고 하는데 jekyll을 서버로 실행시킬려면 ruby 개발 환경이 필요하다.
+위 폴더와 파일 구성을 jekyll이라고 하는데 jekyll을 서버로 실행시킬려면 ruby 개발 환경이 필요합니다.
 
-다음 강의는 마지막 설치 강의로 ruby를 설치할 것이다.
+다음 강의는 마지막 설치 강의로 ruby를 설치할 겁니다.

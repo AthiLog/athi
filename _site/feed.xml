@@ -6,8 +6,8 @@
         <link>http://localhost:4000/athi/</link>
         <atom:link href="http://localhost:4000/athi/feed.xml" rel="self"
         type="application/rss+xml"/>
-        <pubDate>Tue, 02 Jul 2019 10:34:19 +0900</pubDate>
-        <lastBuildDate>Tue, 02 Jul 2019 10:34:19 +0900</lastBuildDate>
+        <pubDate>Tue, 02 Jul 2019 10:53:51 +0900</pubDate>
+        <lastBuildDate>Tue, 02 Jul 2019 10:53:51 +0900</lastBuildDate>
         <generator>Jekyll v3.8.5</generator>
         
         <item>
@@ -1632,7 +1632,7 @@ justifyContent는 세로로 가운데 정렬
 
 &lt;p&gt;전 강의에서 모든 설치를 완료하였으므로 이제 서버를 실행 시킬 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;cmd(명령 프롬프트)창을 켜도되고, bash 창을 켜서 하셔도 됩니다.
+&lt;p&gt;cmd(명령 프롬프트)창을 켜도되고, bash 창을 켜서 하셔도 됩니다.&lt;br /&gt;
 저는 cmd창을 키고 진행하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;cmd에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;dir&lt;/code&gt; 명령어는 현재폴더에 있는 목록들을 확인 할 수 있습니다.
@@ -1642,21 +1642,21 @@ justifyContent는 세로로 가운데 정렬
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4hOXykO.png&quot; alt=&quot;서버실행&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;저렇게 뜨면 잘 실행이 성공한 것이다.&lt;/p&gt;
+&lt;p&gt;저렇게 뜨면 잘 실행이 성공한 것 입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1&lt;/code&gt;은 &lt;code class=&quot;highlighter-rouge&quot;&gt;로컬주소&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;즉 인터넷을 통해 다른 컴퓨터에 접속하는 서버가 아닌 자기컴퓨터에서 접속할 수 있음을 뜻하고&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:4000&lt;/code&gt;은 &lt;code class=&quot;highlighter-rouge&quot;&gt;포트&lt;/code&gt;를 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:4000&lt;/code&gt;은 &lt;code class=&quot;highlighter-rouge&quot;&gt;포트&lt;/code&gt;를 의미&lt;/p&gt;
 
-&lt;p&gt;포트란 서버에 들어갈 수 있는 문이 여러개가 있는데 4000이라고 적혀져 있는 문을 열어 놓은거라고 할 수 있다.&lt;/p&gt;
+&lt;p&gt;포트란 서버에 들어갈 수 있는 문이 여러개가 있는데 4000이라고 적혀져 있는 문을 열어 놓은거라고 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/athi/&lt;/code&gt;는 따로 지정해 놓은것으로 나중에 원하는대로 바꿀 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/athi/&lt;/code&gt;는 따로 지정해 놓은것으로 나중에 원하는대로 바꿀 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;그래서 이제 미리보기 서버를 접속할 수 있다.&lt;/p&gt;
+&lt;p&gt;그래서 이제 미리보기 서버를 접속할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;인터넷에 아래를 주소창에 입력해주면 접속이 잘된다.&lt;/p&gt;
+&lt;p&gt;인터넷에 아래를 주소창에 입력해주면 접속이 잘 됩니다.&lt;/p&gt;
 
 &lt;p&gt;🔥주의! &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;를 꼭 붙여주세요.&lt;/p&gt;
 
@@ -1740,7 +1740,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. `Proin vestibulum non m
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/bQH3PtI.png&quot; alt=&quot;서버확인&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이제 각 태그를 클릭해보세요.
+&lt;p&gt;이제 각 태그를 클릭해보세요.&lt;br /&gt;
 각 태그에 맞는 작성된 글이 분류된 것을 확인하실 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/qNoZb3J.png&quot; alt=&quot;글 작성된것 확인&quot; /&gt;&lt;/p&gt;
@@ -1755,7 +1755,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. `Proin vestibulum non m
 
 &lt;p&gt;test1은 이미 만들어진 태그이기 때문에 따로 빨간색으로 이미 존재하지만 tag2와 tag3은 저희가 따로 색깔을 입혀야 합니다.&lt;/p&gt;
 
-&lt;p&gt;자동으로 랜덤색이 지정됬으면 좋겠다구요?
+&lt;p&gt;자동으로 랜덤색이 지정됬으면 좋겠다구요?&lt;br /&gt;
 모든 강의를 마치면 그것도 하실 수 있을 겁니다.&lt;/p&gt;
 
 &lt;p&gt;색깔은 저를 주로 &lt;a href=&quot;https://flatuicolors.com/&quot;&gt;팔레트&lt;/a&gt;에서 가져와서 씁니다.
@@ -1826,10 +1826,10 @@ data = 게시날짜
 
 &lt;p&gt;avatar와 image에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;/img/&lt;/code&gt; 경로부터 시작에 내가 원하는 사진이 있는곳까지의 경로를 적어준 것입니다.&lt;/p&gt;
 
-&lt;p&gt;🔥주의! 이미지를 포스팅할 때는 규격에 맞춰서 해주어야 깔끔하게 포스팅 됩니다.
+&lt;p&gt;🔥주의! 이미지를 포스팅할 때는 규격에 맞춰서 해주어야 깔끔하게 포스팅 됩니다.&lt;br /&gt;
 이미지 규격은 1920x1200 입니다.&lt;/p&gt;
 
-&lt;p&gt;이 떄 그렇게 이미지 규격에 맞는 이미지를 어느 세월에 구하냐고 하시는분이 계실텐데 걱정하지 마세요.
+&lt;p&gt;이 떄 그렇게 이미지 규격에 맞는 이미지를 어느 세월에 구하냐고 하시는분이 계실텐데 걱정하지 마세요.&lt;br /&gt;
 unsplash에서 고퀄이미지를 규격에 맞게 가져올 수 있습니다&lt;/p&gt;
 
 &lt;h3 id=&quot;unsplash에서-무료로-고퀄이미지-가져오기&quot;&gt;unsplash에서 무료로 고퀄이미지 가져오기&lt;/h3&gt;
@@ -1907,7 +1907,7 @@ date: 2019-06-30 12:12:12
 
 &lt;h3 id=&quot;commit하기전-빌드하기html파일로-변환시키는-작업&quot;&gt;commit하기전 빌드하기(html파일로 변환시키는 작업)&lt;/h3&gt;
 
-&lt;p&gt;cmd창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 명령어나 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;를 입력 해주세요.&lt;/p&gt;
+&lt;p&gt;최상위 폴더에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 명령어나 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;를 입력 해주세요.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 명령어는 실행 후 실행창을 꺼야 합니다.&lt;/p&gt;
 
@@ -1931,7 +1931,7 @@ git remote add origin [원격지 ur]
 
 &lt;p&gt;.git 파일을 생성하는 명령어 입니다.&lt;/p&gt;
 
-&lt;p&gt;.git 파일은 현재 폴더부터 하위에 있는 폴더들에 있는 모든 파일의 변경사항을 추적(기록) 합니다.&lt;/p&gt;
+&lt;p&gt;.git 파일은 현재 폴더부터 하위에 있는 폴더들에 있는 모든 파일의 변경사항을 추적(기록)을 시작 합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/p&gt;
 
@@ -1970,9 +1970,23 @@ git remote add origin [원격지 ur]
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;원격지 주소에 _site에 있는 파일을 업로드 합니다.&lt;/p&gt;
+&lt;p&gt;원격지 주소에 _site에 있는 master(현재파일이 있는 폴더)를 업로드 합니다.&lt;/p&gt;
+
+&lt;p&gt;master라는 별칭은 git init . 할 때 자동으로 생겨 납니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;글을-수정하고-블로그에-다시-등록하기&quot;&gt;글을 수정하고 블로그에 다시 등록하기&lt;/h2&gt;
+
+&lt;p&gt;글을 수정하고&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build or jekyll serve
+git add .
+git commit -m &quot;commit&quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;해주면 자동으로 블로그에 업데이트 됩니다.&lt;/p&gt;
+
+&lt;p&gt;이로서 자동화도구를 얻으셨습니다.&lt;/p&gt;
 </description>
             <pubDate>Sun, 06 Jan 2019 21:12:12 +0900</pubDate>
             <link>http://localhost:4000/athi#/2019/01/06/get-started-quickly.html</link>
@@ -1989,24 +2003,24 @@ git remote add origin [원격지 ur]
 
 &lt;p&gt;&lt;a href=&quot;https://rubyinstaller.org/downloads/&quot;&gt;루비 다운로드&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;위 사이트에서 ruby를 다운받아주자.&lt;/p&gt;
+&lt;p&gt;위 사이트에서 ruby를 다운받아주세요.&lt;/p&gt;
 
-&lt;p&gt;2.4.2 버젼 이상을 다운받아주자.&lt;/p&gt;
+&lt;p&gt;2.4.2 버젼 이상을 다운받아주세요,&lt;/p&gt;
 
 &lt;p&gt;(x64)는 64비트용 컴퓨터
-(x86)은 32비트용 컴퓨터다.&lt;/p&gt;
+(x86)은 32비트용 컴퓨터&lt;/p&gt;
 
-&lt;p&gt;이런것에 잘 모르겠다면 그냥 (x86)을 다운받아주면 된다.&lt;/p&gt;
+&lt;p&gt;이런것에 잘 모르겠다면 그냥 (x86)을 다운받아주면 됩니다.&lt;/p&gt;
 
 &lt;p&gt;계속 next해주면 다음같은 화면이 뜰 것인데&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/6eJIXCp.png&quot; alt=&quot;ruby화면&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이제 3가지 설정을 해주어야 한다.&lt;/p&gt;
+&lt;p&gt;이제 3가지 설정을 해주어야 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;첫번째-설정&quot;&gt;첫번째 설정&lt;/h2&gt;
 
-&lt;p&gt;숫자 1을 누른 뒤 enter를 눌러주자.
+&lt;p&gt;숫자 1을 누른 뒤 enter를 눌러주세요.
 &lt;img src=&quot;https://i.imgur.com/bd5rlEw.png&quot; alt=&quot;숫자1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;다음과 같은 화면이 나올 텐데&lt;/p&gt;
@@ -2017,35 +2031,35 @@ git remote add origin [원격지 ur]
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OHgGsu0.png&quot; alt=&quot;체크&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이 체크하는 화면에서 체크를 해제해주자.&lt;/p&gt;
+&lt;p&gt;이 체크하는 화면에서 체크를 해제해주세요,&lt;/p&gt;
 
-&lt;p&gt;저 화면이 안나온다면 그냥 넘어가면 된다.&lt;/p&gt;
+&lt;p&gt;저 화면이 안나온다면 그냥 넘어가면 됩니다.&lt;/p&gt;
 
-&lt;p&gt;여기까지 첫번째 설정이 끝났고 2번째 설정을 해주자.&lt;/p&gt;
+&lt;p&gt;여기까지 첫번째 설정이 끝났고 2번째 설정을 해주세요.&lt;/p&gt;
 
 &lt;h2 id=&quot;두번째-설정&quot;&gt;두번째 설정&lt;/h2&gt;
 
-&lt;p&gt;숫자 2를 누르고 enter를 누른다.&lt;/p&gt;
+&lt;p&gt;숫자 2를 누르고 enter를 누릅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4AcZBxw.png&quot; alt=&quot;숫자2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;다음과 같은 succeeded가 나오면 성공이다.&lt;/p&gt;
+&lt;p&gt;다음과 같은 succeeded가 나오면 성공입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/TPSKjfu.png&quot; alt=&quot;성공&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;세번째-설정&quot;&gt;세번째 설정&lt;/h2&gt;
 
-&lt;p&gt;숫자 3을 누르고 enter를 누른다.&lt;/p&gt;
+&lt;p&gt;숫자 3을 누르고 enter를 누르세요,&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HNoM0TB.png&quot; alt=&quot;숫자3&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;다음과 같은 succeeded가 나오면 성공이다.&lt;/p&gt;
+&lt;p&gt;다음과 같은 succeeded가 나오면 성공입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/dQJ6m5i.png&quot; alt=&quot;성공2&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;ruby가-잘-설치-되었는지-확인해보자&quot;&gt;ruby가 잘 설치 되었는지 확인해보자&lt;/h1&gt;
 
-&lt;p&gt;다음 명령어가 잘 실행된다면 잘 설치 되었다.&lt;/p&gt;
+&lt;p&gt;다음 명령어가 잘 실행된다면 잘 설치 되었습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
 gem &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
@@ -2053,23 +2067,23 @@ gem &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HhKm4gO.png&quot; alt=&quot;ruby설치확인&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;그리고 다음명령어를 사용해주자&lt;/p&gt;
+&lt;p&gt;그리고 다음명령어를 사용해주세요.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;jekyll 명령어를 사용하기 위해 다음 명령어로 jekyll bundler를 설치해준다.&lt;/p&gt;
+&lt;p&gt;jekyll 명령어를 사용하기 위해 다음 명령어로 jekyll bundler를 설치해주세요.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/lDoXJcS.png&quot; alt=&quot;jekyll설치&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;위 명령어가 잘 실행된다면 잘 설치가 되었다.&lt;/p&gt;
+&lt;p&gt;위 명령어가 잘 실행된다면 잘 설치가 되었습니다.&lt;/p&gt;
 
-&lt;p&gt;이제 모든 설치강의는 끝났다.&lt;/p&gt;
+&lt;p&gt;이제 모든 설치강의는 끝났습니다.&lt;/p&gt;
 
-&lt;p&gt;다음 강의는 빠르게 시작하기 강의로, 이 강의만 끝나면 모두 개인 블로그를 개설할 수 있다.&lt;/p&gt;
+&lt;p&gt;다음 강의는 빠르게 시작하기 강의로, 이 강의만 끝나면 모두 개인 블로그를 개설할 수 있습니다.&lt;/p&gt;
 </description>
             <pubDate>Sat, 05 Jan 2019 21:12:12 +0900</pubDate>
             <link>http://localhost:4000/athi#/2019/01/05/install-ruby.html</link>

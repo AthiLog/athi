@@ -12,16 +12,15 @@ date: 2019-01-01 12:12:12
 
 ## VSCode란?
 
-메모장은 모두들 아실 겁니다.
+메모장은 모두들 아실 겁니다.  
 메모장을 다른말로 `텍스트 편집기`라고도 하는데
 
-VSCode는 개발자를 위한 `텍스트 편집기`일 뿐입니다.
+VSCode는 개발자를 위한 `텍스트 편집기`일 뿐입니다.  
 VSCode는 개발자들이 코드를 작성하면 예쁘게 볼 수 있게 도와주어서 한눈에 알아보기 쉽게 해줍니다.
 
-텍스트 편집기는 정말 다양하게 여러가지가 있는데
-Sublime Text, Atom, Vim, Emacs, 등등
+텍스트 편집기는 정말 다양하게 여러가지가 있는데  
+Sublime Text, Atom, Vim, Emacs, 등등  
 이 모든걸 다 써본결과 정말 가볍고, 확장프로그램까지 완변하고 좋은 것이라고 판단 되는것이 VSCode입니다.
-그래서 이 강의
 
 ## VSCode설치하기
 
@@ -37,7 +36,7 @@ Sublime Text, Atom, Vim, Emacs, 등등
 
 ## VSCode 실행
 
-git bash에서 원하는 폴더에 들어가서
+git bash에서 원하는 폴더에 들어가서  
 `code .`명령어를 실행시키거나
 
 💬 git bash는 install github강의를 끝내면 사용하실 수 있습니다.
@@ -49,11 +48,11 @@ git bash에서 원하는 폴더에 들어가서
 
 ### 🔧VScode Extensions 설치하기
 
-왼쪽 상단에 보시면 다음과 같은 아이콘이 있을 겁니다. **제일 밑에 있는 아이콘**을 클릭해주세요.
+왼쪽 상단에 보시면 다음과 같은 아이콘이 있을 겁니다. **제일 밑에 있는 아이콘**을 클릭해주세요.  
 ![vscode구조](https://i.imgur.com/qMOw6B2.png)
 
-그럼 여러가지 Extensions을 설치하실 수 있는데 다음 네가지 Extensions을 설치 할 겁니다.
-모두 검색을 해서 다운받아 주세요.
+그럼 여러가지 Extensions을 설치하실 수 있는데 다음 네가지 Extensions을 설치 할 겁니다.  
+모두 검색을 해서 다운받아 주세요.  
 다운 받을 떄는 install 버튼만 누르면 됩니다.
 
 - Bracket Pair Colorizer: (),{},[] 이러한 괄호등에 색깔을 입혀 구분을 쉽게 도와줍니다.
@@ -66,8 +65,8 @@ git bash에서 원하는 폴더에 들어가서
 ![extension3](https://i.loli.net/2019/06/28/5d1587e0db73210219.png)
 ![extension4](https://i.imgur.com/3ZbMxdm.png)
 
-다 설치했으면 창을 닫아주세요.
-창을 열고 닫고 하는 단축키는
+다 설치했으면 창을 닫아주세요.  
+창을 열고 닫고 하는 단축키는  
 `ctrl + B` 입니다.
 
 ### 🔧 Markdown Preview Enhanced Extension 설정
@@ -344,7 +343,7 @@ Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.
 }
 ```
 
-저장을 했으면 그 다음에는
+저장을 했으면 그 다음에는  
 Markdown Preview Enhanced: Extend Parser을 검색 후 눌러 줍니다.
 
 ![markdown preview parser](https://i.imgur.com/mcKkugL.png)
