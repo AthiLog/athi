@@ -88,6 +88,8 @@ Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.
     font-weight: normal;
     font-style: normal;
   }
+
+  @import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
   // task-list
   input[type="checkbox"]::after {
     border-width: 1px;
@@ -278,19 +280,58 @@ Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.
     background: #f9f9f9;
     border-left: 10px solid #00cec9;
     margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+    padding: 1em 10px;
+    quotes: "\201C""\201D";
   }
   blockquote:before {
     color: #ccc;
     content: open-quote;
+    font-family: Arial;
     font-size: 4em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
   blockquote p {
-    display: inline;
+    // display: inline;
+    padding: 0 20px;
+  }
+
+  .citeBlockQuote {
+    background: #fff;
+    width: 100%;
+    min-width: 320px;
+    margin: 2em auto 0;
+  }
+  .citeBlockQuote > blockquote {
+    display: block;
+    background: #fff;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #eee;
+    padding: 1.5em 0 0.5em;
+    margin: 1.5em 0;
+    position: relative;
+  }
+  .citeBlockQuote > blockquote:before {
+    content: "\201C";
+    position: absolute;
+    top: 0em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 3rem;
+    height: 2rem;
+    font: 6em/1.08em "NanumBarunpen", sans-serif;
+    color: #666;
+    text-align: center;
+  }
+  .citeBlockQuote > blockquote:after {
+    content: "\2013 \2003"attr(cite);
+    display: block;
+    text-align: right;
+    font-size: 0.875em;
+    color: #e74c3c;
   }
 
   // 자바스크립트
@@ -298,6 +339,12 @@ Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.
   pre {
     background: #1e1e1e;
     color: #abb2bf;
+  }
+
+  pre code {
+    background: none;
+    border: none;
+    color: white;
   }
 
   .keyword {
@@ -341,6 +388,26 @@ Markdown Preview Enhanced: Customize CSS 검색 후 눌러 줍니다.
 
   // css
 }
+
+// responsive video
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// responsive video
 ```
 
 저장을 했으면 그 다음에는  
