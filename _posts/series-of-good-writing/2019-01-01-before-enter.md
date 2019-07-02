@@ -16,6 +16,16 @@ date: 2019-01-01 00:00:00
 
 글을 수정했지만 내 서버에서 보이지가 않아요 => 새로고침 버튼(F5)를 눌러주세요
 
+# Q&A 대화방
+
+[대화방](https://gitter.im/athi-class/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
+모든 질의 응답은 여기로 통일하겠습니다.
+
+여기에 질문을 남겨놓으시면 제가 가장 빠르게 보고 응답해드릴 수 있고
+
+똑같은 질문은 과거 채팅기록을 통해서 반복하지 않아도 되기 때문에 이렇게 정했습니다.
+
 # 이미 github vscode가 jekyll등이 무엇인지 아시는 분들
 
 아는 분들이더라도 강의 문서를 차례대로 모두 보셔야 합니다.

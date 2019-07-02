@@ -88,6 +88,23 @@ _You **can** combine them_
 ![Alt Text](url)
 ```
 
+이미지를 추가할 때는 이미지 호스팅이라는걸 쓰게 되는데
+
+이미지 호스팅이란 이미지를 여러사람들이 이용하는 공유 웹서버에 올려 놓아서 내가 이미지를 저장해놓지 않아도 url로 가져다 쓸 수 있습니다.
+
+이미지 호스팅을 이용할려면 MarkdwonPriview에서 마우스 오른쪽 클릭하시면 `Image Helper`나오는데, 클릭해주세요.
+
+![이미지 헬퍼](https://i.imgur.com/UrDAvPZ.png)
+
+업로드를 클릭하시고 원하는 이미지를 클릭하시면 됩니다.
+단점은 한번에 한개씩 밖에 되질 않습니다.
+
+![업로드](https://i.imgur.com/1yyP3jS.png)
+
+이미지 호스팅을 이용하기 싫으시다면
+
+위에 Copy image to workspace /assets folder를 클릭해주시면 됩니다.
+
 ## 링크
 
 ```
@@ -153,7 +170,9 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 ```
 
-## 이모지
+## 이모지 & 이미지 추가하기
 
-[https://emojipedia.org/](https://emojipedia.org/)
-[https://www.emojiengine.com/ko/](https://www.emojiengine.com/ko/)
+[이모지사이트1](https://emojipedia.org/)
+[이모지사이트2](https://www.emojiengine.com/ko/)
+
+위 사이트에서 복사 붙여넣기를 하시면 됩니다.

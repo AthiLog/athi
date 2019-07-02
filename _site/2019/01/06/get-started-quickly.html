@@ -258,8 +258,66 @@ date: 2019-06-30 12:12:12
 
 <p>이 챕터만 끝나시면 자동화 도구를 얻으실 수 있습니다.</p>
 
-<p>git init .</p>
+<h2 id="저장소-만들기">저장소 만들기</h2>
 
-<p>.git 파일을 생성하는 것</p>
+<p><img src="https://i.imgur.com/NittvpN.png" alt="저장소 만들기1" /></p>
+
+<p><img src="https://i.imgur.com/rBMi1Nk.png" alt="저장소 만들기" />
+🔥주의!</p>
+
+<p>저장소명은 url 주소에서 마지막 부분에 들어갑니다.</p>
+
+<p>신중히 정해주세요.</p>
+
+<p><img src="https://i.imgur.com/bOdGAGo.png" alt="blog" /></p>
+
+<p>이와 비슷한 화면이 나온다면 성공입니다.</p>
+
+<h2 id="배포하기-전-commit하기원고-완성시키기">배포하기 전 commit하기(원고 완성시키기)</h2>
+
+<p><code class="highlighter-rouge">_site 폴더</code>에 들어가서 다음명령어들을 차례대로</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init .
+git add .
+git commit -m "commit"
+git remote add origin master
+git push origin master
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">git init .</code></p>
+
+<p>.git 파일을 생성하는 명령어 입니다.</p>
+
+<p>.git 파일은 현재 폴더부터 하위에 있는 폴더들에 있는 모든 파일의 변경사항을 추적(기록) 합니다.</p>
+
+<p><code class="highlighter-rouge">git add .</code></p>
+
+<p>commit전 단계로 staged 단계로 넘기는 명령어 입니다.</p>
+
+<p><code class="highlighter-rouge">git commit -m "commit"</code></p>
+
+<p>staged에 있는걸 commit 상태로 넘기는 명령어 입니다.</p>
+
+<p>"”안에 있는 것은 commit한 것에대한 주석(설명) 입니다.</p>
+
+<p>주석에는 자신이 원하는대로 적으시면 됩니다.</p>
+
+<p>이렇게 말하면 아직 뭔가 와닿지 않으실 겁니다.</p>
+
+<p>쉽게 애기하면 총 두 번의 수정할 수 있는 기회가 있습니다.</p>
+
+<p><code class="highlighter-rouge">git add .</code> 하기전 <code class="highlighter-rouge">git commit -m "commit"</code> 하기전</p>
+
+<p>웹툰 원고를 그려서 제출해야하는데 commit은 웹툰원고를 완성시켜서 완성시킨 원고를 따로 완성시킨 원고 목록에 분류해놓은거라고 할 수 있습니다.</p>
+
+<p>add는 원고는 다 그렸지만 혹시 모르니 옆에다 두는 것 입니다.</p>
+
+<p>만약 아직도 이해가 되지 않으신다면 Q&amp;A에 남겨주세요.</p>
+
+<p>그림을 동원해서 더 자세히 설명해 드리겠습니다.</p>
+
+<h2 id="배포하기원고마감-한-것을-출하기">배포하기(원고마감 한 것을 출하기)</h2>
+
+<p>git push origin master</p>
 
 <h2 id="글을-수정하고-블로그에-다시-등록하기">글을 수정하고 블로그에 다시 등록하기</h2>
