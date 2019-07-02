@@ -1,0 +1,439 @@
+<p>React Native에서 Animated를 사용하여 컴포넌트에 움직임을 넣거나 색상, 투명도 등이 변경되도록 애니메이션을 만들 수 있습니다.</p>
+
+<p>Animated는 State나 변수 등을 직접 제어하지 않고, Animated 객체로 생성된 value를 제어하는 것으로 애니메이션을 만듭니다.</p>
+
+<p>애니메이션을 실행하면 시간에 따라 value가 변하는데, 이때 rerender는 이루어지지 않으며 실시간으로 반영됩니다.</p>
+
+<p>(rerender와 연관이 없으므로 케이스에 따라 shouldComponentUpdate를 false로 해놓는 것도 좋습니다.)</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">Component</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">View</span><span class="p">,</span> <span class="nx">Animated</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-native</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">type</span> <span class="nx">Props</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">Value</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+      <span class="na">position</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span><span class="na">x</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span><span class="mi">0</span><span class="p">}),</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="err">생략</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Animated value는 한가지 값을 갖는 Value()와 x축,y축 값을 갖는 ValueXY가 있습니다.</p>
+
+<p>이렇게 초기화 된 value를 style 속성에서 참조하도록 지정하고(예를들면 {opacity: this.state.value}) 애니메이션을 실행하면 시간에 따라 변화가 일어나게 되는 것 입니다.</p>
+
+<hr />
+
+<p>애니메이션을 만드는데에 세가지 주요 메소드가 있습니다.</p>
+
+<p>1.Animated.timing()</p>
+
+<p>우리가 애니메이션이라고 하면 생각나는 가장 일반적인 애니메이션과 같습니다.</p>
+
+<p>간단한 fade in 애니메이션 코드를 보겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">View</span><span class="p">,</span> <span class="nx">Animated</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-native</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="nx">type</span> <span class="nx">Props</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">Value</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+      <span class="na">position</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">})</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_fadeIn</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_fadeIn</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">timing</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">toValue</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="na">duration</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="c1">//easing : Easing.bounce,</span>
+      <span class="na">delay</span><span class="p">:</span> <span class="mi">200</span>
+    <span class="p">}).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_getStyle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">backgroundColor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">red</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">opacity</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Animated</span><span class="p">.</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getStyle</span><span class="p">()}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>우선 보셔야 할 부분은 _getStyle() 함수 입니다.</p>
+
+<p><strong>opacity를 보시면 this.state.value를 참조 하고있는데, 사실 이 값은 new Animated.Value(0) 객체</strong> 입니다.</p>
+
+<p>_fadeIn() 함수에서 <strong>Animated.timing().start()</strong>를 볼 수 있는데, <strong>Value를 어떻게 변경할지에 대한 내용</strong>이 들어있습니다.</p>
+
+<p>- toValue는 목표 Value 값 입니다.</p>
+
+<p>현재 Animated.Value 값은 0으로 초기화 되어있기 때문에 애니메이션이 실행되면 0 -&gt; 1로 변화하게 됩니다.</p>
+
+<p>- duration은 지속시간입니다.</p>
+
+<p>낮을수록 toValue에 도달하는 시간이 짧아지고, 높을수록 toValue에 도달하는 시간이 길어집니다.</p>
+
+<p>- easing은 가속 효과입니다.</p>
+
+<p>리액트 네이티브에는 <a href="https://facebook.github.io/react-native/docs/easing">Easing이라는 API가 제공</a>되고 있습니다.</p>
+
+<p><strong>timing().start()로 실행된 애니메이션은 등속으로 Value가 증가</strong>하게 되는데, <strong>Easing을 사용하면</strong> 빠르게 시작했다 천천히 느려지거나, 점점 빠르게 증가하는 등 <strong>duration에 다양한 가속 효과</strong>를 줄 수 있습니다.</p>
+
+<p>- delay는 애니메이션 시작 전, 기다리는 시간입니다.</p>
+
+<p>delay를 0으로 하면 start()되는 순간 즉시 toValue를 향해 증가하며, 이는 ms단위로 delay를 1000으로 설정하면 start() 시점으로부터 1초 뒤에 toValue를 향해 증가합니다.</p>
+
+<p>다음은 <Animated.View></Animated.View>입니다.</p>
+
+<p>일반적인 View 컴포넌트는 state와 props에 종속적이기 때문에 style에 Animated.Value()를 참조시키면 동작하지 않습니다.</p>
+
+<p>애니메이션 효과가 필요한 View는 <Animate.View></Animate.View> 컴포넌트를 사용합니다.</p>
+
+<p>2.Animated.spring()</p>
+
+<p>스프링은 띠용~ 하는 것 같은 효과를 넣어줍니다.</p>
+
+<p>gif로 캡처하는 방법을 몰라서 이미지는 준비하지 못했습니다ㅜㅜ</p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99D65F405B6800D10D" alt="" /></p>
+
+<p>(띠용~)</p>
+
+<p>timing()과 사용법은 유사하며, 옵션에 약간의 차이가 있습니다</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">Value</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+      <span class="na">position</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">})</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_moveX</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_moveX</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">spring</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">position</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">toValue</span><span class="p">:</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+      <span class="na">friction</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="na">tension</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">}).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_getStyle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">backgroundColor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">green</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">transform</span><span class="p">:</span> <span class="p">[{</span> <span class="na">translateX</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="p">}]</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Animated</span><span class="p">.</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getStyle</span><span class="p">()}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>frinction은 얼마나 띠용~ 할 것인지, tension은 얼마나 격렬하게 띠용~ 할 것인지를 담당하는 속성입니다.</p>
+
+<p>크게 어렵지 않으니 그대로 복사해서 수치를 바꿔가며 테스트해보세요!</p>
+
+<p><a href="https://facebook.github.io/react-native/docs/animated#spring">여기</a>에서 더 많은 속성 정보를 볼 수 있습니다.</p>
+
+<p>3.Animated.decay()</p>
+
+<p>decay는 점점 감속하는 애니메이션 효과를 낼 수 있습니다.</p>
+
+<p>한가지 재밌는 부분은 초기속도가 너무 빠르면 toValue 값을 지나쳐버리기도 합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">View</span><span class="p">,</span> <span class="nx">Animated</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-native</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="nx">type</span> <span class="nx">Props</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">Value</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+      <span class="na">position</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">})</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_moveX</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_moveX</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">decay</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">position</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">toValue</span><span class="p">:</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+      <span class="na">velocity</span><span class="p">:</span> <span class="mf">0.4</span>
+    <span class="p">}).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_getStyle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">backgroundColor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">green</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">transform</span><span class="p">:</span> <span class="p">[{</span> <span class="na">translateX</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="p">}]</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Animated</span><span class="p">.</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getStyle</span><span class="p">()}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>코드를 실행하여 Spring과 Decay를 비교해보시기 바랍니다.</p>
+
+<p>velocity는 초기 가속 값인데, 분명 toValue는 x -&gt; 100을 향하고 있지만 실제로 100이상 향한 후 제동하는 것을 볼 수 있습니다.</p>
+
+<hr />
+
+<p>다음은 애니메이션의 병렬 실행입니다.</p>
+
+<p>병렬 실행에 관련된 메소드도 마찬가지로 3가지가 있습니다.</p>
+
+<p>1.Animated.parallel()</p>
+
+<p>parallel은 애니메이션을 실행하는 메소드들을 배열로 가진채로 동시에 실행하는 기능을 합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">positions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}),</span>
+        <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}),</span>
+        <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}),</span>
+        <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">ValueXY</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">})</span>
+      <span class="p">]</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">parallel</span><span class="p">(</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">positions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">position</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">_moveX</span><span class="p">(</span><span class="nx">position</span><span class="p">))</span>
+    <span class="p">).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">_moveX</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">timing</span><span class="p">(</span><span class="nx">position</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">toValue</span><span class="p">:</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+      <span class="na">duration</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="na">delay</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">_getStyle</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">backgroundColor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">red</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">transform</span><span class="p">:</span> <span class="p">[{</span> <span class="na">translateX</span><span class="p">:</span> <span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="p">}]</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">positions</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">position</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Animated</span><span class="p">.</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getStyle</span><span class="p">(</span><span class="nx">position</span><span class="p">)}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">;
+</span>        <span class="p">})}</span>
+      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>componentDidMount()를 보시면 map을 사용하여 [Animated.timing(), … Animated.timing()]로 이루어진 배열을 반환받는 모습을 볼 수 있습니다.</p>
+
+<p>이 애니메이션들을 Animated.parallel([ .. ]).start()로 동시에 실행할 수 있습니다.</p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/9917F1505B6814F01C" alt="" /> <img src="https://t1.daumcdn.net/cfile/tistory/99528E505B6814F133" alt="" /></p>
+
+<p>사실 각 Animated.timing()을 별개로 start해도 상관은 없지만 만약 그 개수가 많아진다면 동시에 실행된다는 보장이 없어지겠죠.</p>
+
+<p>그리고 parallel이 있기 때문에 다음에 나올 기능들이 빛을 발하게 됩니다.</p>
+
+<p>2.Animated.sequence()</p>
+
+<p>sequence는 배열에 담긴 애니메이션을 순차적으로 실행하게 됩니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">(){</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">sequence</span><span class="p">(</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">positions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">position</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">_moveX</span><span class="p">(</span><span class="nx">position</span><span class="p">))</span>
+    <span class="p">).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<p>다른 부분은 parallel과 같고 Animated.sequence로 수정하면 됩니다.</p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99AB5D505B6815782A" alt="" /> <img src="https://t1.daumcdn.net/cfile/tistory/99C26D505B6815780B" alt="" /></p>
+
+<p>순차적으로 애니메이션이 실행되는 모습을 볼 수 있습니다.</p>
+
+<p>3.Animated.stagger()</p>
+
+<p>stagger은 일정 delay를 두고 애니메이션을 순차적으로 실행하는 기능입니다.</p>
+
+<p>이 기능을 잘 사용하면 화려하고 예쁜 애니메이션을 만들 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">componentDidMount</span><span class="p">(){</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">stagger</span><span class="p">(</span>
+      <span class="mi">100</span><span class="p">,</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">positions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">position</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">_moveX</span><span class="p">(</span><span class="nx">position</span><span class="p">))</span>
+    <span class="p">).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<p>마찬가지로 Animated.stagger로 수정한 뒤, 첫번째 파라미터에 time(millisecond)을 넣어줍니다.</p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99D61A4A5B6817CB27" alt="" /> <img src="https://t1.daumcdn.net/cfile/tistory/99C5FB4A5B6817CB10" alt="" /></p>
+
+<p>~별빛이 내린다 샤라랄랄랄라라~~</p>
+
+<p>이게 사진으로 보면 별 감흥이 없는데 view크기를 작게해서 많이 넣으시면 꽤 멋스럽습니다.</p>
+
+<p>이 효과만큼은 직접 해보시길 추천드립니다!</p>
+
+<hr />
+
+<p>Interpolate</p>
+
+<p>오늘 소개할 마지막 기능입니다.</p>
+
+<p>Interpolate는 Animated.Value의 변화에 따라 종속적으로 값이 변하도록 하는 기능입니다.</p>
+
+<p>여러가지 애니메이션을 만들고 병렬적으로 실행할 필요없이, 이걸 사용하면 하나의 Animated.Value만으로 여러가지 값을 통제할 수 있습니다.</p>
+
+<p>바로 코드부터 보시죠!</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">View</span><span class="p">,</span> <span class="nx">Animated</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-native</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="nx">type</span> <span class="nx">Props</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="o">&lt;</span><span class="nx">Props</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">value</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Animated</span><span class="p">.</span><span class="nx">Value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Animated</span><span class="p">.</span><span class="nx">timing</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">toValue</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="na">duration</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="na">delay</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}).</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">componentWillMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">interpolate</span><span class="p">({</span>
+      <span class="na">inputRange</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="na">outputRange</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">red</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">});</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">interpolate</span><span class="p">({</span>
+      <span class="na">inputRange</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="na">outputRange</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">_getStyle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="na">backgroundColor</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">,</span>
+      <span class="na">transform</span><span class="p">:</span> <span class="p">[{</span> <span class="na">translateX</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="p">}]</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Animated</span><span class="p">.</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getStyle</span><span class="p">()}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99C186475B681A7E01" alt="" /> <img src="https://t1.daumcdn.net/cfile/tistory/99F997475B681A802E" alt="" /> <img src="https://t1.daumcdn.net/cfile/tistory/99BD5B475B681A8133" alt="" /></p>
+
+<p>색깔도 변하고(red -&gt; blue) x좌표도 이동합니다. 심지어 천천히 움직이다가 빠르게 이동하죠!</p>
+
+<p>componentWillMount()에는 this.x와 this.color라는 멤버 변수를 설정하는 코드가 있습니다.</p>
+
+<p>그런데 이들은 this.state.value. 즉 new Animated.Value(0)에 Interpolate를 달아놓은 값 입니다.</p>
+
+<p>Interpolate를 사용하면 Animated.Value가 어떤 수치일때(inputRange) 어떤 값을 리턴하게 됩니다(outputRange)</p>
+
+<p>this.color는 state.value가 0일때 빨간색 -&gt; 1일때 파란색이 되고, 그라디언트처럼 자연스럽게 바뀌는 모습을 볼 수 있습니다.</p>
+
+<p>this.x는 state.value가 0일때 0 -&gt; 0.5일때 20 -&gt; 1일때 200으로, state.value가 0.5가 될때까지 천천히 움직이다가 1이 될때까지 빠르게 이동하는 애니메이션을 갖게됩니다.</p>
+
+<p>이 멤버 변수들은 _getStyle()에서 참조하고있고, Animated.timing().start()가 일어나며 값이 바뀌면 Interpolate에 의해 _getStyle()의 값이 변동되는 것 입니다.</p>
+
+<p><strong>- 요약</strong></p>
+
+<p>* 애니메이션을 사용하기 위한 준비물 : new Animated.Value혹은 ValueXY, &lt;Animated.View style={} /&gt;</p>
+
+<p>* 애니메이션을 만드는 3가지 메소드 - timing(일반 애니메이션), spring(띠용~ 애니메이션), decay(점점 느려지는 애니메이션)</p>
+
+<p>* 만든 애니메이션을 병렬 실행하는 3가지 메소드 - parallel(동시실행), sequence(순차실행), stagger(시간차 실행)</p>
+
+<p>* Interpolate  - Animated.Value에 종속적으로 변하는 값을 설정, Value 변화에 따른 세부 값 조정 용이</p>
+
+<p><strong>- 마무리</strong></p>
+
+<p>이번 시간에는 React Native에서 애니메이션을 만드는 방법을 알아봤습니다.</p>
+
+<p>애니메이션을 사용하면 다양하고 아름다운 컴포넌트를 제작할 수 있습니다.</p>
+
+<p>이를 응용할 쉬운 예제는 단언 Switch가 아닐까 생각되는데요, 한번 직접 만들어보세요!</p>
+
+<p>분량상 이곳에 작성하긴 어렵지만, 제가 만든 <a href="https://github.com/Yuddomack/react-native-simple-switch">Switch Material</a>도 공유해놓겠습니다.(Star 찍어주시나요? :D )</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>react<span class="se">\-</span>native<span class="se">\-</span>simple<span class="se">\-</span>switch
+</code></pre></div></div>
+
+<p>npm을 사용하여 설치해서 사용해보실 수 있습니다.</p>
+
+<p>이것으로 React Native의 기본적인 사용법에 대해서 마치겠습니다</p>
