@@ -68,11 +68,11 @@
 <br />
 
 <span>test1|test2|test3|test4|test5|test6|test7|test8|test9|test10|</span><br />
-<span>VScodeVScodeVScodebooksdockergithubgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesjekylljekylljekylljekylljekylljekyllreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetag2tag3test1test1test10test2test3test4test5test6test7test8test9</span>
+<span>VScodeVScodeVScodebooksdockergithubgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesjekylljekylljekylljekylljekylljekyllreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetest1test10test2test3test4test5test6test7test8test9</span>
 
 <br />
 
-<span>VScodebooksdockergithubgoodwriting-seriesjekyllreact-nativetag2tag3test1test10test2test3test4test5test6test7test8test9</span>
+<span>VScodebooksdockergithubgoodwriting-seriesjekyllreact-nativetest1test10test2test3test4test5test6test7test8test9</span>
 
 <br />
 <span>
@@ -132,22 +132,6 @@
   <a href="/tag/react-native"
     ><code class="highligher-rouge"
       ><nobr>react-native</nobr></code
-    >&nbsp;</a
-  >
-  
-   
-  
-  <a href="/tag/tag2"
-    ><code class="highligher-rouge"
-      ><nobr>tag2</nobr></code
-    >&nbsp;</a
-  >
-  
-   
-  
-  <a href="/tag/tag3"
-    ><code class="highligher-rouge"
-      ><nobr>tag3</nobr></code
     >&nbsp;</a
   >
   
@@ -276,14 +260,6 @@
    
   
   <a href="/athi/tag/react-native" class="react-nativeTagLink"><code><nobr>react-native</nobr></code>&nbsp;</a>
-  
-   
-  
-  <a href="/athi/tag/tag2" class="tag2TagLink"><code><nobr>tag2</nobr></code>&nbsp;</a>
-  
-   
-  
-  <a href="/athi/tag/tag3" class="tag3TagLink"><code><nobr>tag3</nobr></code>&nbsp;</a>
   
    
   
@@ -652,13 +628,26 @@ date: 2019-06-30 12:12:12
 
 <h2 id="배포하기-전-commit하기원고-완성시키기">배포하기 전 commit하기(원고 완성시키기)</h2>
 
-<p><code class="highlighter-rouge">_site 폴더</code>에 들어가서 다음명령어들을 차례대로</p>
+<h3 id="commit하기전-빌드하기html파일로-변환시키는-작업">commit하기전 빌드하기(html파일로 변환시키는 작업)</h3>
+
+<p>cmd창에서 <code class="highlighter-rouge">jekyll build</code> 명령어나 <code class="highlighter-rouge">jekyll serve</code>를 입력 해주세요.</p>
+
+<p><code class="highlighter-rouge">jekyll serve</code> 명령어는 실행 후 실행창을 꺼야 합니다.</p>
+
+<p>빌드가 잘 되셨으면 _site 폴더에 서버를 실행시키기 위한 모든 파일이 생겼습니다.</p>
+
+<h3 id="commit하기">commit하기</h3>
+
+<p><code class="highlighter-rouge">_site 폴더</code>에 들어가서 다음명령어들을 차례대로 입력해주세요.</p>
+
+<p>🔥주의!</p>
+
+<p>최상위 폴더가 아닌 _site폴더입니다.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init .
 git add .
 git commit -m "commit"
-git remote add origin master
-git push origin master
+git remote add origin [원격지 ur]
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">git init .</code></p>
@@ -671,7 +660,7 @@ git push origin master
 
 <p>commit전 단계로 staged 단계로 넘기는 명령어 입니다.</p>
 
-<p><code class="highlighter-rouge">git commit -m "commit"</code></p>
+<p><code class="highlighter-rouge">git commit -m "주석"</code></p>
 
 <p>staged에 있는걸 commit 상태로 넘기는 명령어 입니다.</p>
 
@@ -679,23 +668,32 @@ git push origin master
 
 <p>주석에는 자신이 원하는대로 적으시면 됩니다.</p>
 
-<p>이렇게 말하면 아직 뭔가 와닿지 않으실 겁니다.</p>
-
 <p>쉽게 애기하면 총 두 번의 수정할 수 있는 기회가 있습니다.</p>
 
-<p><code class="highlighter-rouge">git add .</code> 하기전 <code class="highlighter-rouge">git commit -m "commit"</code> 하기전</p>
+<p><code class="highlighter-rouge">git add .</code> 하기전 / <code class="highlighter-rouge">git commit -m "commit"</code> 하기전</p>
 
-<p>웹툰 원고를 그려서 제출해야하는데 commit은 웹툰원고를 완성시켜서 완성시킨 원고를 따로 완성시킨 원고 목록에 분류해놓은거라고 할 수 있습니다.</p>
-
-<p>add는 원고는 다 그렸지만 혹시 모르니 옆에다 두는 것 입니다.</p>
+<ul>
+  <li>
+    <p>commit은 웹툰 원고를 그려서 제출해야하는데 웹툰원고를 완성시켜서 완성시킨 원고를 따로 완성시킨 원고 목록에 분류해놓은거라고 할 수 있습니다.</p>
+  </li>
+  <li>
+    <p>add는 원고는 다 그렸지만 혹시 모르니 옆에다 두는 것 입니다.</p>
+  </li>
+</ul>
 
 <p>만약 아직도 이해가 되지 않으신다면 Q&amp;A에 남겨주세요.</p>
 
-<p>그림을 동원해서 더 자세히 설명해 드리겠습니다.</p>
+<p>그림을 동원해서라도 더 자세히 설명해 드리겠습니다.</p>
+
+<p><code class="highlighter-rouge">git remote add origin [원격지 url]</code></p>
+
+<p>원격지 url을 기반으로 원격지 별칭을 origin으로 정하고 추가합니다.</p>
 
 <h2 id="배포하기원고마감-한-것을-출하기">배포하기(원고마감 한 것을 출하기)</h2>
 
-<p>git push origin master</p>
+<p><code class="highlighter-rouge">git push origin master</code></p>
+
+<p>원격지 주소에 _site에 있는 파일을 업로드 합니다.</p>
 
 <h2 id="글을-수정하고-블로그에-다시-등록하기">글을 수정하고 블로그에 다시 등록하기</h2>
 
@@ -1295,6 +1293,23 @@ ex) <code class="highlighter-rouge">ls</code></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt Text](url)
 </code></pre></div></div>
 
+<p>이미지를 추가할 때는 이미지 호스팅이라는걸 쓰게 되는데</p>
+
+<p>이미지 호스팅이란 이미지를 여러사람들이 이용하는 공유 웹서버에 올려 놓아서 내가 이미지를 저장해놓지 않아도 url로 가져다 쓸 수 있습니다.</p>
+
+<p>이미지 호스팅을 이용할려면 MarkdwonPriview에서 마우스 오른쪽 클릭하시면 <code class="highlighter-rouge">Image Helper</code>나오는데, 클릭해주세요.</p>
+
+<p><img src="https://i.imgur.com/UrDAvPZ.png" alt="이미지 헬퍼" /></p>
+
+<p>업로드를 클릭하시고 원하는 이미지를 클릭하시면 됩니다.
+단점은 한번에 한개씩 밖에 되질 않습니다.</p>
+
+<p><img src="https://i.imgur.com/1yyP3jS.png" alt="업로드" /></p>
+
+<p>이미지 호스팅을 이용하기 싫으시다면</p>
+
+<p>위에 Copy image to workspace /assets folder를 클릭해주시면 됩니다.</p>
+
 <h2 id="링크">링크</h2>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[GitHub](http://github.com)
@@ -1353,10 +1368,12 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 </code></pre></div></div>
 
-<h2 id="이모지">이모지</h2>
+<h2 id="이모지--이미지-추가하기">이모지 &amp; 이미지 추가하기</h2>
 
-<p><a href="https://emojipedia.org/">https://emojipedia.org/</a>
-<a href="https://www.emojiengine.com/ko/">https://www.emojiengine.com/ko/</a></p>
+<p><a href="https://emojipedia.org/">이모지사이트1</a>
+<a href="https://www.emojiengine.com/ko/">이모지사이트2</a></p>
+
+<p>위 사이트에서 복사 붙여넣기를 하시면 됩니다.</p>
 
                 </div>
               </div>

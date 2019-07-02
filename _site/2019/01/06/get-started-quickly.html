@@ -275,13 +275,26 @@ date: 2019-06-30 12:12:12
 
 <h2 id="배포하기-전-commit하기원고-완성시키기">배포하기 전 commit하기(원고 완성시키기)</h2>
 
-<p><code class="highlighter-rouge">_site 폴더</code>에 들어가서 다음명령어들을 차례대로</p>
+<h3 id="commit하기전-빌드하기html파일로-변환시키는-작업">commit하기전 빌드하기(html파일로 변환시키는 작업)</h3>
+
+<p>cmd창에서 <code class="highlighter-rouge">jekyll build</code> 명령어나 <code class="highlighter-rouge">jekyll serve</code>를 입력 해주세요.</p>
+
+<p><code class="highlighter-rouge">jekyll serve</code> 명령어는 실행 후 실행창을 꺼야 합니다.</p>
+
+<p>빌드가 잘 되셨으면 _site 폴더에 서버를 실행시키기 위한 모든 파일이 생겼습니다.</p>
+
+<h3 id="commit하기">commit하기</h3>
+
+<p><code class="highlighter-rouge">_site 폴더</code>에 들어가서 다음명령어들을 차례대로 입력해주세요.</p>
+
+<p>🔥주의!</p>
+
+<p>최상위 폴더가 아닌 _site폴더입니다.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init .
 git add .
 git commit -m "commit"
-git remote add origin master
-git push origin master
+git remote add origin [원격지 ur]
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">git init .</code></p>
@@ -294,7 +307,7 @@ git push origin master
 
 <p>commit전 단계로 staged 단계로 넘기는 명령어 입니다.</p>
 
-<p><code class="highlighter-rouge">git commit -m "commit"</code></p>
+<p><code class="highlighter-rouge">git commit -m "주석"</code></p>
 
 <p>staged에 있는걸 commit 상태로 넘기는 명령어 입니다.</p>
 
@@ -302,22 +315,31 @@ git push origin master
 
 <p>주석에는 자신이 원하는대로 적으시면 됩니다.</p>
 
-<p>이렇게 말하면 아직 뭔가 와닿지 않으실 겁니다.</p>
-
 <p>쉽게 애기하면 총 두 번의 수정할 수 있는 기회가 있습니다.</p>
 
-<p><code class="highlighter-rouge">git add .</code> 하기전 <code class="highlighter-rouge">git commit -m "commit"</code> 하기전</p>
+<p><code class="highlighter-rouge">git add .</code> 하기전 / <code class="highlighter-rouge">git commit -m "commit"</code> 하기전</p>
 
-<p>웹툰 원고를 그려서 제출해야하는데 commit은 웹툰원고를 완성시켜서 완성시킨 원고를 따로 완성시킨 원고 목록에 분류해놓은거라고 할 수 있습니다.</p>
-
-<p>add는 원고는 다 그렸지만 혹시 모르니 옆에다 두는 것 입니다.</p>
+<ul>
+  <li>
+    <p>commit은 웹툰 원고를 그려서 제출해야하는데 웹툰원고를 완성시켜서 완성시킨 원고를 따로 완성시킨 원고 목록에 분류해놓은거라고 할 수 있습니다.</p>
+  </li>
+  <li>
+    <p>add는 원고는 다 그렸지만 혹시 모르니 옆에다 두는 것 입니다.</p>
+  </li>
+</ul>
 
 <p>만약 아직도 이해가 되지 않으신다면 Q&amp;A에 남겨주세요.</p>
 
-<p>그림을 동원해서 더 자세히 설명해 드리겠습니다.</p>
+<p>그림을 동원해서라도 더 자세히 설명해 드리겠습니다.</p>
+
+<p><code class="highlighter-rouge">git remote add origin [원격지 url]</code></p>
+
+<p>원격지 url을 기반으로 원격지 별칭을 origin으로 정하고 추가합니다.</p>
 
 <h2 id="배포하기원고마감-한-것을-출하기">배포하기(원고마감 한 것을 출하기)</h2>
 
-<p>git push origin master</p>
+<p><code class="highlighter-rouge">git push origin master</code></p>
+
+<p>원격지 주소에 _site에 있는 파일을 업로드 합니다.</p>
 
 <h2 id="글을-수정하고-블로그에-다시-등록하기">글을 수정하고 블로그에 다시 등록하기</h2>
