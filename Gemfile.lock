@@ -14,7 +14,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.8.5)
+    jekyll (3.8.6)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -29,7 +29,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-paginate (1.1.0)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
@@ -73,9 +72,8 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  jekyll (~> 3.8.5)
+  jekyll (~> 3.8.6)
   jekyll-feed (~> 0.6)
-  jekyll-paginate (~> 1.1.0)
   jekyll-paginate-v2
   minima (~> 2.0)
   tzinfo-data
