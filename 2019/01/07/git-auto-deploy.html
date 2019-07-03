@@ -1,0 +1,17 @@
+<p>간단하다. sh파일을 만들어서 지금 까지 입려했던 명령어를 적어주면 된다.</p>
+
+<p>최상위 폴더에서 auto.sh 파일을 만들고(파일명은 맘대루) 다음 명령어를 입력해 준다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="nb">cd </span>_site
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"commit"</span>
+git push origin master
+</code></pre></div></div>
+
+<p>그리고 나서 이걸 실행시켜주면 끝이다.</p>
+
+<p>./auto.sh 입력 후 엔터 끝!!</p>
