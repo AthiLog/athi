@@ -5,7 +5,7 @@ encoding: utf-8
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
-baseurl: "/athi" # for test: remove string '/space-jekyll-template' to ''
+# baseurl: "/athi" # for test: remove string '/space-jekyll-template' to ''
 url: "https://athilog.github.io/athi/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 g-analytics: UA-143250392-1
@@ -51,7 +51,8 @@ pagination:
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
   # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  title: ":title - page :num"
+  # title: ":title - page :num"
+  title: "Athi"
 
   # Limit how many pagenated pages to create (default: 0, means all)
   limit: 0
