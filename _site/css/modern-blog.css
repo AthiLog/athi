@@ -1,0 +1,865 @@
+/*------------Responsive Embeded--------------*/
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*------------Responsive Embeded--------------*/
+/*-------------------CARD-------------------- */
+
+.card {
+  position: relative;
+  float: left;
+  width: 29%;
+  height: 0;
+  margin: 2%;
+  padding-bottom: 20%;
+}
+
+.card__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card__container--closed {
+  position: absolute;
+  overflow: hidden;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card__container--closed .card__image {
+  position: relative;
+  cursor: pointer;
+}
+/* Fix IE */
+
+.card__container--fix-image .card__image {
+  position: fixed;
+}
+
+.card__content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 400px auto 60px;
+  padding: 30px 40px 22px;
+  background: #fff;
+}
+
+.card__container--closed .card__content {
+  margin-top: 0;
+  padding: 0 16px;
+  pointer-events: none;
+  background: transparent;
+}
+
+.card__caption {
+  font-size: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 35px 30px 0px;
+}
+
+.card__container--closed .card__caption {
+  font-size: 1em;
+  max-width: auto;
+  padding: 10px 10px 25px;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.card__title {
+  font-size: 1.5em;
+  font-weight: 550;
+  line-height: 1;
+  margin: 5px 0 0 0;
+  color: #3b393d;
+}
+
+.card__container--closed .card__title {
+  color: #fff;
+}
+
+.card__subtitle {
+  font-size: 0.95em;
+  line-height: 1;
+  margin: 5px 0 0;
+  color: #777778;
+}
+
+.card__container--closed .card__subtitle {
+  color: #f5f5f5;
+}
+
+.card__copy {
+  font-size: 1.25em;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px 30px 100px;
+  color: #3b393d;
+}
+
+.card__btn-close {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 36px;
+  cursor: pointer;
+}
+
+.card__container--closed .card__btn-close {
+  display: none;
+}
+
+.meta {
+  font-size: 0.85em;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 0 35px 0;
+
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.meta__avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.meta__author {
+  font-weight: bold;
+  padding: 0 15px;
+}
+
+.meta__date {
+  margin: 0 0 0 auto;
+}
+
+@media only screen and (max-width: 980px) {
+  .card {
+    width: 46%;
+    padding-bottom: 32.2%;
+  }
+  .card__content {
+    margin-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .card {
+    width: 96%;
+    padding-bottom: 67.2%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card__caption {
+    font-size: 1.25em;
+    padding: 35px 0px 0px;
+  }
+  .meta {
+    padding: 0 0 25px 0;
+  }
+  .card__copy {
+    font-size: 90%;
+    padding: 25px 0px 100px;
+  }
+}
+
+/*-------------------CARD-------------------- */
+
+/*-------------------Athi-------------------- */
+.athi {
+  color: black;
+}
+/*-------------------Athi-------------------- */
+
+/*-------------------BODY-------------------- */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+body {
+  font-family: Avenir, "Helvetica Neue", "Lato", "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  color: #3b393d;
+  background: #f0f0f0;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body.body--hidden {
+  overflow: hidden;
+}
+
+body.body--hidden .header {
+  opacity: 0;
+}
+
+html body table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+  border: 1px;
+}
+
+table th,
+table td {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+
+a {
+  text-decoration: none;
+  color: #de6551;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #3b393d;
+}
+
+.body {
+  background: #acaad1;
+  /* background-image: url(/athi/img/trianglify.png); */
+}
+
+i {
+  color: #4f4c4c;
+}
+
+.body .header h1 span {
+  color: #4f4c4c;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+/* Header */
+
+.header {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0.5em 0 0;
+}
+
+.header h1 span {
+  font-size: 0.45em;
+  display: block;
+  padding: 0.5em 0 1em;
+  color: #999;
+}
+/* Top Navigation Style */
+
+.links {
+  margin: 2em 0 0;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+/* cards wrapper and close btn */
+
+.wrapper {
+  overflow: auto;
+  width: 95%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 50em) {
+  .header {
+    padding: 3em 10% 4em;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .header h1 {
+    font-size: 2.4em;
+    line-height: 1.2;
+  }
+}
+
+/*-------------------BODY-------------------- */
+
+/*-------------------PATTERN-------------------- */
+
+.pattern {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center / cover;
+}
+
+.pattern--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pattern--hidden .polygon {
+  transition-duration: 0ms;
+}
+
+.pattern svg {
+  width: 100%;
+  height: 100%;
+}
+
+.polygon {
+  transition: -webkit-transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.polygon--hidden {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+/* disable scale on firefox */
+
+.ff .polygon {
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+}
+
+/*-------------------PATTERN-------------------- */
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+/*-------------------FONT-------------------- */
+@font-face {
+  font-family: "NanumBarunpen";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-------------------FONT-------------------- */
+
+/*-------------------CHECK BOX-------------------- */
+input[type="checkbox"]::after {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3dbcf6;
+  background: #3dbcf6;
+}
+
+input[type="checkbox"]:checked,
+del {
+  opacity: 0.5;
+}
+
+ul {
+  margin: 0;
+}
+
+/*-------------------CHECK BOX-------------------- */
+
+/*-------------------PROGESS BAR-------------------- */
+
+progress[value]::-webkit-progress-value {
+  background: kit-linear-gradien(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+    -webkit-linear-gradient(left, #09c, #f44),
+    -webkit-linear-gradient(bottom, #09c, #f44);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+
+  animation: animate-stripes 5s linear infinite;
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+  /* Get rid of the default appearance */
+  appearance: none;
+
+  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+  border: none;
+
+  /* Add dimensions */
+  width: 100%;
+  max-width: 850px;
+  height: 20px;
+
+  /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+  background-color: whiteSmoke;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+
+  /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+  color: royalblue;
+
+  position: fixed;
+  top: 15px;
+  margin: 0 0 1.5em;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #dadfe1;
+  border-radius: 3px;
+}
+
+@keyframes animate-stripes {
+  100% {
+    background-position: -100px 0;
+  }
+}
+
+.progress-bar span {
+  position: fixed;
+  width: 100%;
+  max-width: 850px;
+  top: 13px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 550;
+  text-align: center;
+  display: block;
+}
+
+/*-------------------PROGESS BAR-------------------- */
+
+/*-------------------COLOR CLASS-------------------- */
+.red {
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.orange {
+  color: orange;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.yellow {
+  color: yellow;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.green {
+  color: green;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.blue {
+  color: blue;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.deepblue {
+  color: darkblue;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.purple {
+  color: purple;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+/*-------------------COLOR CLASS-------------------- */
+
+/*-------------------MARKDOWN-------------------- */
+img {
+  max-width: 100%;
+}
+p {
+  font-size: 23px;
+  /* font-size: 1.5em; */
+  font-family: "NanumBarunpen";
+  letter-spacing: 1.2px;
+}
+
+a {
+  color: #845ef7;
+  font-weight: 550;
+}
+
+hr {
+  height: 1px;
+}
+
+code {
+  background: #f1f3f5;
+  border: 1px solid #ced4da;
+  font-size: 15px;
+  font-family: Consolas;
+  border-radius: 3px;
+  padding: 0.2em 0.7em;
+}
+
+h1 {
+  font-size: 40px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+h1::before {
+  content: "#"; /* Insert content that looks like bullets */
+  color: #f92672;
+  margin-right: 10px;
+}
+
+h2::before {
+  content: "##"; /* Insert content that looks like bullets */
+  color: #f44;
+  margin-right: 10px;
+}
+
+h3::before {
+  content: "###"; /* Insert content that looks like bullets */
+  color: #e6db74;
+  margin-right: 10px;
+}
+
+/* h2 {
+  background: #f9f9f9;
+  border-left: 7px solid #dd4c39;
+  padding: 0.5em 10px;
+} */
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #00cec9;
+  margin: 1.5em 10px;
+  padding: 1em 10px;
+  quotes: "\201C""\201D";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-family: Arial;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  /* display: inline; */
+  padding: 0 20px;
+  margin-block-start: 0em;
+  margin-block-end: 0.5em;
+}
+
+.citeBlockQuote {
+  background: #fff;
+  width: 100%;
+  min-width: 320px;
+  margin: 2em auto 0;
+}
+.citeBlockQuote > blockquote {
+  display: block;
+  background: #fff;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+.citeBlockQuote > blockquote:before {
+  content: "\201C";
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em "NanumBarunpen", sans-serif;
+  color: #666;
+  text-align: center;
+}
+.citeBlockQuote > blockquote:after {
+  content: "\2013 \2003"attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: #e74c3c;
+}
+
+pre {
+  background: #1e1e1e;
+  color: #abb2bf;
+  border-radius: 3px;
+  padding: 0.8em;
+}
+
+pre code {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+span {
+  font-family: Consolas;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 0.5;
+}
+
+.k {
+  color: #c678dd;
+}
+
+.s2 {
+  color: #98c379;
+}
+
+.punctuation {
+  color: #abb2bf;
+}
+
+.nx {
+  color: #61afef;
+}
+
+.nb {
+  color: #61afef;
+}
+
+.constant {
+  color: #d19a66;
+}
+
+.class-name {
+  color: #e5c07b;
+}
+
+.rule,
+.url {
+  color: #e6db74;
+}
+
+.selector {
+  color: #a6e22e;
+}
+
+.property {
+  color: #f92672;
+}
+
+/*-------------------MARKDOWN-------------------- */
+
+/*-------------------TAG-------------------- */
+
+.tags > span {
+  line-height: 250%;
+}
+
+.tags > span > a {
+  line-height: 250%;
+  color: white;
+}
+
+.tags > span > a:hover {
+  line-height: 250%;
+  color: black;
+}
+
+.tags > span > a > code {
+  background: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 0px;
+  border-radius: 1rem;
+  font-family: sans-serif;
+}
+
+.informationTagLink > code {
+  background: #09c !important;
+}
+
+.jekyllTagLink > code {
+  background: #d19a66 !important;
+}
+
+.react-nativeTagLink > code {
+  background: #ff9ff3 !important;
+}
+
+.VScodeTagLink > code {
+  background: #feca57 !important;
+}
+
+.booksTagLink > code {
+  background: #f368e0 !important;
+}
+
+.githubTagLink > code {
+  background: #ff9f43 !important;
+}
+
+.goodwriting-seriesTagLink > code {
+  background: #ff6b6b !important;
+}
+
+.dockerTagLink > code {
+  background: #2e86de !important;
+}
+
+.test1TagLink > code {
+  background: #ee5253 !important;
+}
+
+.test2TagLink > code {
+  background: #0abde3 !important;
+}
+
+.test3TagLink > code {
+  background: #48dbfb !important;
+}
+
+.test4TagLink > code {
+  background: #1dd1a1 !important;
+}
+
+.test5TagLink > code {
+  background: #10ac84 !important;
+}
+
+.test6TagLink > code {
+  background: #00d2d3 !important;
+}
+
+.test7TagLink > code {
+  background: #01a3a4 !important;
+}
+
+.test8TagLink > code {
+  background: #54a0ff !important;
+}
+
+.test9TagLink > code {
+  background: #5f27cd !important;
+}
+
+.test10TagLink > code {
+  background: #341f97 !important;
+}
+
+/*-------------------TAG-------------------- */
+
+/*-------------------PAGINATIOn-------------------- */
+
+.pagination {
+  margin: 100px 0 100px;
+  text-align: center;
+}
+
+.previous {
+  color: black;
+}
+
+.page_number {
+  background-color: #fa4248;
+  height: 100px;
+  width: 100px;
+  border-radius: 10%;
+  padding: 10px;
+  font-size: 1.3em;
+  color: #fff;
+  margin: 0 20px 0 20px;
+}
+.next {
+  color: black;
+}
+
+/*-------------------PAGINATIOn-------------------- */
