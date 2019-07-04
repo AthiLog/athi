@@ -1,27 +1,39 @@
 encoding: utf-8
 
 # email: your-email@example.com
-title: 아띠
-description: 아띠의 블로그
-keywords: React, Jekyll, dairy
-author: 아띠
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-# baseurl: "/athi" # for test: remove string '/space-jekyll-template' to ''
-# url: "https://athilog.github.io/athi/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
-baseurl: "" # for test: remove string '/space-jekyll-template' to ''
-url: "https://athilog.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
-g-analytics: UA-143250392-1
+#---------------------------config markdown-----------------------------
 markdown: kramdown
 theme: minima
+#---------------------------config markdown-----------------------------
 
+#---------------------------metatag-------------------------------------
+title: 아띠
+description: 아띠의 블로그
+keywords: React, Jekyll, dairy, 생산성, 향상, doc
+author: 아띠
+
+#---------------------------metatag-------------------------------------
+
+#---------------------------deploy url----------------------------------
+baseurl: ""
+url: "https://athilog.github.io/"
+
+#---------------------------deploy url----------------------------------
+
+#---------------------------google analytics----------------------------
+g-analytics: UA-143250392-1
+#---------------------------google analytics----------------------------
+
+#--------------------------------plugins--------------------------------
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-seo-tag
 
+#--------------------------------plugins--------------------------------
+
+####################################paginatorv2#########################################################
 autopages:
   enabled: true
   tags:
@@ -91,3 +103,4 @@ pagination:
   # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # Without file extension
   # indexpage: "index"
+####################################paginatorv2#########################################################
