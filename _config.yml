@@ -8,7 +8,7 @@ encoding: utf-8
 # baseurl: "/athi" # for test: remove string '/space-jekyll-template' to ''
 # url: "https://athilog.github.io/athi/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 baseurl: "" # for test: remove string '/space-jekyll-template' to ''
-url: "https://athi.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+url: "https://athilog.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 g-analytics: UA-143250392-1
 markdown: kramdown
