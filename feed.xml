@@ -3,11 +3,11 @@
     <channel>
         <title></title>
         <description></description>
-        <link>https://athi.github.io//</link>
-        <atom:link href="https://athi.github.io//feed.xml" rel="self"
+        <link>https://athilog.github.io//</link>
+        <atom:link href="https://athilog.github.io//feed.xml" rel="self"
         type="application/rss+xml"/>
-        <pubDate>Thu, 04 Jul 2019 11:19:23 +0900</pubDate>
-        <lastBuildDate>Thu, 04 Jul 2019 11:19:23 +0900</lastBuildDate>
+        <pubDate>Thu, 04 Jul 2019 11:23:25 +0900</pubDate>
+        <lastBuildDate>Thu, 04 Jul 2019 11:23:25 +0900</lastBuildDate>
         <generator>Jekyll v3.8.6</generator>
         
         <item>
@@ -54,8 +54,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Wed, 03 Jul 2019 13:30:00 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/07/03/git-error.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/07/03/git-error.html</guid>
+            <link>https://athilog.github.io/#/2019/07/03/git-error.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/07/03/git-error.html</guid>
             
             <category>errors</category>
             
@@ -133,8 +133,8 @@
 &lt;p&gt;솔직히 말하면 글을 쓰는 것은 많은 부분은 타고난 사람도 있다. 하지만 타고난 사람이든, 타고나지 않은 사람이든 연습하면 글쓰기 실력은 무조건 좋아진다. 다만 의식적인 연습이 필요하다. 과거에 비해 요즘은 SNS나 블로그 등에 누구나 글을 쓸 기회가 많고, 글을 잘 쓰면 그만큼 다양한 기회도 많이 얻을 수 있다. 아무쪼록 필자의 몇가지 팁이 가독성이 높은 글을 쓰시는데 도움이 되면 좋겠다.&lt;/p&gt;
 </description>
             <pubDate>Mon, 01 Jul 2019 21:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/07/01/what-is-good-writing.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/07/01/what-is-good-writing.html</guid>
+            <link>https://athilog.github.io/#/2019/07/01/what-is-good-writing.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/07/01/what-is-good-writing.html</guid>
             
             <category>goodwriting-series</category>
             
@@ -163,8 +163,8 @@
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/MUaX5AP.png&quot; alt=&quot;도커설정&quot; /&gt;&lt;/p&gt;
 </description>
             <pubDate>Sun, 30 Jun 2019 12:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/30/docker-environment.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/30/docker-environment.html</guid>
+            <link>https://athilog.github.io/#/2019/06/30/docker-environment.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/30/docker-environment.html</guid>
             
             <category>docker</category>
             
@@ -614,8 +614,8 @@
 &lt;p&gt;이것으로 React Native의 기본적인 사용법에 대해서 마치겠습니다&lt;/p&gt;
 </description>
             <pubDate>Wed, 05 Jun 2019 01:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/05/animated.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/05/animated.html</guid>
+            <link>https://athilog.github.io/#/2019/06/05/animated.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/05/animated.html</guid>
             
             <category>react-native</category>
             
@@ -629,8 +629,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/console-log.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/console-log.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/console-log.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/console-log.html</guid>
             
             <category>react-native</category>
             
@@ -795,8 +795,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/circletransition.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/circletransition.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/circletransition.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/circletransition.html</guid>
             
             <category>react-native</category>
             
@@ -808,8 +808,8 @@
             <description>&lt;p&gt;&lt;a href=&quot;https://codeburst.io/custom-bubble-transition-with-react-navigation-d8efca9ba83f&quot;&gt;Custom Bubble Transitions with React Navigation&lt;/a&gt;&lt;/p&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/bubble-transition.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/bubble-transition.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/bubble-transition.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/bubble-transition.html</guid>
             
             <category>react-native</category>
             
@@ -1268,8 +1268,8 @@ mongodb://shiftcard:1234@ds121665.mlab.com:21665/graphql-auth-demo-1
 &lt;p&gt;And there you have it! Runnable source code is available below&lt;/p&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/auth-server.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/auth-server.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/auth-server.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/auth-server.html</guid>
             
             <category>react-native</category>
             
@@ -1710,8 +1710,8 @@ export default graphql(
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/auth-client.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/auth-client.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/auth-client.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/auth-client.html</guid>
             
             <category>react-native</category>
             
@@ -1749,8 +1749,8 @@ justifyContent는 세로로 가운데 정렬
 &lt;img src=&quot;https://i.imgur.com/n4DVf3q.png&quot; alt=&quot;가운데 정렬&quot; /&gt;&lt;/p&gt;
 </description>
             <pubDate>Tue, 04 Jun 2019 23:12:12 +0900</pubDate>
-            <link>https://athi.github.io/#/2019/06/04/react-native-align-center.html</link>
-            <guid isPermaLink="true">https://athi.github.io/#/2019/06/04/react-native-align-center.html</guid>
+            <link>https://athilog.github.io/#/2019/06/04/react-native-align-center.html</link>
+            <guid isPermaLink="true">https://athilog.github.io/#/2019/06/04/react-native-align-center.html</guid>
             
             <category>react-native</category>
             
