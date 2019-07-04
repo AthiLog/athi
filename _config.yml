@@ -1,7 +1,10 @@
 encoding: utf-8
 
 # email: your-email@example.com
-# description: >- # this means to ignore newlines until "baseurl:"
+title: 아띠
+description: 아띠의 블로그
+keywords: React, Jekyll, dairy
+author: 아띠
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
@@ -54,8 +57,8 @@ pagination:
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
   # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  # title: ":title - page :num"
-  title: "Athi"
+  title: ":title - page :num"
+  # title: "Athi"
 
   # Limit how many pagenated pages to create (default: 0, means all)
   limit: 0
