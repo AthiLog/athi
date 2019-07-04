@@ -60,7 +60,7 @@
 <br />
 
 <span>test1|test2|test3|test4|test5|test6|test7|test8|test9|test10|</span><br />
-<span>VScodeVScodeVScodebooksdockererrorsgithubgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoogle-analyticsreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetest1test10test2test3test4test5test6test7test8test9</span>
+<span>VScodeVScodeVScodebooksdockererrorsgithubgithubgithubgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoodwriting-seriesgoogle-analyticsreact-nativereact-nativereact-nativereact-nativereact-nativereact-nativereact-nativetest1test10test2test3test4test5test6test7test8test9</span>
 
 <br />
 
@@ -315,6 +315,205 @@
     <!-- cards -->
 
     <div class="wrapper">
+      
+      <div class="card" data-id="/2019/06/04/circletransition">
+        <div class="card__container card__container--closed">
+          <svg
+            class="card__image"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 1920 1200"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <clipPath id="/2019/06/04/circletransition-clip-path">
+                <polygon
+                  class="clip"
+                  points="0,1200 0,0 1920,0 1920,1200"
+                ></polygon>
+              </clipPath>
+            </defs>
+            <image
+              clip-path="url(#/2019/06/04/circletransition-clip-path)"
+              width="1920"
+              height="1200"
+              xlink:href="/img/a.jpg"
+            ></image>
+          </svg>
+          <div class="card__content">
+            <i class="card__btn-close fa fa-times"></i>
+            <div class="card__caption">
+              <span class="card__title">circletransition 모듈</span>
+              <p class="card__subtitle">circletransition</p>
+            </div>
+            <div class="card__copy">
+              <div class="meta">
+                <img
+                  class="meta__avatar"
+                  src="/img/authors/athi.png"
+                />
+                <span class="meta__author">Athi</span>
+                <span class="meta__date">2019-06-04</span>
+              </div>
+              <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span>
+  <span class="nx">Easing</span><span class="p">,</span>
+  <span class="nx">StyleSheet</span><span class="p">,</span>
+  <span class="nx">Text</span><span class="p">,</span>
+  <span class="nx">View</span><span class="p">,</span>
+  <span class="nx">TouchableWithoutFeedback</span>
+<span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-native</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">CircleTransition</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-native-expanding-circle-transition</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">ANIMATION_DURATION</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">INITIAL_VIEW_BACKGROUND_COLOR</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">#E3E4E5</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CIRCLE_COLOR1</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">#29C5DB</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CIRCLE_COLOR2</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">#4EB8AE</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CIRCLE_COLOR3</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">#81C781</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CIRCLE_COLOR4</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">#B0D882</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">TRANSITION_BUFFER</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">POSITON</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">custom</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">reactMixin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">react-mixin</span><span class="dl">"</span><span class="p">);</span>
+<span class="k">import</span> <span class="nx">TimerMixin</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-timer-mixin</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">Exemples</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">viewBackgroundColor</span><span class="p">:</span> <span class="nx">INITIAL_VIEW_BACKGROUND_COLOR</span><span class="p">,</span>
+      <span class="na">circleColor</span><span class="p">:</span> <span class="nx">CIRCLE_COLOR1</span><span class="p">,</span>
+      <span class="na">customLeftMargin</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">customTopMargin</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">counter</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">};</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">handlePress</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handlePress</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">changeColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">changeColor</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">handlePress</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">pressLocationX</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">nativeEvent</span><span class="p">.</span><span class="nx">locationX</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">pressLocationY</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">nativeEvent</span><span class="p">.</span><span class="nx">locationY</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span>
+      <span class="p">{</span>
+        <span class="na">customLeftMargin</span><span class="p">:</span> <span class="nx">pressLocationX</span><span class="p">,</span>
+        <span class="na">customTopMargin</span><span class="p">:</span> <span class="nx">pressLocationY</span>
+      <span class="p">},</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">circleTransition</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">changeColor</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">changeColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">circleColor</span><span class="p">,</span> <span class="nx">counter</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">newCounter</span> <span class="o">=</span> <span class="nx">counter</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">?</span> <span class="nx">counter</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">newCircleColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getColor</span><span class="p">(</span><span class="nx">newCounter</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+      <span class="na">viewBackgroundColor</span><span class="p">:</span> <span class="nx">circleColor</span><span class="p">,</span>
+      <span class="na">counter</span><span class="p">:</span> <span class="nx">newCounter</span>
+    <span class="p">});</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">changeCircleColor</span><span class="p">(</span><span class="nx">newCircleColor</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">changeCircleColor</span><span class="p">(</span><span class="nx">newCircleColor</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+        <span class="na">circleColor</span><span class="p">:</span> <span class="nx">newCircleColor</span>
+      <span class="p">});</span>
+    <span class="p">},</span> <span class="nx">TRANSITION_BUFFER</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">getColor</span><span class="p">(</span><span class="nx">counter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">counter</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">CIRCLE_COLOR1</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">CIRCLE_COLOR2</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">CIRCLE_COLOR3</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">CIRCLE_COLOR4</span><span class="p">;</span>
+      <span class="nl">default</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">CIRCLE_COLOR4</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="p">{</span>
+      <span class="nx">circleColor</span><span class="p">,</span>
+      <span class="nx">viewBackgroundColor</span><span class="p">,</span>
+      <span class="nx">customTopMargin</span><span class="p">,</span>
+      <span class="nx">customLeftMargin</span>
+    <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">View</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">{[</span>
+          <span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">,</span>
+          <span class="p">{</span>
+            <span class="na">backgroundColor</span><span class="p">:</span> <span class="nx">viewBackgroundColor</span>
+          <span class="p">}</span>
+        <span class="p">]}</span>
+      <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">TouchableWithoutFeedback</span>
+          <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">touchable</span><span class="p">}</span>
+          <span class="nx">onPress</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handlePress</span><span class="p">}</span>
+        <span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">touchableView</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">viewBackgroundColor</span><span class="p">.</span><span class="nx">toString</span><span class="p">()}</span><span class="o">&lt;</span><span class="sr">/Text</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/TouchableWithoutFeedback</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">CircleTransition</span>
+          <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">circle</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">circleTransition</span> <span class="o">=</span> <span class="nx">circle</span><span class="p">;</span>
+          <span class="p">}}</span>
+          <span class="nx">color</span><span class="o">=</span><span class="p">{</span><span class="nx">circleColor</span><span class="p">}</span>
+          <span class="nx">expand</span>
+          <span class="nx">customTopMargin</span><span class="o">=</span><span class="p">{</span><span class="nx">customTopMargin</span><span class="p">}</span>
+          <span class="nx">customLeftMargin</span><span class="o">=</span><span class="p">{</span><span class="nx">customLeftMargin</span><span class="p">}</span>
+          <span class="nx">transitionBuffer</span><span class="o">=</span><span class="p">{</span><span class="nx">TRANSITION_BUFFER</span><span class="p">}</span>
+          <span class="nx">duration</span><span class="o">=</span><span class="p">{</span><span class="nx">ANIMATION_DURATION</span><span class="p">}</span>
+          <span class="nx">easing</span><span class="o">=</span><span class="p">{</span><span class="nx">Easing</span><span class="p">.</span><span class="nx">linear</span><span class="p">}</span>
+          <span class="nx">position</span><span class="o">=</span><span class="p">{</span><span class="nx">POSITON</span><span class="p">}</span>
+        <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/View</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">reactMixin</span><span class="p">(</span><span class="nx">Exemples</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="nx">TimerMixin</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="nx">StyleSheet</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+  <span class="na">container</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">flexDirection</span><span class="p">:</span> <span class="dl">"</span><span class="s2">column</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">justifyContent</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">alignItems</span><span class="p">:</span> <span class="dl">"</span><span class="s2">stretch</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="na">touchableView</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">alignItems</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">justifyContent</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="na">text</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">fontSize</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="na">fontWeight</span><span class="p">:</span> <span class="dl">"</span><span class="s2">400</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#253039</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="na">touchable</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">flexDirection</span><span class="p">:</span> <span class="dl">"</span><span class="s2">row</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">alignItems</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">justifyContent</span><span class="p">:</span> <span class="dl">"</span><span class="s2">center</span><span class="dl">"</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Exemples</span><span class="p">;</span>
+</code></pre></div></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
       
       <div class="card" data-id="/2019/06/04/bubble-transition">
         <div class="card__container card__container--closed">
@@ -1442,68 +1641,6 @@ justifyContent는 세로로 가운데 정렬
                 <span class="meta__date">2019-01-08</span>
               </div>
               
-
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card" data-id="/2019/01/07/git-auto-deploy">
-        <div class="card__container card__container--closed">
-          <svg
-            class="card__image"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 1920 1200"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <clipPath id="/2019/01/07/git-auto-deploy-clip-path">
-                <polygon
-                  class="clip"
-                  points="0,1200 0,0 1920,0 1920,1200"
-                ></polygon>
-              </clipPath>
-            </defs>
-            <image
-              clip-path="url(#/2019/01/07/git-auto-deploy-clip-path)"
-              width="1920"
-              height="1200"
-              xlink:href="/img/c.jpg"
-            ></image>
-          </svg>
-          <div class="card__content">
-            <i class="card__btn-close fa fa-times"></i>
-            <div class="card__caption">
-              <span class="card__title">#7 Git 자동화 하는법</span>
-              <p class="card__subtitle">auto deploy</p>
-            </div>
-            <div class="card__copy">
-              <div class="meta">
-                <img
-                  class="meta__avatar"
-                  src="/img/authors/athi.png"
-                />
-                <span class="meta__author">Athi</span>
-                <span class="meta__date">2019-01-07</span>
-              </div>
-              <p>간단하다. sh파일을 만들어서 지금 까지 입려했던 명령어를 적어주면 된다.</p>
-
-<p>최상위 폴더에서 auto.sh 파일을 만들고(파일명은 맘대루) 다음 명령어를 입력해 준다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-
-bundle <span class="nb">exec </span>jekyll build
-
-<span class="nb">cd </span>_site
-git add <span class="nb">.</span>
-git commit <span class="nt">-m</span> <span class="s2">"commit"</span>
-git push origin master
-</code></pre></div></div>
-
-<p>그리고 나서 이걸 실행시켜주면 끝이다.</p>
-
-<p>./auto.sh 입력 후 엔터 끝!!</p>
 
             </div>
           </div>
