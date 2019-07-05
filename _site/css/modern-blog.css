@@ -795,11 +795,11 @@ span {
   background: #2e86de !important;
 }
 
-.test1TagLink > code {
+.google-analyticsTagLink > code {
   background: #ee5253 !important;
 }
 
-.test2TagLink > code {
+.errorsTagLink > code {
   background: #0abde3 !important;
 }
 
