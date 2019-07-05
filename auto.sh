@@ -5,7 +5,7 @@ bundle exec jekyll build
 
 git add .
 git commit -m "commit"
-git push origin lecture
+git push origin allfile
 
 cd _site
 git add .
