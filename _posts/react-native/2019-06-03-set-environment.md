@@ -19,8 +19,8 @@ date: 2019-06-03 16:12:12
 
 ## react-native run-android가 실행 방법
 
-방법 1. android studio -> AVD Manager에서 애뮬레이터를 실행한 뒤에 실행가능하다.
-방법 2. yarn start하고 뜨는 페이지에서 Run on Android device/emulator를 클릭한다.
+방법 1. android studio -> AVD Manager에서 애뮬레이터를 실행한 뒤에 실행가능하다.  
+방법 2. yarn start하고 뜨는 페이지에서 Run on Android device/emulator를 클릭한다.  
 방법 3. expo에선 react-native run-android 대신 expo start --android 명령어를 쓸 수 있다.
 
 ## 안드로이드 스튜디오 다운
