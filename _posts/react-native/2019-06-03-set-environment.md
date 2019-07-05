@@ -29,10 +29,10 @@ date: 2019-06-03 16:12:12
 
 ## JAVA다운 받는곳
 
+[다운로드링크](https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html)
+
 jre가 아닌 jdk를 다운 받아야 한다.
 
-아이디: rlagmlwnd3@naver.com
-비번: Khj34713
 ![자바 받는곳](https://i.imgur.com/UTlqurA.png)
 
 ## git bash에서 JAVA환경변수 보는법
