@@ -11,18 +11,18 @@
 <meta property="og:title" content="아띠 - page 2" />
 <meta name="author" content="아띠" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="아띠의 블로그" />
-<meta property="og:description" content="아띠의 블로그" />
+<meta name="description" content="아띠의 IT 블로그" />
+<meta property="og:description" content="아띠의 IT 블로그" />
 <link rel="canonical" href="https://athilog.github.io//page/2/" />
 <meta property="og:url" content="https://athilog.github.io//page/2/" />
 <meta property="og:site_name" content="아띠" />
 <link rel="prev" href="https://athilog.github.io//" />
 <link rel="next" href="https://athilog.github.io//page/3/" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://athilog.github.io//page/2/","author":{"@type":"Person","name":"아띠"},"headline":"아띠 - page 2","description":"아띠의 블로그","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://athilog.github.io//page/2/","author":{"@type":"Person","name":"아띠"},"headline":"아띠 - page 2","description":"아띠의 IT 블로그","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <meta name="description" content="아띠의 블로그" />
+    <meta name="description" content="아띠의 IT 블로그" />
     <meta name="keywords" content="React, Jekyll, dairy, 생산성, 향상, doc" />
     <meta name="author" content="아띠" />
     <link rel="shortcut icon" href="https://athilog.github.io//img/authors/favicon.ico" />
@@ -1550,6 +1550,9 @@ justifyContent는 세로로 가운데 정렬
 
 <p><a href="https://yuddomack.tistory.com/entry/1React-Native-%EC%84%A4%EC%B9%98%EC%99%80-%EC%8B%A4%ED%96%89hello-world">참고자료</a></p>
 
+<h3 id="avd-manager설정">AVD Manager설정</h3>
+<p>Cotlin이 아닌 JAVA프로젝트를 한개 만들어서 sync가 되면 Tools-&gt;AVDManger 메뉴가 생긴다.</p>
+
 <h2 id="java다운-받는곳">JAVA다운 받는곳</h2>
 
 <p><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html">다운로드링크</a></p>
@@ -1557,6 +1560,47 @@ justifyContent는 세로로 가운데 정렬
 <p>jre가 아닌 jdk를 다운 받아야 한다.</p>
 
 <p><img src="https://i.imgur.com/UTlqurA.png" alt="자바 받는곳" /></p>
+
+<h2 id="윈도우-환경변수-설정">윈도우 환경변수 설정</h2>
+
+<h3 id="android_home">ANDROID_HOME</h3>
+<p><strong>Adroid SDK를 설치하였으니 시스템 변수를 편집해줘야 합니다.</strong></p>
+
+<p><strong>고급 시스템 설정 &gt; 고급 탭의 환경변수 &gt; 시스템변수 &gt; 새 변수 생성</strong></p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/255DD23658291AA935" alt="" /></p>
+
+<p>변수이름 : <strong>ANDROID_HOME</strong></p>
+
+<p>변수 값 : <strong>ANDROID 설치 경로</strong></p>
+
+<p>를 입력하고 확인 클릭~!</p>
+
+<h3 id="sdk-환경변수">SDK 환경변수</h3>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/2466703658291AAE2E" alt="" /></p>
+
+<p>두번째로는 Path 변수를 편집한다.</p>
+
+<p>(사전에 진행했던 JAVA 설치 및 개발환경 구성에서 진행했던 Path 변수가 있을거에요)</p>
+
+<p><strong>가장 끝에 ; 를 붙이고 위에서 설정해주었던 안드로이드 홈의 path를 잡아줍니다.</strong></p>
+
+<p><strong>%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;</strong></p>
+
+<p>(혹시 이렇게 설정되어 있는데 개발환경에서 path를 못잡는 다던가 하는</p>
+
+<p>error가 나면 %ANDROID_HOME%변수로 넣지말고</p>
+
+<p>풀 경로를 복사해서 넣어보세요)</p>
+
+<p><img src="https://t1.daumcdn.net/cfile/tistory/2175453658291AAF21" alt="" /></p>
+
+<h3 id="java환경변수">JAVA환경변수</h3>
+
+<p><img src="https://i.imgur.com/lNO3VgN.png" alt="자바환경변수" /></p>
+
+<p><img src="https://i.imgur.com/tfXes5F.png" alt="자바환경변수2" /></p>
 
 <h2 id="git-bash에서-java환경변수-보는법">git bash에서 JAVA환경변수 보는법</h2>
 
