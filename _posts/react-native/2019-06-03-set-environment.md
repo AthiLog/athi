@@ -27,6 +27,9 @@ date: 2019-06-03 16:12:12
 
 [참고자료](https://yuddomack.tistory.com/entry/1React-Native-%EC%84%A4%EC%B9%98%EC%99%80-%EC%8B%A4%ED%96%89hello-world)
 
+### AVD Manager설정
+Cotlin이 아닌 JAVA프로젝트를 한개 만들어서 sync가 되면 Tools->AVDManger 메뉴가 생긴다.
+
 ## JAVA다운 받는곳
 
 [다운로드링크](https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html)
@@ -34,6 +37,48 @@ date: 2019-06-03 16:12:12
 jre가 아닌 jdk를 다운 받아야 한다.
 
 ![자바 받는곳](https://i.imgur.com/UTlqurA.png)
+
+## 윈도우 환경변수 설정
+
+### ANDROID_HOME
+**Adroid SDK를 설치하였으니 시스템 변수를 편집해줘야 합니다.**
+
+**고급 시스템 설정 > 고급 탭의 환경변수 > 시스템변수 > 새 변수 생성**
+
+![](https://t1.daumcdn.net/cfile/tistory/255DD23658291AA935)
+
+변수이름 : **ANDROID\_HOME**
+
+변수 값 : **ANDROID 설치 경로**
+
+를 입력하고 확인 클릭~!
+
+### SDK 환경변수
+
+![](https://t1.daumcdn.net/cfile/tistory/2466703658291AAE2E)
+
+두번째로는 Path 변수를 편집한다.
+
+(사전에 진행했던 JAVA 설치 및 개발환경 구성에서 진행했던 Path 변수가 있을거에요)
+
+**가장 끝에 ; 를 붙이고 위에서 설정해주었던 안드로이드 홈의 path를 잡아줍니다.**
+
+**%ANDROID\_HOME%\\tools;%ANDROID\_HOME%\\platform\-tools;**
+
+(혹시 이렇게 설정되어 있는데 개발환경에서 path를 못잡는 다던가 하는
+
+error가 나면 %ANDROID\_HOME%변수로 넣지말고
+
+풀 경로를 복사해서 넣어보세요)
+
+![](https://t1.daumcdn.net/cfile/tistory/2175453658291AAF21)
+
+### JAVA환경변수
+
+![자바환경변수](https://i.imgur.com/lNO3VgN.png)
+
+![자바환경변수2](https://i.imgur.com/tfXes5F.png)
+
 
 ## git bash에서 JAVA환경변수 보는법
 

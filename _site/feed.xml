@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>아띠</title>
-        <description>아띠의 블로그</description>
+        <description>아띠의 IT 블로그</description>
         <link>https://athilog.github.io//</link>
         <atom:link href="https://athilog.github.io//feed.xml" rel="self"
         type="application/rss+xml"/>
-        <pubDate>Fri, 05 Jul 2019 23:17:35 +0900</pubDate>
-        <lastBuildDate>Fri, 05 Jul 2019 23:17:35 +0900</lastBuildDate>
+        <pubDate>Sat, 06 Jul 2019 13:00:06 +0900</pubDate>
+        <lastBuildDate>Sat, 06 Jul 2019 13:00:06 +0900</lastBuildDate>
         <generator>Jekyll v3.8.6</generator>
         
         <item>
