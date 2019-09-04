@@ -4,7 +4,7 @@ subtitle: "What is good writing"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/b.jpg"
-tags: [goodwriting-series]
+tags: [jekyll-blog-series]
 date: 2019-07-01 12:12:12
 ---
 

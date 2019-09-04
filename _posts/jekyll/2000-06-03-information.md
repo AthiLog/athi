@@ -4,7 +4,7 @@ subtitle: "Information"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/f.jpg"
-tags: [goodwriting-series]
+tags: [jekyll-blog-series]
 date: 2000-06-03 12:12:12
 ---
 

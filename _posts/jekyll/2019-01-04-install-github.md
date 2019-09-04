@@ -4,7 +4,7 @@ subtitle: "How to install Github"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/e.jpg"
-tags: [goodwriting-series, github]
+tags: [jekyll-blog-series, github]
 date: 2019-01-04 12:12:12
 ---
 

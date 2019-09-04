@@ -4,7 +4,7 @@ subtitle: "auto deploy"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/c.jpg"
-tags: [goodwriting-series]
+tags: [jekyll-blog-series]
 date: 2019-01-07 12:12:12
 ---
 

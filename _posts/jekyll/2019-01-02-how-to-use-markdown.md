@@ -4,7 +4,7 @@ subtitle: "How to use Markdown"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/c.jpg"
-tags: [goodwriting-series, vscode]
+tags: [jekyll-blog-series, vscode]
 date: 2019-01-02 12:12:12
 ---
 
