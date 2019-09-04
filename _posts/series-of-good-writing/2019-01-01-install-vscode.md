@@ -4,7 +4,7 @@ subtitle: "How to install VScode"
 author: "Athi"
 avatar: "/img/authors/athi.png"
 image: "/img/b.jpg"
-tags: [goodwriting-series, VScode]
+tags: [goodwriting-series, vscode]
 date: 2019-01-01 12:12:12
 ---
 
