@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://athilog.github.io//tag/github/" />
 <meta property="og:site_name" content="아띠" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://athilog.github.io//tag/github/","author":{"@type":"Person","name":"아띠"},"headline":"Posts tagged with github","description":"아띠의 IT 블로그","@context":"https://schema.org"}</script>
+{"description":"아띠의 IT 블로그","headline":"Posts tagged with github","@type":"WebPage","url":"https://athilog.github.io//tag/github/","author":{"@type":"Person","name":"아띠"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="description" content="아띠의 IT 블로그" />
@@ -313,7 +313,10 @@
                     <span class="meta__author">Athi</span>
                     <span class="meta__date">2019-01-05</span>
                   </div>
-                  <h1 id="ruby-다운로드">ruby 다운로드</h1>
+                  <p>#참고
+<a href="https://medium.com/@IanRahman/how-to-upgrade-ruby-on-a-mac-a592c6085c63">macos ruby설치</a></p>
+
+<h1 id="ruby-다운로드">ruby 다운로드</h1>
 
 <p><a href="https://rubyinstaller.org/downloads/">루비 다운로드</a></p>
 
@@ -370,6 +373,35 @@
 <p>다음과 같은 succeeded가 나오면 성공입니다.</p>
 
 <p><img src="https://i.imgur.com/dQJ6m5i.png" alt="성공2" /></p>
+
+<h1 id="macos의-경우">macOS의 경우</h1>
+
+<h2 id="homebrew설치">Homebrew설치</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre></div></div>
+
+<h3 id="방법1-ruby설치">방법1. ruby설치</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+</code></pre></div></div>
+
+<h3 id="방법2-rvm으로-ruby설치">방법2. rvm으로 ruby설치</h3>
+
+<p>이 방법은 homebrew로 ruby를 설치했는데 버젼이 2.4이상이 아닌경우</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.rvm/scripts/rvm
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install ruby --latest
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you need to have ruby first in your PATH run:
+echo 'export PATH="/usr/local/opt/ruby/bin:\$PATH"' &gt;&gt; ~/.bash_profile
+</code></pre></div></div>
 
 <h1 id="ruby가-잘-설치-되었는지-확인해보자">ruby가 잘 설치 되었는지 확인해보자</h1>
 

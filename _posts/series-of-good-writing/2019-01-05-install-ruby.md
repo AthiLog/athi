@@ -8,6 +8,9 @@ tags: [goodwriting-series, github]
 date: 2019-01-05 12:12:12
 ---
 
+#참고
+[macos ruby설치](https://medium.com/@IanRahman/how-to-upgrade-ruby-on-a-mac-a592c6085c63)
+
 # ruby 다운로드
 
 [루비 다운로드](https://rubyinstaller.org/downloads/)
@@ -65,6 +68,41 @@ date: 2019-01-05 12:12:12
 다음과 같은 succeeded가 나오면 성공입니다.
 
 ![성공2](https://i.imgur.com/dQJ6m5i.png)
+
+# macOS의 경우
+
+## Homebrew설치
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### 방법1. ruby설치
+
+```bash
+brew install ruby
+```
+
+### 방법2. rvm으로 ruby설치
+
+이 방법은 homebrew로 ruby를 설치했는데 버젼이 2.4이상이 아닌경우
+
+```
+\curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable
+```
+
+```
+source ~/.rvm/scripts/rvm
+```
+
+```
+rvm install ruby --latest
+```
+
+```
+If you need to have ruby first in your PATH run:
+echo 'export PATH="/usr/local/opt/ruby/bin:\$PATH"' >> ~/.bash_profile
+```
 
 # ruby가 잘 설치 되었는지 확인해보자
 
